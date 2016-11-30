@@ -1,0 +1,8 @@
+<?php
+/*
+ *
+ *
+ * Registor Theme option
+ *
+ *
+ */
