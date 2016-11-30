@@ -1,4 +1,4 @@
-# starttheme
+# SEKF Install Project
 1. Import database in `sql` folder into phpmyadmin.
 2. Copy `build\wp-config\wp-config.env.example.php` and change name to `wp-config.local.php`
 3. Config site in `build\wp-config\wp-config.local.php` file.
