@@ -5,3 +5,4 @@
 4. Run: `composer install`.
 5. Create Vitual Host for project on local with curent folder `build`.
 6. Run project with Vitual Host.
+7. Account Login: admin/admin
