@@ -65,6 +65,11 @@ function sekf_set_posts_per_page( $query ) {
 
 add_filter( 'body_class', 'sekf_body_class' );
 function sekf_body_class( $classes ) {
+  global $post;
+  if(is_page()){
+    $post_slug = $post->post_name;
+    $classes[] = 'page-'.$post_slug;
+  }
   return $classes;
 }
 
