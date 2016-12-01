@@ -26,9 +26,9 @@
       {% block feature %}
       {% endblock %}
 
-      <main role="main" class="clearfix {% if ( sidebar_right != 'none' ) or ( not function('is_page') ) %}has-sidebar sidebar-right{% endif %}">
-        <div class="{{ page_layout }}{% if not function('is_page') %} container{% endif %}">
-          <div class="main-content">
+      <main role="main" class="clearfix {% if ( sidebar_right != 'none' ) or ( not function('is_page') ) %} container has-sidebar sidebar-right {% endif %}">
+        {% if ( sidebar_right != 'none' ) or ( not function('is_page') ) %} <div class="row"> {% endif %}
+          <div class="main-content {% if ( sidebar_right != 'none' ) or ( not function('is_page') ) %} col-md-9 {% endif %}">
             {% block content %}
               <div class="content-wrapper">
                 {{context}}
@@ -37,14 +37,14 @@
           </div>
 
           {% if ( sidebar_right != 'none' ) or ( not function('is_page') ) %}
-            <section class="sidebar-right">
+            <section class="sidebar-right col-md-3">
               <div class="sidebar-right__inner">
                 {% block aside %}
                 {% endblock %}
               </div>
             </section>
           {% endif %}
-        </div>
+        {% if ( sidebar_right != 'none' ) or ( not function('is_page') ) %} </div> {% endif %}
       </main>
 
       {% block footer %}
