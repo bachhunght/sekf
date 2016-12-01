@@ -303,6 +303,7 @@ function sekf_twig_data($data){
   $data['avatar_author'] = TimberHelper::function_wrapper( 'avatar_author' );
 
   $data['menu']['main'] = new TimberMenu('main');
+  $data['menu']['header_top'] = new TimberMenu('header_top');
   $data['menu']['footer'] = new TimberMenu('footer');
 
   return $data;
