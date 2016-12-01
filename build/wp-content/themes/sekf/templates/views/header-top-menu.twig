@@ -2,9 +2,9 @@
   <ul class="nav-header__menu">
     {% include 'menu.twig' with {'menu': menu.header_top} %}
     {% if function('is_user_logged_in') %}
-        <li><a href="{{function('wp_logout_url')}}">{{ __('Logout', 'heochaua') }}</a></li>
+        <li><a href="{{function('wp_logout_url')}}">{{ __('Logout') }}</a></li>
       {% else %}
-        <li><a href="{{function('wp_login_url')}}">{{ __('Login', 'heochaua') }}</a></li>
+        <li><a href="{{function('wp_login_url')}}">{{ __('Login') }}</a></li>
     {% endif %}
   </ul>
 </div>
