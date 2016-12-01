@@ -39,6 +39,11 @@ function sidebar($name) {
   return;
 }
 
+function sidebar_active($name) {
+  $sidebar_active = is_active_sidebar( $name );
+  return $sidebar_active;
+}
+
 // Disable shortcode
 function shortcode($name) {
   echo do_shortcode($name);
@@ -294,6 +299,7 @@ function sekf_twig_data($data){
   $data['get_id_youtube'] = TimberHelper::function_wrapper( 'get_id_youtube' );
   $data['related'] = TimberHelper::function_wrapper( 'related' );
   $data['sidebar'] = TimberHelper::function_wrapper( 'sidebar' );
+  $data['sidebar_active'] = TimberHelper::function_wrapper( 'sidebar_active' );
   $data['shortcode'] = TimberHelper::function_wrapper( 'shortcode' );
   $data['acfwidget'] = TimberHelper::function_wrapper( 'acfwidget' );
   $data['acfobject_field'] = TimberHelper::function_wrapper( 'acfobject_field' );
