@@ -42,7 +42,7 @@ add_theme_support( 'post-thumbnails' );
 
 add_action( 'init', 'sekf_remove_default_field' );
 function sekf_remove_default_field() {
-  remove_post_type_support( 'page', 'thumbnail' );
+  // remove_post_type_support( 'page', 'thumbnail' );
 }
 
 // Unset URL from comment form
