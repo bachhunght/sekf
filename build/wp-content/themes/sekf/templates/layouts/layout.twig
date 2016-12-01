@@ -26,25 +26,35 @@
       {% block feature %}
       {% endblock %}
 
-      <main role="main" class="clearfix {% if ( sidebar_right != 'none' ) or ( not function('is_page') ) %}has-sidebar sidebar-right{% endif %}">
-        <div class="{{ page_layout }}{% if not function('is_page') %} container{% endif %}">
-          <div class="main-content">
-            {% block content %}
-              <div class="content-wrapper">
-                {{context}}
-              </div>
+      {% set sidebar_acf = post.get_field('group_sidebar') %}
+      {% set sidebar_wp = sidebar_active('sidebar-right') %}
+
+      <main role="main" class="clearfix {{page_layout}}">
+        {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) %}
+          {% set main_content_class = 'col-md-9' %}
+          <div class="row">
+        {% endif %}
+
+        <div class="main-content {{main_content_class}}">
+          {% block content %}
+            <div class="content-wrapper">
+              {{context}}
+            </div>
+          {% endblock %}
+        </div>
+
+        {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) %}
+        <section class="sidebar-right col-md-3">
+          <div class="sidebar-right__inner">
+            {% block aside %}
             {% endblock %}
           </div>
+        </section>
+        {% endif %}
 
-          {% if ( sidebar_right != 'none' ) or ( not function('is_page') ) %}
-            <section class="sidebar-right">
-              <div class="sidebar-right__inner">
-                {% block aside %}
-                {% endblock %}
-              </div>
-            </section>
-          {% endif %}
-        </div>
+        {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) %}
+          </div>
+        {% endif %}
       </main>
 
       {% block footer %}

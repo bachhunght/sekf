@@ -1,0 +1,80 @@
+{
+    "key": "group_583fef4ae097a",
+    "title": "Group Sidebar",
+    "fields": [
+        {
+            "layouts": [
+                {
+                    "key": "583fef71c609c",
+                    "name": "box_post_links",
+                    "label": "Box Post Links",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "post_type": [],
+                            "taxonomy": [],
+                            "allow_null": 0,
+                            "multiple": 1,
+                            "return_format": "object",
+                            "ui": 1,
+                            "key": "field_583fefaf94752",
+                            "label": "Box Post Link",
+                            "name": "box_post_link",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ],
+            "min": "",
+            "max": "",
+            "button_label": "Add  Components",
+            "key": "field_583fef6994751",
+            "label": "Group Sidebar",
+            "name": "group_sidebar",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1480585572
+}

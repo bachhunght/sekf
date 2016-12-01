@@ -19,6 +19,9 @@ if(!is_admin()) {
     wp_register_script('lib-slick', get_stylesheet_directory_uri() . '/dist/js/libs/slick.js', array('jquery'), FALSE, '0.7.0', TRUE);
     wp_enqueue_script('lib-slick');
 
+    wp_register_script('Bootstrap', get_stylesheet_directory_uri() . '/dist/js/libs/bootstrap.min.js', array('jquery'), FALSE, '3.0.3', TRUE);
+    wp_enqueue_script('Bootstrap');
+
     wp_register_script('lib-matchHeight', get_stylesheet_directory_uri() . '/dist/js/libs/jquery.matchHeight-min.js', array('jquery'), FALSE, '0.7.0', TRUE);
     wp_enqueue_script('lib-matchHeight');
 
@@ -36,6 +39,12 @@ if(!is_admin()) {
     $styles = get_stylesheet_directory_uri() . '/dist/css/styles.css';
     wp_register_style('theme-style', $styles, array(), '1.0', 'all');
     wp_enqueue_style('theme-style');
+
+    wp_register_style('bootstrap', get_stylesheet_directory_uri() . '/dist/css/bootstrap.min.css', array(), '3.0.3', 'all');
+    wp_enqueue_style('bootstrap');
+
+    wp_register_style('bootstrap-theme', get_stylesheet_directory_uri() . '/dist/css/bootstrap-theme.min.css', array(), '3.0.3', 'all');
+    wp_enqueue_style('bootstrap-theme');
   }
   add_action('wp_enqueue_scripts', 'sekf_styles');
 }
@@ -59,40 +68,3 @@ function sekf_admin_styles() {
   wp_enqueue_style('admin-style');
 }
 add_action('admin_init', 'sekf_admin_styles');
-
-/* Add custom post type
-function cat_create_custom_post_types() {
-  // Vacancies
-  register_post_type( 'vacancy', array(
-    'labels' => array(
-      'name' => __( 'Vacancies' ),
-      'singular_name' => __( 'Vacancy' )
-    ),
-    'public' => true,
-    'has_archive' => false,
-    'menu_position' => 20,
-    'rewrite' => array('slug' => 'vacancies'),
-    'supports' => array( 'title', 'editor' ),
-  ));
-}
-add_action( 'init', 'cat_create_custom_post_types' );
-
-
-function cat_create_custom_taxonomy() {
-  $labels_product = array(
-    'name' => 'Service',
-    'singular' => 'Service',
-    'menu_name' => 'Service'
-  );
-  $args_product = array(
-    'labels'                     => $labels_product,
-    'hierarchical'               => true,
-    'public'                     => true,
-    'show_ui'                    => true,
-    'show_admin_column'          => true,
-    'show_in_nav_menus'          => true,
-    'show_tagcloud'              => true,
-  );
-  register_taxonomy('service_product', array('wf_product'), $args_product);
-}
-add_action( 'init', 'cat_create_custom_taxonomy', 0 );*/
