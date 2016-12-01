@@ -1,6 +1,7 @@
 # Wordpress Specific
 build/wp-config/wp-config.local.php
 build/wp-content/plugins
+build/wp-content/vendor
 build/wp-content/uploads
 build/db-tool
 build/wp-content/cache/
