@@ -24,6 +24,7 @@ add_action('init', 'sekf_menu');
 function sekf_menu() {
   register_nav_menus(array (
     'main' => 'Main Menu',
+    'header_top' => 'Header Top Menu',
     'footer' => 'Footer Menu'
   ));
 }
