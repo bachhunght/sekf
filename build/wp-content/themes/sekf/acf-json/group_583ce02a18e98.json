@@ -34,11 +34,520 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                {
+                    "key": "583fa3811b234",
+                    "name": "box_contact_form_seven",
+                    "label": "Box contact form 7",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "post_type": [
+                                "wpcf7_contact_form"
+                            ],
+                            "taxonomy": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "object",
+                            "ui": 1,
+                            "key": "field_583fa4191b235",
+                            "label": "Box Form",
+                            "name": "box_form",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "583fa8b054c07",
+                    "name": "banner_slide",
+                    "label": "Banner slide",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "layouts": [
+                                {
+                                    "key": "583fa8c400c24",
+                                    "name": "slide_item",
+                                    "label": "Slide Item",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "return_format": "url",
+                                            "preview_size": "thumbnail",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": "",
+                                            "key": "field_583fa8ca54c09",
+                                            "label": "Slide Image",
+                                            "name": "slide_image",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "key": "field_583fa8e254c0a",
+                                            "label": "Slide Title",
+                                            "name": "slide_title",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add  Item Slide",
+                            "key": "field_583fa8b554c08",
+                            "label": "Slide Items",
+                            "name": "slide_items",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "583fa966e23d1",
+                    "name": "box_service",
+                    "label": "Box service",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_583fa96be23d2",
+                            "label": "Box service title",
+                            "name": "box_service_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "layouts": [
+                                {
+                                    "key": "583fa9a613077",
+                                    "name": "box_service_item",
+                                    "label": "Box Service Item",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "return_format": "url",
+                                            "preview_size": "thumbnail",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": "",
+                                            "key": "field_583fa9bbe23d4",
+                                            "label": "Box Service Icon",
+                                            "name": "box_service_icon",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "key": "field_583fa9dee23d5",
+                                            "label": "Box Service Title",
+                                            "name": "box_service_title",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "new_lines": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "rows": 5,
+                                            "key": "field_583fa9f2e23d6",
+                                            "label": "Box Service Description",
+                                            "name": "box_service_description",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "key": "field_583faa41e23d8",
+                                            "label": "Box Service Title Link",
+                                            "name": "box_service_title_link",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "key": "field_583faa28e23d7",
+                                            "label": "Box Service Link",
+                                            "name": "box_service_link",
+                                            "type": "url",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add Row",
+                            "key": "field_583fa993e23d3",
+                            "label": "Box Service Items",
+                            "name": "box_service_items",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_583faa83e23d9",
+                            "label": "Box service class",
+                            "name": "box_service_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "583fa69788c60",
+                    "name": "box_testimonial",
+                    "label": "Box Testimonial",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_583fa69c88c61",
+                            "label": "Box Testimonial title",
+                            "name": "box_testimonial_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "layouts": [
+                                {
+                                    "key": "583fa6d48dc8e",
+                                    "name": "box_testimonial_item",
+                                    "label": "Box Testimonial item",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "default_value": "",
+                                            "new_lines": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "rows": "",
+                                            "key": "field_583fa6e088c63",
+                                            "label": "Box Testimonial Quote",
+                                            "name": "box_testimonial_quote",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "return_format": "url",
+                                            "preview_size": "thumbnail",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": "",
+                                            "key": "field_583fa78788c67",
+                                            "label": "Box Testimonial Image",
+                                            "name": "box_testimonial_image",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "key": "field_583fa70a88c64",
+                                            "label": "Box Testimonial Name",
+                                            "name": "box_testimonial_name",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "key": "field_583fa72688c65",
+                                            "label": "Box Testimonial Position",
+                                            "name": "box_testimonial_position",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add Testimonial items",
+                            "key": "field_583fa6c288c62",
+                            "label": "Box Testimonial items",
+                            "name": "box_testimonial_items",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_583fa74d88c66",
+                            "label": "Box Testimonial Class",
+                            "name": "box_testimonial_class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "583fa4e41b236",
+                    "name": "box_partners",
+                    "label": "Box Partners",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "layouts": [
+                                {
+                                    "key": "583fa5c7d5fe1",
+                                    "name": "box_partners_item",
+                                    "label": "Box Partners Item",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "return_format": "url",
+                                            "preview_size": "thumbnail",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": "",
+                                            "key": "field_583fa5d91b238",
+                                            "label": "Box Partners Image",
+                                            "name": "box_partners_image",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add Partners Item",
+                            "key": "field_583fa5a21b237",
+                            "label": "Box Partners Items",
+                            "name": "box_partners_items",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ],
             "min": "",
             "max": "",
-            "button_label": "Add Views Or Shortcode",
+            "button_label": "Add Component OR Views Or Shortcode",
             "key": "field_583ce60aa4ee2",
             "label": "Group Component",
             "name": "group_component",
@@ -77,5 +586,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1480407108
+    "modified": 1480567483
 }

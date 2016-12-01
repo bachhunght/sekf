@@ -1,0 +1,12 @@
+<div class="box-testimonial">
+    <h2 class="box-title"> {{ box_testimonial_title }} </h2>
+
+    {% for item in box_testimonial_items %}
+        <div class="box-testimonial__item">
+            <div class="box-testimonial__quote"> {{item.box_testimonial_quote}} </div>
+            <div class="box-testimonial__image"><img src=" {{item.box_testimonial_image}} "></div>
+            <div class="box-testimonial__name"> {{ item.box_testimonial_name }} </div>
+            <div class="box-testimonial__positon"> {{ item.box_testimonial_position }} </div>
+        </div>
+    {% endfor %}
+</div>
