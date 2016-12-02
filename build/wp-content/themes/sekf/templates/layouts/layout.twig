@@ -17,6 +17,7 @@
     <link rel="pingback" href="{{site.pingback_url}}" />
     {{ wp_head }}
   </head>
+
   <body class="{{body_class}}" data-template="base.twig">
     <div class="page-wrapper">
       {% block header %}
@@ -29,7 +30,7 @@
       {% set sidebar_acf = post.get_field('group_sidebar') %}
       {% set sidebar_wp = sidebar_active('sidebar-right') %}
 
-      <main role="main" class="clearfix {{page_layout}}">
+      <main role="main" class="clearfix {{page_layout}} {% if  not function('is_page') %} container {% endif %} ">
         {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) %}
           {% set main_content_class = 'col-md-9' %}
           <div class="row">
