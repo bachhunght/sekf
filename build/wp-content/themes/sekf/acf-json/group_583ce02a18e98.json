@@ -543,6 +543,131 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                {
+                    "key": "5840d8112db26",
+                    "name": "box_text_format",
+                    "label": "Box Text Format",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "layouts": [
+                                {
+                                    "key": "5840ddbd6d404",
+                                    "name": "one_column",
+                                    "label": "One Column",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1,
+                                            "default_value": "",
+                                            "delay": 0,
+                                            "key": "field_5840dddc782c3",
+                                            "label": "Text Editor One Column",
+                                            "name": "text_editor_one_column",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "key": "field_5840de35782c4",
+                                            "label": "Column Class",
+                                            "name": "column_class",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                },
+                                {
+                                    "key": "5840de5e782c5",
+                                    "name": "two_columns",
+                                    "label": "Two Columns",
+                                    "display": "table",
+                                    "sub_fields": [
+                                        {
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1,
+                                            "default_value": "",
+                                            "delay": 0,
+                                            "key": "field_5840de71782c6",
+                                            "label": "Text Editor Col First",
+                                            "name": "text_editor_col_first",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1,
+                                            "default_value": "",
+                                            "delay": 0,
+                                            "key": "field_5840dea1782c7",
+                                            "label": "Text Editor Col Seccond",
+                                            "name": "text_editor_col_seccond",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add Text Format Field",
+                            "key": "field_5840d8562db27",
+                            "label": "Text Format Field",
+                            "name": "text_format_field",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             ],
             "min": "",
@@ -586,5 +711,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1480567483
+    "modified": 1480646928
 }
