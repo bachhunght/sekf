@@ -1,6 +1,6 @@
 .footer {
   background-color: $blue;
-  text-align: center;
   color: $white;
-  padding: 40px 10px 70px;
+  padding: rem(40px 10px 70px);
+  text-align: center;
 }

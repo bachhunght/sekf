@@ -34,6 +34,14 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+@mixin lora {
+  font-family: 'Lora', serif;
+}
+
+@mixin fira-sans {
+  font-family: 'Fira Sans', sans-serif;
+}
+
 //Single image background with retina support
 //USAGE:  @include background-image-retina('preloader', 'GIF', rem(20px), rem(20px));
 @mixin background-image-retina($image-1x, $image-2x, $width, $height) {

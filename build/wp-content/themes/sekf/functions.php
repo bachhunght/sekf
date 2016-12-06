@@ -36,6 +36,9 @@ if(!is_admin()) {
 
   // Add stylesheet
   function sekf_styles() {
+    wp_register_style('font-awesome', get_stylesheet_directory_uri() . '/dist/css/font-awesome.min.css', array(), '4.3.0', 'all');
+    wp_enqueue_style('font-awesome');
+
     wp_register_style('bootstrap', get_stylesheet_directory_uri() . '/dist/css/bootstrap.min.css', array(), '3.0.3', 'all');
     wp_enqueue_style('bootstrap');
 
