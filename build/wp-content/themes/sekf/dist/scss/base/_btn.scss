@@ -1,6 +1,17 @@
 // Button
 .btn {
-  color: $primary-color;
+  background-color: $green;
+  border-radius: rem(8px);
+  border: 0;
+  color: $white;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  min-width: 184px;
+  padding: rem(10px 10px 7px 10px);
+  text-align: center;
+  text-transform: uppercase;
+
   &,
   &:focus,
   &:visited {
@@ -8,5 +19,6 @@
 
   &:active,
   &:hover {
+    background-color: $green-glitter;
   }
 }

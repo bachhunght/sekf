@@ -4,6 +4,8 @@
 // Ex:
 // @include font-face(Samplino, fonts/Samplino);
 
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,500,500i,700,700i&subset=cyrillic,cyrillic-ext,greek,latin-ext');
 @font-face {
   font-family: 'icomoon';
   src:  url('../fonts/icomoon.eot?foziim');

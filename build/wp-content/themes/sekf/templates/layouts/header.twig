@@ -1,10 +1,10 @@
 {% block header %}
   <header id="header" class="header clearfix bg--gradient-red">
-    <div class="heade__top">
+    <div class="header__top">
       <div class="container">
         {# {{function('icl_get_languages')|print_r}} #}
         {% include 'header-top-menu.twig' %}
-        <div class="container">{{acfwidget('group_header_component', 'header_widget-2')}}</div>
+        {{acfwidget('group_header_component', 'header_widget-2')}}
         {% include 'searchform.twig' %}
       </div>
     </div>
