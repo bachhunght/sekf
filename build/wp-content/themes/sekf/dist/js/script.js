@@ -53,6 +53,12 @@
 
   $(document).ready(function() {
     $('.ajax-pagination .pager-item a').on('click', pagination_ajax);
+    $('.box-slide').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true,
+      arrows : false,
+    });
   });
 
   $(window).load(function() {
