@@ -1,0 +1,16 @@
+<div class="views {{ ajax_views }} box-member">
+  <div class="container">
+    {% for post in posts %}
+      <div class=" box-member__item col-md-3 {{post.class|join(" ")}}">
+      {% if post.thumbnail.src %}
+        <div class="box-member__image">
+          <img src="{{post.thumbnail.src}}" class="feature" />
+        </div>
+        {% endif %}
+        <h3 class="box-member__name post-title">{{ post.title }}</h3>
+        <div class="box-member__position">{{post.group_field_page_types_0_description_field}}</div>
+        <div class="view_link"><a href=" {{post.link}} ">READ BIO</a></div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

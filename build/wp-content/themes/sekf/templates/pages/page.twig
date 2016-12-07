@@ -1,5 +1,10 @@
 {% extends 'layout.twig' %}
 
+{% block feature %}
+  <div class="box-feature">
+    <h1 class="post-detail-title">{{ post.head_banner_text }}</h1>
+  </div>
+{% endblock %}
 {% block content %}
   {% if title_option != "on" %}
     {% if post.title %}
