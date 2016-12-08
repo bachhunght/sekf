@@ -1,7 +1,13 @@
-<div class="views view-latest-news {{ ajax_views }}">
+<div class="views view-upcoming-event {{ ajax_views }}">
   {% for post in posts %}
+    {# {{post|print_r}} #}
   <div class="views__item {{post.class|join(" ")}}">
-    <div class="views__date">{{ post.date|date("Y.d.m") }}</div>
+    <div class="view-group-top">
+      <span class="views__date">{{ post.date|date("Y.d.m") }}</span>
+      {% if  post.group_category_events_0_plats %}
+        <span class="views__location"><span class="lable">location:</span>  {{post.group_category_events_0_plats}}</span>
+      {% endif %}
+    </div>
     <h3 class="post-title views__title">{{post.title}}</h3>
     <div class="views__content"><p>{{post.content|excerpt(30)}}</p></div>
     <div class="views_link"><a href="{{post.link}}">read more</a></div>

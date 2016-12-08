@@ -168,39 +168,5 @@ $susy-media: (
 
 
 .container {
-  @include container();
-
-  @include susy-media(tablet) {
-    @include container($susy-tablet);
-  }
-
-  @include susy-media(desktop) {
-    @include container($susy-desktop);
-  }
-}
-
-.container-wide {
-  @include container();
-
-  @include susy-media(tablet) {
-    @include container($susy-tablet);
-  }
-
-  @include susy-media(desktop) {
-    @include container($susy-desktop);
-  }
-
-  @include susy-media(desktop-wide) {
-    @include container($susy-desktop-medium);
-  }
-
-  @include susy-media(desktop-superwide1) {
-    @include container($susy-desktop-medium);
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  @include susy-media(desktop-superwide) {
-    @include container($susy-desktop-wide);
-  }
+  width: $desktop;
 }

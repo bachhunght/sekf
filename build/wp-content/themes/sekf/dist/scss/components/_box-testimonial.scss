@@ -1,0 +1,44 @@
+.box-testimonial {
+  text-align: center;
+  margin-bottom: rem(60px);
+
+  .box-title {
+    margin-bottom: rem(48px);
+  }
+
+  &__item {
+    padding-left: rem(75px);
+    padding-right: rem(75px);
+  }
+
+  &__quote {
+    font-size: rem(20px);
+    line-height: rem(28px);
+    margin-bottom: rem(30px);
+    position: relative;
+
+    &:before {
+      content: '\301E';
+      font-size: rem(48px);
+      font-weight: normal;
+      left: rem(-20px);
+      position: absolute;
+      top: rem(10px);
+    }
+  }
+
+  &__image {
+    margin-bottom: rem(20px);
+  }
+
+  &__name {
+    color: $dark-navy-blue;
+    line-height: rem(24px);
+    text-transform: uppercase;
+  }
+
+  &__positon {
+    color: $dark-navy-blue;
+  }
+}
+

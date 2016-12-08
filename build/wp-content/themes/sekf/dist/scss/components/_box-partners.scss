@@ -1,0 +1,15 @@
+.box-partners {
+  text-align: center;
+  padding-top: rem(70px);
+  padding-bottom: rem(90px);
+
+  .box-title {
+    margin-bottom: rem(50px);
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}

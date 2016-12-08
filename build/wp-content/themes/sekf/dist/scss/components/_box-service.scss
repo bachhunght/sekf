@@ -1,0 +1,39 @@
+.box-service {
+  text-align: center;
+  margin-bottom: rem(90px);
+
+  &__group {
+    padding: 0 rem(22px);
+  }
+
+  &__icon {
+    align-items: center;
+    background: rgba(0, 0, 0, 1);
+    border-radius: rem(200px);
+    display: flex;
+    height: rem(118px);
+    justify-content: center;
+    margin: 0 auto rem(50px);
+    width: rem(118px);
+  }
+
+  &__title {
+    color: $dark-navy-blue;
+    margin-bottom: rem(15px);
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-size: rem(16px);
+    line-height: 1.5;
+    font-weight: normal;
+    margin-bottom: rem(30px);
+  }
+
+  &__link {
+    a {
+      text-decoration: underline;
+      text-transform: uppercase;
+    }
+  }
+}

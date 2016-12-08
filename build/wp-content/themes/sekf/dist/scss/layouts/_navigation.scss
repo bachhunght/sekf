@@ -1,0 +1,17 @@
+.main-menu ul {
+    display: flex;
+
+    li {
+    font-size: rem(16px);
+    font-weight: 400;
+    padding: 0 rem(10px);
+
+    a {
+      color: $dark-navy-blue;
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+}

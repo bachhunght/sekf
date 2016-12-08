@@ -1,6 +1,45 @@
 .footer {
   background-color: $blue;
   color: $white;
-  padding: rem(40px 10px 70px);
+  padding: rem(40px 0 70px);
   text-align: center;
+}
+
+.box-information {
+  h2 {
+    color: $white;
+  }
+
+  &__title {
+    font-size: rem(18px);
+    line-height: rem(24px);
+    margin: 0 auto rem(10px);
+    max-width: rem(250px);
+  }
+
+  &__body {
+    font-size: rem(12px);
+    line-height: rem(16px);
+
+    p {
+      line-height: rem(16px);
+    }
+  }
+}
+
+.nav-footer {
+  border-top: rem(1px) solid rgba(255, 255, 255, .21);
+  margin: 0 auto;
+  max-width: rem(619px);
+
+  &__menu {
+    display: flex;
+    padding: rem(20px) 0;
+    font-size: rem(14px);
+    justify-content: space-between;
+
+    a {
+      color: $dark-navy-blue;
+    }
+  }
 }
