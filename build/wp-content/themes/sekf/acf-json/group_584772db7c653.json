@@ -1,6 +1,6 @@
 {
     "key": "group_584772db7c653",
-    "title": "Group Category Events",
+    "title": "Event Information",
     "fields": [
         {
             "layouts": [
@@ -48,14 +48,14 @@
                         }
                     ],
                     "min": "",
-                    "max": ""
+                    "max": "1"
                 }
             ],
             "min": "",
             "max": "",
             "button_label": "Add Row",
             "key": "field_584772df9b046",
-            "label": "Group Category Events",
+            "label": "Event Information",
             "name": "group_category_events",
             "type": "flexible_content",
             "instructions": "",
@@ -85,5 +85,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1481078080
+    "modified": 1481274859
 }
