@@ -8,16 +8,16 @@
   }
 
   .slick-track {
-    display: flex !important;
+    display: flex;
   }
 
   &__item {
     align-items: center;
-    display: flex !important;
+    display: flex;
     height: auto;
     justify-content: center;
 
-    &.slick-initialized.slick-slide {
+    &.slick-slide {
       display: flex;
     }
   }
