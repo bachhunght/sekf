@@ -1,15 +1,24 @@
 .box-partners {
-  text-align: center;
-  padding-top: rem(70px);
   padding-bottom: rem(90px);
+  padding-top: rem(70px);
+  text-align: center;
 
   .box-title {
     margin-bottom: rem(50px);
   }
 
+  .slick-track {
+    display: flex;
+  }
+
   &__item {
     align-items: center;
     display: flex;
+    height: auto;
     justify-content: center;
+
+    &.slick-slide {
+      display: flex;
+    }
   }
 }
