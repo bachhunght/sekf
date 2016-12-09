@@ -53,7 +53,22 @@
 
   $(document).ready(function() {
     $('.ajax-pagination .pager-item a').on('click', pagination_ajax);
+    $('.box-slide').slick({
+      autoplay: false,
+      autoplaySpeed: 2000,
+      dots: true,
+      arrows : false,
+      pauseOnHover: false,
+    });
+
+     $('.js-toggle').on('click', function(e) {
+      $('.form-search').toggleClass("active");
+      e.preventDefault();
+    });
+
   });
+  $('.box-testimonial__quote').matchHeight();
+  $('.box-partners__item').matchHeight();
 
   $(window).load(function() {
     // Call to function

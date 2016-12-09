@@ -1,9 +1,15 @@
-{% for item in  text_format_field %}
-  <div class="row">
-    <div class="col-sm-12"> {{ item.text_editor_one_column }} </div>
+<div class="box-text-format">
+  <div class="container">
+    {% for item in  text_format_field %}
+      {% if item.text_editor_one_column %}
+      <div class="row">
+        <div class="col-sm-12"> {{ item.text_editor_one_column }} </div>
+      </div>
+    {% endif %}
+      <div class="row">
+        <div class="col-sm-6 col-first">{{ item.text_editor_col_first }}</div>
+        <div class="col-sm-6 col-last">{{ item.text_editor_col_seccond }}</div>
+      </div>
+    {% endfor %}
   </div>
-  <div class="row">
-    <div class="col-sm-6">{{ item.text_editor_col_first }}</div>
-    <div class="col-sm-6">{{ item.text_editor_col_seccond }}</div>
-  </div>
-{% endfor %}
+</div>

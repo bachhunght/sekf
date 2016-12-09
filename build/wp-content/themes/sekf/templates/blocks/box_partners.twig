@@ -1,7 +1,10 @@
 <div class="box-partners">
+  <div class="container">
+    <h2 class="box-title"> {{box_partners_title}} </h1>
   {% for item in box_partners_items %}
-    <div class="box-partners__item">
+    <div class="box-partners__item col-md-3 ">
       <div class="box-partners__image"><img src=" {{ item.box_partners_image }} " ></div>
     </div>
   {% endfor %}
+  </div>
 </div>

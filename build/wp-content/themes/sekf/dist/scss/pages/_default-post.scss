@@ -1,0 +1,40 @@
+.post-date {
+  font-size: rem(14px);
+  margin-bottom: rem(30px);
+
+  .lable {
+    color: $red-leight;
+    font-size: rem(14px);
+    margin-right: rem(15px);
+    opacity: .75;
+  }
+}
+
+.page-template-default {
+  h3 {
+    margin-bottom: rem(20px);
+  }
+}
+
+.box-post-link {
+  background: rgba(135, 155, 21, .05);
+  padding: rem(48px);
+
+  h2 {
+    margin-bottom: rem(20px);
+  }
+
+  p {
+    margin-bottom: rem(15px);
+  }
+
+  .views__date {
+    color: $red-leight;
+    margin-bottom: rem(10px);
+    opacity: .75;
+  }
+
+  .views-link {
+    margin-bottom: rem(30px);
+  }
+}

@@ -1,6 +1,69 @@
 .header {
-
   &__top {
     background-color: $gary-glitter;
+
+    &-menu-wrap {
+      text-align: right;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: rem(38px);
+
+
+      .form-search {
+        display: none;
+        padding: rem(7px 15px);
+        border-left: rem(1px) solid $gray;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .site-logo {
+      line-height: 0;
+      margin-right: rem(15px);
+    }
+
+    .site-description {
+      @include fira-sans;
+      color: $dark-navy-blue;
+      font-size: rem(18px);
+    }
+  }
+
+  &__bottom__content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: rem(10px) 0;
+  }
+}
+
+
+.nav-header {
+  &__menu {
+    li {
+      float: left;
+      text-transform: uppercase;
+      padding: rem(8px 12px);
+      border-left: rem(1px) solid rgba(1, 131, 197, .05);
+
+      a {
+        color: $gray-b5bf;
+        font-size: rem(14px);
+        text-transform: uppercase;
+      }
+    }
   }
 }

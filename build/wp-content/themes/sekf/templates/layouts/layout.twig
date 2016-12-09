@@ -32,7 +32,7 @@
 
       <main role="main" class="clearfix {{page_layout}} {% if  not function('is_page') %} container {% endif %} ">
         {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) %}
-          {% set main_content_class = 'col-md-9' %}
+          {% set main_content_class = 'col-md-8' %}
           <div class="row">
         {% endif %}
 
@@ -45,7 +45,7 @@
         </div>
 
         {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) %}
-        <section class="sidebar-right col-md-3">
+        <section class="sidebar-right col-md-4">
           <div class="sidebar-right__inner">
             {% block aside %}
             {% endblock %}

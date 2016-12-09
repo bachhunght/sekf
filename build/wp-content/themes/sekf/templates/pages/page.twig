@@ -1,12 +1,27 @@
 {% extends 'layout.twig' %}
 
+{% block feature %}
+  {% if post.head_banner_text %}
+    <div class="box-feature">
+      <div class="container">
+        <h1 class="post-heightline-title">{{ post.head_banner_text }}</h1>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
+
 {% block content %}
   {% if title_option != "on" %}
     {% if post.title %}
-    <h1 id="page-title">
+    <h2 id="page-title" class="page-title">
       {{ post.title }}
-    </h1>
+    </h2>
     {% endif %}
+  {% endif %}
+
+  {% if function('is_front_page') %}
+    {% else %}
+      <div class="post-date"><span class="lable">PUBLISHED ON</span>{{ post.post_date|date('y.m.d')}}</div>
   {% endif %}
 
   {% for post in posts %}

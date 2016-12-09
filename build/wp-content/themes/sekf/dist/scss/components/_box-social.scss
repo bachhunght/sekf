@@ -1,0 +1,36 @@
+.box-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    border-left: 1px solid rgba(1, 131, 197, .05);
+
+    &:last-child {
+      // border-right: 1px solid #ccc;
+    }
+  }
+
+  &__icon {
+    overflow: hidden;
+    line-height: 1;
+    display: inline-block;
+    text-align: center;
+    padding: 0 rem(15px);
+
+    a {
+      color: transparent;
+      display: inline-block;
+      font-size: 0;
+      text-indent: rem(-148px);
+
+      &:before {
+        color: $dark-navy-blue;
+        float: left;
+        font-size: rem(20px);
+        text-indent: 0;
+        opacity: .25;
+      }
+    }
+  }
+}

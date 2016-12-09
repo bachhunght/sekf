@@ -11,6 +11,25 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_58478c80673ca",
+                            "label": "Box Post Link Title",
+                            "name": "box_post_link_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
                             "post_type": [],
                             "taxonomy": [],
                             "allow_null": 0,
@@ -76,5 +95,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1480585572
+    "modified": 1481084132
 }
