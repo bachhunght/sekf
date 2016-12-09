@@ -22,8 +22,25 @@ html {
 body {
   // Disable in production mode;
   // @include show-breakpoints;
+  @include fira-sans;
   text-size-adjust: none;
-  @include lora;
+  color: $dark-blue;
 }
 
 
+.box-feature {
+  background-image: url("../images/map.jpg");
+  height: 190px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: rgb(1, 131, 197);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.post-heightline-title {
+  color: $white;
+}

@@ -1,0 +1,15 @@
+.box-member {
+  text-align: center;
+  &-wrap {
+    padding: rem(70px) 0;
+  }
+
+  &__image {
+    line-height: 0;
+    width: rem(140px);
+    height: rem(140px);
+    border-radius: rem(200px);
+    overflow: hidden;
+    margin: 0 auto rem(20px);
+  }
+}
