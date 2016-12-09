@@ -61,11 +61,10 @@
       pauseOnHover: false,
     });
     $('.box-partners__list').slick({
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 2000,
       dots: false,
       arrows : false,
-      // adaptiveHeight: false,
       pauseOnHover: true,
       slidesToShow: 4,
       slidesToScroll: 1
