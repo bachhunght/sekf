@@ -28,7 +28,11 @@
   }
 
   &__image {
-    margin-bottom: rem(20px);
+    width: rem(140px);
+    height: rem(140px);
+    margin: 0 auto rem(20px);
+    border-radius: rem(200px);
+    overflow: hidden;
   }
 
   &__name {
@@ -39,6 +43,7 @@
 
   &__positon {
     color: $dark-navy-blue;
+    text-transform: capitalize;
   }
 }
 

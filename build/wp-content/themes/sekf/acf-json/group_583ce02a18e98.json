@@ -70,7 +70,7 @@
                 {
                     "key": "583fa8b054c07",
                     "name": "banner_slide",
-                    "label": "Banner slide",
+                    "label": "Box slide",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -93,7 +93,7 @@
                                             "max_size": "",
                                             "mime_types": "",
                                             "key": "field_583fa8ca54c09",
-                                            "label": "Slide Image",
+                                            "label": "Image",
                                             "name": "slide_image",
                                             "type": "image",
                                             "instructions": "",
@@ -112,7 +112,7 @@
                                             "prepend": "",
                                             "append": "",
                                             "key": "field_583fa8e254c0a",
-                                            "label": "Slide Title",
+                                            "label": "Title",
                                             "name": "slide_title",
                                             "type": "text",
                                             "instructions": "",
@@ -131,7 +131,7 @@
                             ],
                             "min": "",
                             "max": "",
-                            "button_label": "Add  Item Slide",
+                            "button_label": "Add  Item",
                             "key": "field_583fa8b554c08",
                             "label": "Slide Items",
                             "name": "slide_items",
@@ -189,16 +189,16 @@
                                             "min_width": "",
                                             "min_height": "",
                                             "min_size": "",
-                                            "max_width": "",
-                                            "max_height": "",
+                                            "max_width": "118px",
+                                            "max_height": "118px",
                                             "max_size": "",
                                             "mime_types": "",
                                             "key": "field_583fa9bbe23d4",
                                             "label": "Box Service Icon",
                                             "name": "box_service_icon",
                                             "type": "image",
-                                            "instructions": "",
-                                            "required": 0,
+                                            "instructions": "upload images less than or equal 118px",
+                                            "required": 1,
                                             "conditional_logic": 0,
                                             "wrapper": {
                                                 "width": "",
@@ -358,12 +358,12 @@
                                     "sub_fields": [
                                         {
                                             "default_value": "",
-                                            "new_lines": "",
+                                            "new_lines": "wpautop",
                                             "maxlength": "",
                                             "placeholder": "",
                                             "rows": "",
                                             "key": "field_583fa6e088c63",
-                                            "label": "Box Testimonial Quote",
+                                            "label": "Quote",
                                             "name": "box_testimonial_quote",
                                             "type": "textarea",
                                             "instructions": "",
@@ -387,7 +387,7 @@
                                             "max_size": "",
                                             "mime_types": "",
                                             "key": "field_583fa78788c67",
-                                            "label": "Box Testimonial Image",
+                                            "label": "Image",
                                             "name": "box_testimonial_image",
                                             "type": "image",
                                             "instructions": "",
@@ -406,7 +406,7 @@
                                             "prepend": "",
                                             "append": "",
                                             "key": "field_583fa70a88c64",
-                                            "label": "Box Testimonial Name",
+                                            "label": "Customer  Name",
                                             "name": "box_testimonial_name",
                                             "type": "text",
                                             "instructions": "",
@@ -425,7 +425,7 @@
                                             "prepend": "",
                                             "append": "",
                                             "key": "field_583fa72688c65",
-                                            "label": "Box Testimonial Position",
+                                            "label": "Customer Title",
                                             "name": "box_testimonial_position",
                                             "type": "text",
                                             "instructions": "",
@@ -444,7 +444,7 @@
                             ],
                             "min": "",
                             "max": "",
-                            "button_label": "Add Testimonial items",
+                            "button_label": "Add  item",
                             "key": "field_583fa6c288c62",
                             "label": "Box Testimonial items",
                             "name": "box_testimonial_items",
@@ -662,6 +662,25 @@
                                                 "class": "",
                                                 "id": ""
                                             }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "key": "field_584a64348e84c",
+                                            "label": "Two Columns Class",
+                                            "name": "two_columns_class",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "two-columns-class",
+                                                "id": "two-columns-class"
+                                            }
                                         }
                                     ],
                                     "min": "",
@@ -730,5 +749,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1481186613
+    "modified": 1481276867
 }
