@@ -1,0 +1,53 @@
+.teaser-list {
+  &__item {
+
+  }
+  &__image {
+
+  }
+
+  &__date {
+    font-size: rem(14px);
+
+    .lable {
+      color: $red-leight;
+      opacity: .75;
+      margin-bottom: rem(10px);
+      margin-right: rem(5px);
+    }
+
+    &.none-lable {
+      color: $red-leight;
+      margin-bottom: rem(10px);
+      margin-right: rem(50px);
+      opacity: .75;
+    }
+  }
+
+  &__group {
+    margin-bottom: rem(10px);
+  }
+
+  &__location {
+    font-size: rem(14px);
+    .lable {
+      color: $red-leight;
+      margin-bottom: rem(10px);
+      opacity: .75;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(10px);
+  }
+
+  &__content {
+
+  }
+
+  &__more {
+    margin-bottom: rem(40px);
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+}

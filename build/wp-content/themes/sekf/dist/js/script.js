@@ -60,6 +60,15 @@
       arrows : false,
       pauseOnHover: false,
     });
+    $('.box-partners__list').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: false,
+      arrows : false,
+      pauseOnHover: true,
+      slidesToShow: 4,
+      slidesToScroll: 1
+    });
 
      $('.js-toggle').on('click', function(e) {
       $('.form-search').toggleClass("active");
@@ -68,7 +77,7 @@
 
   });
   $('.box-testimonial__quote').matchHeight();
-  $('.box-partners__item').matchHeight();
+  // $('.box-partners__item').matchHeight();
 
   $(window).load(function() {
     // Call to function

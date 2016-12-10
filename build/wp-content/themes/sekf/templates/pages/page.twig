@@ -8,6 +8,11 @@
       </div>
     </div>
   {% endif %}
+  <div class="description-wrap">
+    <div class="container">
+      {{ post.description_post_page }}
+    </div>
+  </div>
 {% endblock %}
 
 {% block content %}
@@ -17,19 +22,15 @@
       {{ post.title }}
     </h2>
     {% endif %}
+    <div class="post-date"><span class="lable">PUBLISHED ON</span>{{ post.post_date|date('y.m.d')}}</div>
   {% endif %}
 
-  {% if function('is_front_page') %}
-    {% else %}
-      <div class="post-date"><span class="lable">PUBLISHED ON</span>{{ post.post_date|date('y.m.d')}}</div>
-  {% endif %}
 
   {% for post in posts %}
     {% if not function('is_page') %}
       <h3 class="post-title"><a href="{{ post.link }}">{{ post.title }}</a></h3>
     {% endif %}
     {{  post.post_content|shortcodes }}
-    {{ flexible_content('group_field_page_types') }}
     {{ flexible_content('group_component') }}
     {{ flexible_content('view_component') }}
   {% endfor %}

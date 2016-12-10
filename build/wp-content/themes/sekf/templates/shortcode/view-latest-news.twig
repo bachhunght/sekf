@@ -1,10 +1,10 @@
-<div class="views view-latest-news {{ ajax_views }}">
+<div class="views view-latest-news teaser-list {{ ajax_views }}">
   {% for post in posts %}
-  <div class="views__item {{post.class|join(" ")}}">
-    <div class="views__date">{{ post.date|date("Y.d.m") }}</div>
-    <h3 class="post-title views__title">{{post.title}}</h3>
-    <div class="views__content"><p>{{post.content|excerpt(30)}}</p></div>
-    <div class="views_link"><a href="{{post.link}}">read more</a></div>
-  </div>
+    <div class="teaser-list__item">
+      <div class="teaser-list__date none-lable">{{ post.post_date|date('y.m.d')}}</div>
+      <h3 class="teaser-list__title">{{post.title}}</h3>
+      <div class="teaser-list__content"><p>{{post.content|excerpt(30)}}</p></div>
+      <div class="teaser-list__more"><a href="{{post.link}}">read more</a></div>
+    </div>
   {% endfor %}
 </div>
