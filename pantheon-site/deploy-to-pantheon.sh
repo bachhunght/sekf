@@ -12,7 +12,7 @@ if [ ! -d ".pantheon" ]
 then
 	# Clone the Pantheon repoa
 	echo -e "\n${txtgrn}Cloning Pantheon repository ${txtrst}"
-	git clone $PANTHEON_GIT_URL " .pantheon"
+	git clone $PANTHEON_GIT_URL ".pantheon"
 else
 	echo -e "\n${txtgrn}Pull latest from Pantheon ${txtrst}"
 	git -C ".pantheon" pull
