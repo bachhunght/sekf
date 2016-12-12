@@ -70,6 +70,16 @@
       slidesToScroll: 1
     });
 
+    $('.box-testimonial__list').slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: false,
+      arrows : false,
+      pauseOnHover: true,
+      slidesToShow: 3,
+      slidesToScroll: 1
+    });
+
      $('.js-toggle').on('click', function(e) {
       $('.form-search').toggleClass("active");
       e.preventDefault();

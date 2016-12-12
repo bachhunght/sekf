@@ -7,10 +7,12 @@
     position: relative;
 
    .box-slide-image {
+    background-size: cover;
     line-height: 0;
 
     img {
       height: rem(430px);
+      opacity: 0;
       width: 100%;
     }
    }
@@ -23,9 +25,9 @@
     line-height: 1.17;
     min-width: rem(800px);
     position: absolute;
+    text-align: center;
     top: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
   }
 }
 
@@ -34,36 +36,36 @@
 
    li {
     height: rem(10px);
-    width: rem(10px);
     margin: 0 rem(6px);
+    width: rem(10px);
 
       button {
-        width: auto;
         height: auto;
-        padding: 0;
         margin: 0;
+        padding: 0;
+        width: auto;
 
         &:before {
-        background: $gray-d8;
-        border-radius: rem(200px);
-        color: $dark-navy-blue;
-        content: "";
-        height: rem(10px);
-        opacity: 1;
-        width: rem(10px);
+          background: $gray-d8;
+          border-radius: rem(200px);
+          color: $dark-navy-blue;
+          content: "";
+          height: rem(10px);
+          opacity: 1;
+          width: rem(10px);
       }
       }
    }
 
 
   li.slick-active button:before {
-    opacity: 1;
-    color: $dark-navy-blue;
-    content: "";
-    width: rem(10px);
-    height: rem(10px);
     background: $dark-navy-blue;
     border-radius: rem(200px);
+    color: $dark-navy-blue;
+    content: "";
+    height: rem(10px);
+    opacity: 1;
+    width: rem(10px);
   }
 }
 

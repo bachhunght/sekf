@@ -237,3 +237,9 @@ keygen:focus,
 select:focus {
   outline-offset: rem(-2px);
 }
+
+.user-image-default {
+  background-image: url('../images/user.jpg');
+  background-size: cover;
+  border: rem(1px) solid $gray-d8;
+}

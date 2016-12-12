@@ -1,7 +1,7 @@
 <div class="box-slide">
 {% for item in slide_items %}
   <div class="box-slide__item">
-    <div class="box-slide-image">
+    <div class="box-slide-image" style="background-image: url('{{item.slide_image}}')">
       <img src="{{item.slide_image}}" alt="">
     </div>
     <div class="box-slide__title">{{ item.slide_title }}</div>

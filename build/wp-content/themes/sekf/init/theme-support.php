@@ -44,7 +44,6 @@ add_action( 'init', 'sekf_remove_default_field' );
 add_filter( 'user_can_richedit', 'sekf_remove_default_field' );
 function sekf_remove_default_field() {
   global $post;
-  // remove_post_type_support( 'page', 'thumbnail' );
   if (($post->post_name == 'home') && ($post->post_type == 'page')) {
     remove_post_type_support( 'page', 'editor' );
   }
