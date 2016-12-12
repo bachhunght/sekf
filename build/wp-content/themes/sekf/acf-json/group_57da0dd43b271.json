@@ -34,10 +34,10 @@
                             "allow_null": 0,
                             "choices": {
                                 "views": "Default Template",
-                                "member": "View Member",
-                                "upcoming-events": "View Member Upcoming Events",
-                                "latest-news": "View Latest News",
-                                "news-list": "View News List"
+                                "member": "Member",
+                                "upcoming-events": "Upcoming Events",
+                                "latest-news": "Latest News",
+                                "news-list": "News List"
                             },
                             "default_value": [],
                             "ui": 0,
@@ -1103,7 +1103,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": 0,
     "description": "",
-    "modified": 1481257291
+    "modified": 1481526654
 }
