@@ -76,7 +76,9 @@
     });
 
   });
+
   $('.box-testimonial__quote').matchHeight();
+  $('.box-member__item').matchHeight();
   // $('.box-partners__item').matchHeight();
 
   $(window).load(function() {

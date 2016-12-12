@@ -8,11 +8,13 @@
       </div>
     </div>
   {% endif %}
+  {% if post.description_post_page %}
   <div class="description-wrap">
     <div class="container">
       {{ post.description_post_page }}
     </div>
   </div>
+  {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -30,7 +32,9 @@
     {% if not function('is_page') %}
       <h3 class="post-title"><a href="{{ post.link }}">{{ post.title }}</a></h3>
     {% endif %}
-    {{  post.post_content|shortcodes }}
+    {% if post.post_content %}
+      {{  post.post_content|shortcodes }}
+    {% endif %}
     {{ flexible_content('group_component') }}
     {{ flexible_content('view_component') }}
   {% endfor %}

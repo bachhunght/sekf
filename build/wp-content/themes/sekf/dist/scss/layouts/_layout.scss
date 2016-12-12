@@ -44,3 +44,9 @@ body {
 .post-heightline-title {
   color: $white;
 }
+
+.description-wrap {
+  max-width: rem(890px);
+  text-align: center;
+  margin: 0 auto rem(70px);
+}
