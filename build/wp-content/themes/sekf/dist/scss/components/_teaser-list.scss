@@ -56,12 +56,21 @@
   }
 
   &--grid {
+    display: inline-block;
     width: 100%;
 
     .teaser-list__item {
       float: left;
       width: 50%;
+      padding: 0 20px;
+      //margin-right: 8px;
+      box-sizing: border-box;
+      //display: inline-block;
       background-color: rgba(1, 131, 197, .05);
+
+      // &:nth-child(even) {
+      //   margin-right: 0;
+      // }
     }
   }
 }

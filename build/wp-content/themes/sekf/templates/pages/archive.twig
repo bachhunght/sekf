@@ -20,7 +20,7 @@
 {% endblock %}
 
 {% block content %}
-  <div class="teaser-list teaser-list--grid js-masonry">
+  <div class="teaser-list teaser-list--grid js-masonry-teaser">
     {% for post in term.get_posts({'posts_per_page': count, 'paged': paged}) %}
       {% if function('is_tag') %}
         {% include ['tags.twig', 'archive-tease.twig'] %}

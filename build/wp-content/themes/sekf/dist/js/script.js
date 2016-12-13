@@ -85,9 +85,8 @@
       e.preventDefault();
     });
 
-    var $postlistmasonry = $('.js-masonry');
+    var $postlistmasonry = $('.js-masonry-teaser');
     $postlistmasonry.masonry({
-        isFitWidth: true,
         itemSelector: '.teaser-list__item'
     });
 
