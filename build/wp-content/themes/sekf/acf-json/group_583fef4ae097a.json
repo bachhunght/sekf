@@ -85,6 +85,13 @@
                 "operator": "==",
                 "value": "page"
             }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "category"
+            }
         ]
     ],
     "menu_order": 0,
@@ -95,5 +102,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1481084132
+    "modified": 1481535314
 }

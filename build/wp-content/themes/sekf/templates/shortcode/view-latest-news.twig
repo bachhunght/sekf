@@ -1,7 +1,7 @@
 <div class="views view-latest-news teaser-list {{ ajax_views }}">
   {% for post in posts %}
     <div class="teaser-list__item">
-      <div class="teaser-list__date none-lable">{{ post.post_date|date('y.m.d')}}</div>
+      <div class="teaser-list__date none-lable"><span class="lable">Plats: </span>{{ post.post_date|date('Y.m.d')}}</div>
       <h3 class="teaser-list__title">{{post.title}}</h3>
       <div class="teaser-list__content"><p>{{post.content|excerpt(30)}}</p></div>
       <div class="teaser-list__more"><a href="{{post.link}}">read more</a></div>

@@ -2,9 +2,9 @@
   {% for post in posts %}
   <div class="teaser-list__item {{post.class|join(" ")}}">
     <div class="teaser-list__group">
-      <span class="teaser-list__date none-lable">{{ post.post_date|date('y.m.d')}}</span>
+      <span class="teaser-list__date none-lable"><span class="lable">Plats: </span> {{ post.post_date|date('Y.m.d')}}</span>
       {% if  post.group_category_events_0_plats %}
-        <span class="teaser-list__location"><span class="lable">location:</span>  {{post.group_category_events_0_plats}}</span>
+        <span class="teaser-list__location"><span class="lable">Plats:</span>  {{post.group_category_events_0_plats}}</span>
       {% endif %}
     </div>
     <h3 class="teaser-list__title">{{post.title}}</h3>

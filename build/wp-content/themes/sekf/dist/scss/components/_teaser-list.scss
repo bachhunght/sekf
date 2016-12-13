@@ -13,7 +13,6 @@
       color: $red-leight;
       margin-bottom: rem(10px);
       margin-right: rem(5px);
-      opacity: .75;
       text-transform: capitalize;
     }
 
@@ -26,26 +25,29 @@
   }
 
   &__group {
-    margin-bottom: rem(10px);
+    margin-bottom: rem(15px);
   }
 
   &__location {
     font-size: rem(14px);
+    color: $red-leight;
+    opacity: .75;
 
     .lable {
       color: $red-leight;
       margin-bottom: rem(10px);
-      opacity: .75;
       text-transform: capitalize;
     }
   }
 
   &__title {
-    margin-bottom: rem(10px);
+    margin-bottom: rem(5px);
   }
 
   &__content {
-
+    p {
+      margin-bottom: 10px;
+    }
   }
 
   &__more {

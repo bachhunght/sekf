@@ -40,12 +40,25 @@ function sekf_setup() {
 // Theme support custom logo
 add_theme_support( 'post-thumbnails' );
 
-add_action( 'init', 'sekf_remove_default_field' );
-add_filter( 'user_can_richedit', 'sekf_remove_default_field' );
-function sekf_remove_default_field() {
+add_action( 'admin_init', 'sekf_remove_default_field' );
+//add_filter( 'user_can_richedit', 'sekf_remove_default_field' );
+/*function sekf_remove_default_field() {
   global $post;
+  print_r($post);
   if (($post->post_name == 'home') && ($post->post_type == 'page')) {
-    remove_post_type_support( 'page', 'editor' );
+    //remove_post_type_support( 'page', 'editor' );
+    //echo '<style>#post-body-content #postdivrich {display: none;}</style>';
+  }
+}*/
+function sekf_remove_default_field() {
+  // Get the Post ID.
+  $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+  if( !isset( $post_id ) ) return;
+  // Hide the editor on the page titled 'Homepage'
+  $slug = get_post_field( 'post_name', $post_id );
+  $homepgname = get_the_title($post_id);
+  if($slug == 'home'){
+    remove_post_type_support('page', 'editor');
   }
 }
 

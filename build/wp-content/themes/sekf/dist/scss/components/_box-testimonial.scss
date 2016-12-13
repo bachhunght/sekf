@@ -3,19 +3,23 @@
   margin-bottom: rem(60px);
 
   .box-title {
-    margin-bottom: rem(48px);
+    margin-bottom: rem(43px);
   }
 
   &__item {
-    padding-left: rem(75px);
-    padding-right: rem(75px);
+    padding-left: rem(80px);
+    padding-right: rem(80px);
   }
 
   &__quote {
     font-size: rem(20px);
     line-height: rem(28px);
-    margin-bottom: rem(30px);
+    margin-bottom: rem(25px);
     position: relative;
+
+    p {
+      line-height: 28px;
+    }
 
     &:before {
       content: '\301E';
@@ -30,7 +34,7 @@
   &__image {
     width: rem(140px);
     height: rem(140px);
-    margin: 0 auto rem(20px);
+    margin: 0 auto rem(28px);
     border-radius: rem(200px);
     overflow: hidden;
   }

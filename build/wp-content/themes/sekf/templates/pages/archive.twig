@@ -1,5 +1,21 @@
 {% extends 'layout.twig' %}
 
+{% block feature %}
+  {% if post.head_banner_text %}
+    <div class="box-feature">
+      <div class="container">
+        <h1 class="post-heightline-title">{{ post.head_banner_text }}</h1>
+      </div>
+    </div>
+  {% endif %}
+  {% if post.description_post_page %}
+  <div class="description-wrap">
+    <div class="container">
+      {{ post.description_post_page }}
+    </div>
+  </div>
+  {% endif %}
+{% endblock %}
 {% block content %}
   {% if title is defined %}
     <h2 id="page-title">{{title}}</h2>
