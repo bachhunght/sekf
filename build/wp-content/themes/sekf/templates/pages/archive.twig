@@ -4,7 +4,9 @@
   {% if term.head_banner_text %}
     <div class="box-feature">
       <div class="container">
-        <h1 class="post-heightline-title">{{ term.head_banner_text }}</h1>
+        <h1 class="post-heightline-title">
+          {% if title is defined %} {{ title }} {% endif %}
+        </h1>
       </div>
     </div>
   {% endif %}
@@ -18,20 +20,19 @@
 {% endblock %}
 
 {% block content %}
-  {% if title is defined %}
-    <h2 id="page-title">{{title}}</h2>
-  {% endif %}
-  {% for post in term.get_posts({'posts_per_page': count, 'paged': paged}) %}
-    {% if function('is_tag') %}
-      {% include ['tags.twig', 'archive-tease.twig'] %}
-    {% elseif function('is_category') %}
-      {% include ['category.twig', 'archive-tease.twig'] %}
-    {% elseif function('is_post_type_archive') %}
-      {% include ["archive-"~post.post_type~".twig", 'archive-tease.twig'] %}
-    {% else %}
-      {% include 'archive-tease.twig' %}
-    {% endif %}
-  {% endfor %}
+  <div class="teaser-list">
+    {% for post in term.get_posts({'posts_per_page': count, 'paged': paged}) %}
+      {% if function('is_tag') %}
+        {% include ['tags.twig', 'archive-tease.twig'] %}
+      {% elseif function('is_category') %}
+        {% include ['category.twig', 'archive-tease.twig'] %}
+      {% elseif function('is_post_type_archive') %}
+        {% include ["archive-"~post.post_type~".twig", 'archive-tease.twig'] %}
+      {% else %}
+        {% include 'archive-tease.twig' %}
+      {% endif %}
+    {% endfor %}
+  </div>
   {% include 'pagination.twig' %}
 {% endblock %}
 
