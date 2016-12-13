@@ -1,7 +1,7 @@
 {% block content %}
   <h2 class="post-detail-title">{{ post.title }}</h2>
   <div class="content-post">
-  <div class="post-date">{{ post.post_date|date('Y.m.d')}}</div>
+  <div class="post-date teaser-list__date "><span class="lable">Datum: </span>{{ post.post_date|date('Y.m.d')}}</div>
   {% if post.thumbnail.src %}
   <div class="post-picture">
     <p><img src="{{post.thumbnail.src}}" class="feature" /></p>
