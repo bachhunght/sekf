@@ -243,3 +243,12 @@ select:focus {
   background-size: cover;
   border: rem(1px) solid $gray-d8;
 }
+
+.slick-prev, .slick-next {
+  min-width: inherit;
+
+  &:before {
+    color: $gray-d8;
+    font-size: 30px;
+  }
+}

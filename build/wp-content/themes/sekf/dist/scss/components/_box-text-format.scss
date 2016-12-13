@@ -1,6 +1,6 @@
 .box-text-format {
   background: rgba(1, 131, 197, .05);
-  margin-bottom: rem(70px);
+  margin-bottom: rem(60px);
 
   h2 {
     margin-bottom: rem(15px);
@@ -20,18 +20,20 @@
   }
 
   .col-sm-6 {
-    padding-bottom: rem(100px);
-    padding-top: rem(70px);
+    padding-bottom: rem(65px);
+    padding-top: rem(59px);
   }
 
 .col-first {
-  padding-right: rem(35px);
+  padding-right: rem(40px);
   border-right: rem(1px) solid $white;
+  padding-left: rem(40px);
  }
 
 .col-last {
   padding-left: rem(35px);
   border-left: rem(1px) solid $white;
+  padding-right: rem(40px);
  }
 }
 

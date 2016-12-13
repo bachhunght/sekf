@@ -8,13 +8,6 @@
       </div>
     </div>
   {% endif %}
-  {% if post.description_post_page %}
-  <div class="description-wrap">
-    <div class="container">
-      {{ post.description_post_page }}
-    </div>
-  </div>
-  {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -24,7 +17,7 @@
       {{ post.title }}
     </h2>
     {% endif %}
-    <div class="post-date"><span class="lable">PUBLISHED ON</span>{{ post.post_date|date('y.m.d')}}</div>
+    <div class="post-date"><span class="lable">Plats: </span>{{ post.post_date|date('Y.m.d')}}</div>
   {% endif %}
 
 

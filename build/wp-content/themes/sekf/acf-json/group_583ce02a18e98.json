@@ -38,7 +38,7 @@
                 {
                     "key": "583fa3811b234",
                     "name": "box_contact_form_seven",
-                    "label": "Box contact form 7",
+                    "label": "Box Contact Form 7",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -51,7 +51,7 @@
                             "return_format": "object",
                             "ui": 1,
                             "key": "field_583fa4191b235",
-                            "label": "Box Form",
+                            "label": "Form",
                             "name": "box_form",
                             "type": "post_object",
                             "instructions": "",
@@ -70,7 +70,7 @@
                 {
                     "key": "583fa8b054c07",
                     "name": "banner_slide",
-                    "label": "Box slide",
+                    "label": "Box Slide",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -78,7 +78,7 @@
                                 {
                                     "key": "583fa8c400c24",
                                     "name": "slide_item",
-                                    "label": "Slide Item",
+                                    "label": "Add Item",
                                     "display": "row",
                                     "sub_fields": [
                                         {
@@ -133,7 +133,7 @@
                             "max": "",
                             "button_label": "Add  Item",
                             "key": "field_583fa8b554c08",
-                            "label": "Slide Items",
+                            "label": "Items",
                             "name": "slide_items",
                             "type": "flexible_content",
                             "instructions": "",
@@ -152,7 +152,7 @@
                 {
                     "key": "583fa966e23d1",
                     "name": "box_service",
-                    "label": "Box service",
+                    "label": "Box Service",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -162,7 +162,7 @@
                             "prepend": "",
                             "append": "",
                             "key": "field_583fa96be23d2",
-                            "label": "Box service title",
+                            "label": "Title",
                             "name": "box_service_title",
                             "type": "text",
                             "instructions": "",
@@ -179,7 +179,7 @@
                                 {
                                     "key": "583fa9a613077",
                                     "name": "box_service_item",
-                                    "label": "Box Service Item",
+                                    "label": "Add Item",
                                     "display": "row",
                                     "sub_fields": [
                                         {
@@ -194,7 +194,7 @@
                                             "max_size": "",
                                             "mime_types": "",
                                             "key": "field_583fa9bbe23d4",
-                                            "label": "Box Service Icon",
+                                            "label": "Icon",
                                             "name": "box_service_icon",
                                             "type": "image",
                                             "instructions": "upload images less than or equal 118px",
@@ -213,7 +213,7 @@
                                             "prepend": "",
                                             "append": "",
                                             "key": "field_583fa9dee23d5",
-                                            "label": "Box Service Title",
+                                            "label": "Title",
                                             "name": "box_service_title",
                                             "type": "text",
                                             "instructions": "",
@@ -232,7 +232,7 @@
                                             "placeholder": "",
                                             "rows": 5,
                                             "key": "field_583fa9f2e23d6",
-                                            "label": "Box Service Description",
+                                            "label": "Description",
                                             "name": "box_service_description",
                                             "type": "textarea",
                                             "instructions": "",
@@ -251,7 +251,7 @@
                                             "prepend": "",
                                             "append": "",
                                             "key": "field_583faa41e23d8",
-                                            "label": "Box Service Title Link",
+                                            "label": "Link Title",
                                             "name": "box_service_title_link",
                                             "type": "text",
                                             "instructions": "",
@@ -267,7 +267,7 @@
                                             "default_value": "",
                                             "placeholder": "",
                                             "key": "field_583faa28e23d7",
-                                            "label": "Box Service Link",
+                                            "label": "Link",
                                             "name": "box_service_link",
                                             "type": "url",
                                             "instructions": "",
@@ -286,9 +286,9 @@
                             ],
                             "min": "",
                             "max": "",
-                            "button_label": "Add Row",
+                            "button_label": "Add Item",
                             "key": "field_583fa993e23d3",
-                            "label": "Box Service Items",
+                            "label": "Items",
                             "name": "box_service_items",
                             "type": "flexible_content",
                             "instructions": "",
@@ -336,7 +336,7 @@
                             "prepend": "",
                             "append": "",
                             "key": "field_583fa69c88c61",
-                            "label": "Box Testimonial title",
+                            "label": "Title",
                             "name": "box_testimonial_title",
                             "type": "text",
                             "instructions": "",
@@ -353,7 +353,7 @@
                                 {
                                     "key": "583fa6d48dc8e",
                                     "name": "box_testimonial_item",
-                                    "label": "Box Testimonial item",
+                                    "label": "Add Item",
                                     "display": "row",
                                     "sub_fields": [
                                         {
@@ -382,8 +382,8 @@
                                             "min_width": "",
                                             "min_height": "",
                                             "min_size": "",
-                                            "max_width": "",
-                                            "max_height": "",
+                                            "max_width": 143,
+                                            "max_height": 143,
                                             "max_size": "",
                                             "mime_types": "",
                                             "key": "field_583fa78788c67",
@@ -446,7 +446,7 @@
                             "max": "",
                             "button_label": "Add  item",
                             "key": "field_583fa6c288c62",
-                            "label": "Box Testimonial items",
+                            "label": "Items",
                             "name": "box_testimonial_items",
                             "type": "flexible_content",
                             "instructions": "",
@@ -488,11 +488,30 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_58491cfc2cec3",
+                            "label": "Title",
+                            "name": "box_partners_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
                             "layouts": [
                                 {
                                     "key": "583fa5c7d5fe1",
                                     "name": "box_partners_item",
-                                    "label": "Box Partners Item",
+                                    "label": "Add Item",
                                     "display": "row",
                                     "sub_fields": [
                                         {
@@ -507,9 +526,25 @@
                                             "max_size": "",
                                             "mime_types": "",
                                             "key": "field_583fa5d91b238",
-                                            "label": "Box Partners Image",
+                                            "label": "Image",
                                             "name": "box_partners_image",
                                             "type": "image",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "key": "field_584f601e00f62",
+                                            "label": "Link",
+                                            "name": "box_partners_link",
+                                            "type": "url",
                                             "instructions": "",
                                             "required": 0,
                                             "conditional_logic": 0,
@@ -526,30 +561,11 @@
                             ],
                             "min": "",
                             "max": "",
-                            "button_label": "Add Partners Item",
+                            "button_label": "Add Item",
                             "key": "field_583fa5a21b237",
-                            "label": "Box Partners Items",
+                            "label": "Items",
                             "name": "box_partners_items",
                             "type": "flexible_content",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            }
-                        },
-                        {
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_58491cfc2cec3",
-                            "label": "Box Partners Title",
-                            "name": "box_partners_title",
-                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -749,5 +765,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1481276867
+    "modified": 1481598593
 }

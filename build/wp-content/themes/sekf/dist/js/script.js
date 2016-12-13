@@ -71,10 +71,10 @@
     });
 
     $('.box-testimonial__list').slick({
-      autoplay: true,
+      autoplay: false,
       autoplaySpeed: 2000,
       dots: false,
-      arrows : false,
+      arrows : true,
       pauseOnHover: true,
       slidesToShow: 3,
       slidesToScroll: 1

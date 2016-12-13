@@ -1,13 +1,14 @@
 {% block content %}
   <h2 class="post-detail-title">{{ post.title }}</h2>
   <div class="content-post">
-
-  <div class="post-date">{{ post.post_date|date('y.m.d')}}</div>
-  {{ post.description_post_page }}
+  <div class="post-date">{{ post.post_date|date('Y.m.d')}}</div>
   {% if post.thumbnail.src %}
   <div class="post-picture">
-    <img src="{{post.thumbnail.src}}" class="feature" />
+    <p><img src="{{post.thumbnail.src}}" class="feature" /></p>
   </div>
+  {% endif %}
+  {% if post.description_post_page %}
+    <p>{{ post.description_post_page }}</p>
   {% endif %}
   <div class="post-content">
     {{ post.content|shortcodes }}
