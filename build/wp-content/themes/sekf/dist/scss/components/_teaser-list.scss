@@ -54,4 +54,14 @@
     text-transform: uppercase;
     text-decoration: underline;
   }
+
+  &--grid {
+    width: 100%;
+
+    .teaser-list__item {
+      float: left;
+      width: 50%;
+      background-color: rgba(1, 131, 197, .05);
+    }
+  }
 }

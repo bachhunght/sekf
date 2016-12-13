@@ -85,6 +85,12 @@
       e.preventDefault();
     });
 
+    var $postlistmasonry = $('.js-masonry');
+    $postlistmasonry.masonry({
+        isFitWidth: true,
+        itemSelector: '.teaser-list__item'
+    });
+
   });
 
   $('.box-testimonial__quote').matchHeight();
