@@ -20,7 +20,7 @@
 {% endblock %}
 
 {% block content %}
-  <div class="teaser-list">
+  <div class="teaser-list teaser-list--grid js-masonry">
     {% for post in term.get_posts({'posts_per_page': count, 'paged': paged}) %}
       {% if function('is_tag') %}
         {% include ['tags.twig', 'archive-tease.twig'] %}
@@ -38,11 +38,14 @@
 
 {% block aside %}
   {% for item in term.group_sidebar %}
-    <div class="item.acf_fc_layout">
+    <div class="item.acf_fc_layout box-post-link">
       <h2>{{ item.box_post_link_title }}</h2>
       <div class="box-post-link--list">
         {% for post in item.box_post_link %}
+          <div class="post-date teaser-list__date none-lable"><span class="lable">Datum:</span>{{post.post_date|date("Y.m.d") }}</div>
           <h3>{{ post.post_title }}</h3>
+          <div class="views__content"><p>{{ post.post_content|excerpt(10) }}</p></div>
+          <div class="views-link"><a href="{{item.link}}">READ THE ARTICLE IN FULL</a></div>
         {% endfor %}
       </div>
     </div>

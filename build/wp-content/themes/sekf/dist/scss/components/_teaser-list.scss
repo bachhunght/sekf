@@ -10,7 +10,6 @@
     font-size: rem(14px);
 
     .lable {
-      color: $red-leight;
       margin-bottom: rem(10px);
       margin-right: rem(5px);
       text-transform: capitalize;
@@ -54,5 +53,15 @@
     margin-bottom: rem(40px);
     text-transform: uppercase;
     text-decoration: underline;
+  }
+
+  &--grid {
+    width: 100%;
+
+    .teaser-list__item {
+      float: left;
+      width: 50%;
+      background-color: rgba(1, 131, 197, .05);
+    }
   }
 }
