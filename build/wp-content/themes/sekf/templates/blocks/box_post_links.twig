@@ -1,7 +1,7 @@
 <div class="box-post-link">
   <h2>{{box_post_link_title}}</h2>
   {% for item  in box_post_link %}
-    <div class="views__date">{{ post.post_date|date("Y.m.d") }}</div>
+    <div class="views__date">{{ item.post_date|date("Y.m.d") }}</div>
     <h3>{{ item.post_title }}</h3>
     <div class="views__content"><p>{{ item.post_content|excerpt(10) }}</p></div>
     <div class="views-link"><a href="{{item.link}}">READ THE ARTICLE IN FULL</a></div>

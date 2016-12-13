@@ -1,21 +1,22 @@
 {% extends 'layout.twig' %}
 
 {% block feature %}
-  {% if post.head_banner_text %}
+  {% if term.head_banner_text %}
     <div class="box-feature">
       <div class="container">
-        <h1 class="post-heightline-title">{{ post.head_banner_text }}</h1>
+        <h1 class="post-heightline-title">{{ term.head_banner_text }}</h1>
       </div>
     </div>
   {% endif %}
-  {% if post.description_post_page %}
+  {% if term.description_post_page %}
   <div class="description-wrap">
     <div class="container">
-      {{ post.description_post_page }}
+      {{ term.description_post_page }}
     </div>
   </div>
   {% endif %}
 {% endblock %}
+
 {% block content %}
   {% if title is defined %}
     <h2 id="page-title">{{title}}</h2>
@@ -32,4 +33,17 @@
     {% endif %}
   {% endfor %}
   {% include 'pagination.twig' %}
+{% endblock %}
+
+{% block aside %}
+  {% for item in term.group_sidebar %}
+    <div class="item.acf_fc_layout">
+      <h2>{{ item.box_post_link_title }}</h2>
+      <div class="box-post-link--list">
+        {% for post in item.box_post_link %}
+          <h3>{{ post.post_title }}</h3>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
 {% endblock %}
