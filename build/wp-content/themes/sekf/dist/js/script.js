@@ -80,17 +80,19 @@
       slidesToScroll: 1
     });
 
-     $('.js-toggle').on('click', function(e) {
+     $('.header__top .js-toggle').on('click', function(e) {
       $('.form-search').toggleClass("active");
       e.preventDefault();
     });
 
-    var $postlistmasonry = $('.js-masonry-teaser');
-    $postlistmasonry.masonry({
-        itemSelector: '.teaser-list__item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true
-    });
+
+
+     $(window).load(function(){
+      var $postlistmasonry = $('.js-masonry-teaser');
+      $postlistmasonry.masonry({
+          itemSelector: '.teaser-list__item'
+      });
+     });
 
   });
 

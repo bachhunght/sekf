@@ -45,12 +45,12 @@
         </div>
 
         {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) or ((function('is_archive') == '1') and term.group_sidebar) %}
-        <section class="sidebar-right col-md-4">
+        <div class="sidebar-right col-md-4">
           <div class="sidebar-right__inner">
             {% block aside %}
             {% endblock %}
           </div>
-        </section>
+        </div>
         {% endif %}
 
         {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) or ((function('is_archive') == '1') and term.group_sidebar) %}

@@ -16,7 +16,7 @@ require_once('init/options/option.php');
 if(!is_admin()) {
   // Add scripts
   function sekf_libs_scripts() {
-    wp_register_script('lib-masonry', get_stylesheet_directory_uri() . '/dist/js/libs/masonry.min.js', array('jquery'), FALSE, '3.1.4', TRUE);
+    wp_register_script('lib-masonry', get_stylesheet_directory_uri() . '/dist/js/libs/masonry.pkgd.min.js', array('jquery'), FALSE, '4.1.1', TRUE);
     wp_enqueue_script('lib-masonry');
 
     wp_register_script('lib-slick', get_stylesheet_directory_uri() . '/dist/js/libs/slick.min.js', array('jquery'), FALSE, '1.6.0', TRUE);
