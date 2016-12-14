@@ -15,6 +15,11 @@
     justify-content: center;
     margin: 0 auto rem(30px);
     width: rem(118px);
+
+    img {
+      min-width: rem(50px);
+      max-width: rem(100px);
+    }
   }
 
   &__title {

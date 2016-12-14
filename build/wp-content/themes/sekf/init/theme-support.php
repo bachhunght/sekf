@@ -276,3 +276,4 @@ class footer_Widget extends WP_Widget {
     <?php
   }
 }
+
