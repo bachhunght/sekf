@@ -87,7 +87,9 @@
 
     var $postlistmasonry = $('.js-masonry-teaser');
     $postlistmasonry.masonry({
-        itemSelector: '.teaser-list__item'
+        itemSelector: '.teaser-list__item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
     });
 
   });

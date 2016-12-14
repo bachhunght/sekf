@@ -253,3 +253,23 @@ select:focus {
     font-size: 30px;
   }
 }
+
+
+
+.slick-next {
+  right: 20px;
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+@include susy-media(desktop-superwide) {
+  .slick-next {
+    right: -20px;
+  }
+
+  .slick-prev {
+    left: -20px;
+  }
+}
