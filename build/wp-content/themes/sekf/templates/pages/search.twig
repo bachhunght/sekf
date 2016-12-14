@@ -1,16 +1,30 @@
-{% extends 'base.twig' %}
+{% extends 'layout.twig' %}
+
+{% block feature %}
+    <div class="box-feature">
+      <div class="container">
+        <h1 class="post-heightline-title">{{title}}</h1>
+      </div>
+    </div>
+{% endblock %}
 
 {% block content %}
-  <h1 id="page-title">{{title}}</h1>
-  {% include 'searchform.twig' %}
+  {# {% include 'searchform.twig' %} #}
   {% if posts %}
+    <div class="teaser-list">
   {% for post in posts %}
-    <article>
-      <h3><a href="{{post.link}}">{{ post.title }}</a></h3>
-      <p>{{post.content|excerpt(30)}}</p>
-    </article>
+    <div class="teaser-list__item">
+      <div class="teaser-list__date none-lable"><span class="lable">Datum: </span>{{ post.post_date|date('Y.m.d')}}</div>
+      <h3 class="teaser-list__title"><a href="{{post.link}}">{{post.title}}</a></h3>
+      <div class="teaser-list__content"><p>{{post.content|excerpt(30)}}</p></div>
+      <div class="teaser-list__more"><a href="{{post.link}}">read more</a></div>
+    </div>
   {% endfor %}
+  {% include 'pagination.twig' %}
   {% else %}
     <p>Sorry, no results were found!</p>
+    </div>
   {% endif %}
+
 {% endblock %}
+

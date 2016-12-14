@@ -21,6 +21,7 @@ h3 {
 
   h2 {
     margin-bottom: rem(20px);
+    text-transform: uppercase;
   }
 
   p {
@@ -35,5 +36,19 @@ h3 {
 
   .views-link {
     margin-bottom: rem(30px);
+  }
+}
+
+.category {
+  .main-content.col-md-8 {
+    padding-right: 12.5px;
+  }
+  .sidebar-right.col-md-4 {
+    padding-left: 12.5px;
+  }
+}
+.search {
+  .teaser-list {
+    width: 60%;
   }
 }

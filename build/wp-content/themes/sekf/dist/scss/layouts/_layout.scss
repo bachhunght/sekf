@@ -20,9 +20,7 @@ html {
 }
 
 body {
-  // Disable in production mode;
-  // @include show-breakpoints;
-  @include fira-sans;
+  @include lora;
   text-size-adjust: none;
   color: $dark-blue;
 }

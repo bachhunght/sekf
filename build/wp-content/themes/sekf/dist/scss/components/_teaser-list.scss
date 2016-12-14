@@ -56,21 +56,14 @@
   }
 
   &--grid {
+    margin-left: -12.5px;
+    margin-right: -12.5px;
     position: relative;
-    // column-count: 2;
-    // column-gap: 0;
 
-    .teaser-list__item, .grid-sizer {
-      padding: 0 12.5px;
-      // break-inside: avoid;
+    .teaser-list__item {
       float: left;
-      // clear: left;
-      width: 49.999%;
-
-      &:nth-child(2n) {
-        // float: right;
-        // clear: right;
-      }
+      padding: 0 12.5px;
+      width: 50%;
     }
 
     .teaser-list__image {
@@ -78,11 +71,10 @@
     }
 
     .teaser-list__group-content {
-       background-color: rgba(1, 131, 197, .05);
-       // display: inline-block;
-       margin-bottom: 20px;
-       padding: 30px;
-       overflow: hidden;
+      background-color: rgba(1, 131, 197, .05);
+      margin-bottom: 25px;
+      overflow: hidden;
+      padding: 30px;
     }
   }
 }

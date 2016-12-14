@@ -21,7 +21,6 @@
 
 {% block content %}
   <div id="js-masonry-teaser" class="teaser-list teaser-list--grid js-masonry-teaser">
-    <div class="grid-sizer"></div>
     {% for post in term.get_posts({'posts_per_page': count, 'paged': paged}) %}
       {% if function('is_tag') %}
         {% include ['tags.twig', 'archive-tease.twig'] %}

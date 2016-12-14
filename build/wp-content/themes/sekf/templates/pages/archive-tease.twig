@@ -1,11 +1,15 @@
 {% block content %}
   <div class="post post-{{ post.post_type }} teaser-list__item">
       <div class="teaser-list__group-content">
-      <div class="teaser-list__image"><img src="{{post.thumbnail.src}}" class="feature" /></div>
-      <div class="teaser-list__date none-lable"><span class="lable">Datum: </span>{{ post.post_date|date('Y.m.d')}}</div>
-      <h3 class="teaser-list__title views__title">{{post.title}}</h3>
-      <div class="teaser-list__content views__content"><p>{{post.content|excerpt(30)}}</p></div>
-      <div class="teaser-list__more views_link"><a href="{{post.link}}">read more</a></div>
-    </div>
+        <div class="test-wrapper">
+          {% if post.thumbnail.src %}
+            <div class="teaser-list__image"><img src="{{post.thumbnail.src}}" class="feature" /></div>
+          {% endif %}
+          <div class="teaser-list__date none-lable"><span class="lable">Datum: </span>{{ post.post_date|date('Y.m.d')}}</div>
+          <h3 class="teaser-list__title views__title">{{post.title}}</h3>
+          <div class="teaser-list__content views__content"><p>{{post.content|excerpt(30)}}</p></div>
+          <div class="teaser-list__more"><a href="{{post.link}}">read more</a></div>
+        </div>
+      </div>
   </div>
 {% endblock %}
