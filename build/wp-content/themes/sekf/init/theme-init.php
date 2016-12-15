@@ -286,7 +286,7 @@ function sekf_twig_data($data){
   $custom_logo_attachment = wp_get_attachment_image_src( $custom_logo_id , 'full' );
   $custom_logo = $custom_logo_attachment[0];
 
-  $logo = get_template_directory_uri().'/dist/images/logo.png';
+  $logo = get_template_directory_uri().'/dist/images/logo.svg';
   $favicon = get_template_directory_uri().'/dist/images/favicon.ico';
 
   $data['site_logo'] = new TimberImage($logo);

@@ -33,6 +33,11 @@
     .site-logo {
       line-height: 0;
       margin-right: rem(15px);
+
+      img {
+        max-width: 90px;
+        max-height: 90px;
+      }
     }
 
     .site-description {
@@ -46,7 +51,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: rem(10px) 0;
+    padding: rem(10px) 0 rem(11px);
   }
 
   nav.nav.main-menu {

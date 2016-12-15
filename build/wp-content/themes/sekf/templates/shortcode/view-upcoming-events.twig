@@ -1,8 +1,9 @@
 <div class="views view-upcoming-event teaser-list {{ ajax_views }}">
   {% for post in posts %}
+    {# {{post|print_r}} #}
   <div class="teaser-list__item {{post.class|join(" ")}}">
     <div class="teaser-list__group">
-      <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{ post.post_date|date('Y.m.d')}}</span>
+      <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{ post.group_category_events_0_datum|date('d.m.Y')}}</span>
       {% if  post.group_category_events_0_plats %}
         <span class="teaser-list__location"><span class="lable">Plats:</span>  {{post.group_category_events_0_plats}}</span>
       {% endif %}
