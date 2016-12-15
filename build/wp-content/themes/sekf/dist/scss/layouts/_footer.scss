@@ -11,6 +11,11 @@
     color: $white;
   }
 
+  img {
+    width: 90px;
+    height: 90px;
+  }
+
   &__title {
     @include lora;
     font-size: rem(18px);
