@@ -50,10 +50,10 @@
   }
 
   nav.nav.main-menu {
-    margin-top: 8px;
-    margin-right: -4px;
-    ul li {
+    margin-right: rem(-4px);
+    margin-top: rem(8px);
 
+    ul li {
       &:last-child {
         padding-right: 0;
       }

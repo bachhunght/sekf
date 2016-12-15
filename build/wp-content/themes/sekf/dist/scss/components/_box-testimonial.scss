@@ -3,7 +3,7 @@
   margin-bottom: rem(62px);
 
   .slick-list {
-    padding-top: 10px;
+    padding-top: rem(10px);
   }
 
   .box-title {
@@ -23,7 +23,7 @@
     font-style: italic;
 
     p {
-      line-height: 28px;
+      line-height: rem(28px);
     }
 
     &:before {

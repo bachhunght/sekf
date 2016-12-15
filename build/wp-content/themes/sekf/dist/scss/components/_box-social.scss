@@ -19,8 +19,8 @@
     text-align: center;
 
     &:first-child {
-      margin-top: 4px;
-      padding: 0 14px;
+      margin-top: rem(4px);
+      padding: 0 rem(14px);
     }
 
     a {
@@ -35,7 +35,7 @@
         font-size: rem(21px);
         text-indent: 0;
         opacity: .25;
-        margin-top: -5px;
+        margin-top: rem(-5px);
       }
     }
   }

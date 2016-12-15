@@ -43,10 +43,12 @@ h3 {
   .main-content.col-md-8 {
     padding-right: 12.5px;
   }
+
   .sidebar-right.col-md-4 {
     padding-left: 12.5px;
   }
 }
+
 .search {
   .teaser-list {
     width: 60%;
@@ -56,6 +58,6 @@ h3 {
 .error404 {
   &__content {
     text-align: center;
-    padding: 70px 0;
+    padding: rem(70px 0);
   }
 }
