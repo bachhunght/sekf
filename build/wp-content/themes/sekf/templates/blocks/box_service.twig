@@ -1,6 +1,9 @@
 <div class="box-service">
   <div class="container">
     <div class="row">
+    {% if box_service_title %}
+      <h2 class="box-title section-title"> {{ box_service_title }} </h2>
+    {% endif %}
     {% for item in box_service_items %}
       <div class="box-service__item col-md-3">
         <div class="box-service__group">
