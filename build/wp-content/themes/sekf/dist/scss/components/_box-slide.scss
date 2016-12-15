@@ -20,6 +20,7 @@
   }
 
   &__title {
+    @include fira-sans;
     color: $white;
     font-size: rem(48px);
     left: 50%;
@@ -28,7 +29,8 @@
     position: absolute;
     text-align: center;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -62%);
+    font-weight: 300;
   }
 }
 

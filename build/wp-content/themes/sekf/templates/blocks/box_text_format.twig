@@ -10,14 +10,14 @@
       <div class="row">
         {% if item.text_editor_col_first  %}
           {% if item.text_editor_col_seccond  %}
-            <div class="col-sm-6 col-first">{{ item.text_editor_col_first }}</div>
+            <div class="col-sm-6 col-first js-matchHeight">{{ item.text_editor_col_first }}</div>
           {% else %}
             <div class="col-sm-12">{{ item.text_editor_col_first }}</div>
           {% endif %}
         {% endif %}
         {% if item.text_editor_col_seccond  %}
           {% if item.text_editor_col_first  %}
-            <div class="col-sm-6 col-last">{{ item.text_editor_col_seccond }}</div>
+            <div class="col-sm-6 col-last js-matchHeight">{{ item.text_editor_col_seccond }}</div>
           {% else %}
             <div class="col-sm-12">{{ item.text_editor_col_seccond }}</div>
           {% endif %}

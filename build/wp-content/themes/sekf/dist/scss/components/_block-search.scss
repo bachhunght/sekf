@@ -6,10 +6,11 @@
 
   &__icon {
     line-height: 1;
-    padding: rem(10px 15px);
+    padding: rem(10px 15px 5px);
     border-left: rem(1px) solid rgba(1, 131, 197, .05);
     border-right: rem(1px) solid rgba(1, 131, 197, .05);
     cursor: pointer;
+
 
     &__icon {
       text-indent: rem(-300px);

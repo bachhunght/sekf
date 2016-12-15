@@ -19,7 +19,11 @@
     {% endif %}
     <div class="post-date teaser-list__date none-lable"><span class="lable">Datum: </span>{{ post.post_date|date('Y.m.d')}}</div>
   {% endif %}
-
+  {% if post.thumbnail.src %}
+  <div class="post-picture">
+    <p><img src="{{post.thumbnail.src}}" class="feature" /></p>
+  </div>
+  {% endif %}
 
   {% for post in posts %}
     {% if not function('is_page') %}

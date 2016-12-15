@@ -98,7 +98,7 @@
 
   $('.box-testimonial__quote').matchHeight();
   $('.box-member__item').matchHeight();
-  // $('.box-partners__item').matchHeight();
+  $('.js-matchHeight').matchHeight();
 
   $(window).load(function() {
     // Call to function

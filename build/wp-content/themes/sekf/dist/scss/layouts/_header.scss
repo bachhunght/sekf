@@ -36,7 +36,7 @@
     }
 
     .site-description {
-      @include fira-sans;
+      @include lora;
       color: $dark-navy-blue;
       font-size: rem(18px);
     }
@@ -47,6 +47,17 @@
     display: flex;
     justify-content: space-between;
     padding: rem(10px) 0;
+  }
+
+  nav.nav.main-menu {
+    margin-top: 8px;
+    margin-right: -4px;
+    ul li {
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
   }
 }
 
@@ -60,9 +71,11 @@
       border-left: rem(1px) solid rgba(1, 131, 197, .05);
 
       a {
+        @include fira-sans;
         color: $gray-b5bf;
         font-size: rem(14px);
         text-transform: uppercase;
+        font-weight: 500;
       }
     }
   }

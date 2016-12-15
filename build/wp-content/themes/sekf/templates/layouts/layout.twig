@@ -29,14 +29,15 @@
 
       {% set sidebar_acf = post.get_field('group_sidebar') %}
       {% set sidebar_wp = sidebar_active('sidebar-right') %}
+     {% set main_content_class = 'col-md-8' %}
 
       <main role="main" class="clearfix {{page_layout}} {% if  not function('is_page') %} container {% endif %} ">
-        {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) or ((function('is_archive') == '1') and term.group_sidebar) %}
-          {% set main_content_class = 'col-md-8' %}
-          <div class="row">
-        {% endif %}
+       {#  {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) or ((function('is_archive') == '1') and term.group_sidebar) %} #}
 
-        <div class="main-content {{main_content_class}}">
+          {# <div class="row"> #}
+        {# {% endif %} #}
+
+        <div class="main-content {% if  sidebar_option is empty %} {{main_content_class}} {% endif %}">
           {% block content %}
             <div class="content-wrapper">
               {{context}}
@@ -44,7 +45,7 @@
           {% endblock %}
         </div>
 
-        {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) or ((function('is_archive') == '1') and term.group_sidebar) %}
+        {% if sidebar_option is empty %}
         <div class="sidebar-right col-md-4">
           <div class="sidebar-right__inner">
             {% block aside %}
@@ -53,9 +54,9 @@
         </div>
         {% endif %}
 
-        {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) or ((function('is_archive') == '1') and term.group_sidebar) %}
-          </div>
-        {% endif %}
+        {# {% if (sidebar_acf is not empty) or (sidebar_wp is not empty) or ((function('is_archive') == '1') and term.group_sidebar) %} #}
+          {# </div> #}
+        {# {% endif %} #}
       </main>
 
       {% block footer %}
