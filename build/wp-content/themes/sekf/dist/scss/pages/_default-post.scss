@@ -56,6 +56,10 @@ h3 {
 }
 
 .error404 {
+  .main-content.col-md-8 {
+    width: 100%;
+  }
+
   &__content {
     text-align: center;
     padding: rem(70px 0);
