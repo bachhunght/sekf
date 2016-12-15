@@ -23,6 +23,7 @@
 
 $context = Timber::get_context();
 $context['title_option'] = framework_page('title');
+$context['sidebar_option'] = framework_page('sidebahiden');
 $context['main_option'] = framework_page('no_padding');
 $context['page_layout'] = framework_page('layout_page');
 

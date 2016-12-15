@@ -33,10 +33,15 @@
     .site-logo {
       line-height: 0;
       margin-right: rem(15px);
+
+      img {
+        max-width: 90px;
+        max-height: 90px;
+      }
     }
 
     .site-description {
-      @include fira-sans;
+      @include lora;
       color: $dark-navy-blue;
       font-size: rem(18px);
     }
@@ -46,7 +51,18 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: rem(10px) 0;
+    padding: rem(10px) 0 rem(11px);
+  }
+
+  nav.nav.main-menu {
+    margin-right: rem(-4px);
+    margin-top: rem(8px);
+
+    ul li {
+      &:last-child {
+        padding-right: 0;
+      }
+    }
   }
 }
 
@@ -60,9 +76,11 @@
       border-left: rem(1px) solid rgba(1, 131, 197, .05);
 
       a {
+        @include fira-sans;
         color: $gray-b5bf;
         font-size: rem(14px);
         text-transform: uppercase;
+        font-weight: 500;
       }
     }
   }

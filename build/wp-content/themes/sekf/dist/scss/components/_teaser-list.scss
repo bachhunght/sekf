@@ -6,6 +6,10 @@
 
   }
 
+  &__button {
+    margin-top: rem(47px);
+  }
+
   &__date {
     font-size: rem(14px);
 
@@ -45,36 +49,37 @@
 
   &__content {
     p {
-      margin-bottom: 10px;
+      margin-bottom: rem(9px);
     }
   }
 
   &__more {
-    margin-bottom: rem(40px);
+    margin-bottom: rem(35px);
     text-transform: uppercase;
     text-decoration: underline;
+    font-weight: bold;
   }
 
   &--grid {
-    margin-left: -12.5px;
-    margin-right: -12.5px;
+    margin-left: rem(-12.5px);
+    margin-right: rem(-12.5px);
     position: relative;
 
     .teaser-list__item {
       float: left;
-      padding: 0 12.5px;
+      padding: 0 rem(12.5px);
       width: 50%;
     }
 
     .teaser-list__image {
-      margin: -30px -30px 15px;
+      margin: rem(-30px -30px 15px);
     }
 
     .teaser-list__group-content {
       background-color: rgba(1, 131, 197, .05);
-      margin-bottom: 25px;
+      margin-bottom: rem(25px);
       overflow: hidden;
-      padding: 30px;
+      padding: rem(30px);
     }
   }
 }

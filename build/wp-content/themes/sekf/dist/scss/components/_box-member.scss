@@ -1,7 +1,16 @@
 .box-member {
   text-align: center;
+
   &-wrap {
-    padding: rem(62px) 0 rem(40px);
+    padding: rem(67px) 0 rem(35px);
+
+    .section-title {
+      margin-bottom: rem(43px);
+    }
+  }
+
+  &__item {
+    padding-bottom: rem(10px);
   }
 
   &__image {
@@ -16,17 +25,12 @@
   &__name {
     font-size: rem(16px);
     margin-bottom: 0;
-    font-weight: 300;
+    font-weight: 500;
   }
 
   &__position {
     color: $dark-navy-blue;
     font-weight: 300;
-  }
-
-  .views_link {
-    a {
-      font-weight: 100;
-    }
+    line-height: rem(25px);
   }
 }

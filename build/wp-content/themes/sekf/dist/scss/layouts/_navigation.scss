@@ -7,7 +7,9 @@
     padding: 0 rem(10px);
 
     a {
+      @include fira-sans;
       color: $dark-navy-blue;
+      font-weight: 500;
 
       &:hover {
         color: $link-color;

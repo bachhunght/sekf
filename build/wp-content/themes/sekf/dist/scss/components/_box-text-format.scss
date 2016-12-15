@@ -1,9 +1,10 @@
 .box-text-format {
   background: rgba(1, 131, 197, .05);
-  margin-bottom: rem(60px);
+  margin-bottom: rem(68px);
 
   h2 {
-    margin-bottom: rem(15px);
+    margin-bottom: rem(9px);
+
   }
 
 
@@ -20,25 +21,20 @@
   }
 
   .col-sm-6 {
-    padding-bottom: rem(65px);
-    padding-top: rem(59px);
+    padding-bottom: rem(112px);
+    padding-top: rem(63px);
   }
 
 .col-first {
   padding-right: rem(40px);
   border-right: rem(1px) solid $white;
-  padding-left: rem(40px);
+  padding-left: rem(42px);
  }
 
 .col-last {
-  padding-left: rem(35px);
+  padding-left: rem(37px);
   border-left: rem(1px) solid $white;
   padding-right: rem(40px);
  }
 }
 
-.views_link {
-  margin-bottom: rem(40px);
-  text-transform: uppercase;
-  text-decoration: underline;
-}
