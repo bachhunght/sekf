@@ -6,19 +6,23 @@
 
   &__icon {
     line-height: 1;
-    padding: rem(10px 15px 5px);
     border-left: rem(1px) solid rgba(1, 131, 197, .05);
     border-right: rem(1px) solid rgba(1, 131, 197, .05);
     cursor: pointer;
+    height: 38px;
+    overflow: hidden;
 
 
     &__icon {
-      text-indent: rem(-300px);
-      overflow: hidden;
+    align-items: center;
+    display: flex;
+    height: 38px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 15px;
 
       &:before {
         float: left;
-        text-indent: 0;
         color: $dark-navy-blue;
         opacity: .25;
       }
