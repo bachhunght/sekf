@@ -1,6 +1,21 @@
 .box-service {
-  text-align: center;
   margin-bottom: rem(95px);
+  text-align: center;
+
+  @include susy-media(mobileOnly) {
+    margin-bottom: 0;
+  }
+
+  &__item {
+    @include susy-media(mobileOnly) {
+      margin-bottom: rem(30px);
+    }
+
+    @include susy-media(mobiletinyOnly) {
+      width: 100%;
+      float: none;
+    }
+  }
 
   &__group {
     padding: 0 rem(22px);
@@ -16,6 +31,10 @@
     margin: 0 auto rem(33px);
     width: rem(118px);
 
+    @include susy-media(mobileOnly) {
+      margin-bottom: rem(10px);
+    }
+
     img {
       min-width: rem(50px);
       max-width: rem(100px);
@@ -28,6 +47,9 @@
     text-transform: uppercase;
     font-size: rem(16px);
     font-weight: 500;
+    @include susy-media(mobileOnly) {
+      margin-bottom: 0;
+    }
   }
 
   &__description {
@@ -35,6 +57,10 @@
     line-height: 1.5;
     font-weight: normal;
     margin-bottom: rem(24px);
+
+    @include susy-media(mobileOnly) {
+      margin-bottom: 0;
+    }
   }
 
   &__link {

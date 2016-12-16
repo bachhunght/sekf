@@ -1,6 +1,10 @@
 .box-slide {
   background: $blue;
-  margin-bottom: rem(100px) !important;
+  margin-bottom: rem(60px) !important;
+
+  @include susy-media(tabletLandscape) {
+    margin-bottom: rem(100px) !important;
+  }
 
   &__item {
     overflow: hidden;
@@ -22,15 +26,20 @@
   &__title {
     @include fira-sans;
     color: $white;
-    font-size: rem(48px);
+    font-size: rem(24px);
+    font-weight: 300;
     left: 50%;
-    line-height: 1.17;
-    min-width: rem(800px);
+    line-height: rem(32px);
     position: absolute;
     text-align: center;
     top: 50%;
     transform: translate(-50%, -62%);
-    font-weight: 300;
+
+    @include susy-media(tabletLandscape) {
+      font-size: rem(48px);
+      line-height: 1.17;
+      min-width: rem(800px);
+    }
   }
 }
 

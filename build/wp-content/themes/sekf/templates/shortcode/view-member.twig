@@ -1,7 +1,7 @@
 <div class="views {{ ajax_views }} box-member">
   <div class="container">
     {% for post in posts %}
-      <div class=" box-member__item col-md-3 {{post.class|join(" ")}}">
+      <div class=" box-member__item col-md-3 col-sm-4 col-xs-6 {{post.class|join(" ")}}">
       {% if post.thumbnail.src %}
         <div class="box-member__image">
           <img src="{{post.thumbnail.src}}" class="feature" />
