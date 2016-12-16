@@ -5,37 +5,24 @@
 
   &__item {
     border-left: 1px solid rgba(1, 131, 197, .05);
-
-    &:last-child {
-      // border-right: 1px solid #ccc;
-    }
+    height: 38px;
+    overflow: hidden;
   }
 
   &__icon {
-    display: inline-block;
-    line-height: 1;
-    overflow: hidden;
-    padding: 0 rem(15px);
-    text-align: center;
-
-    &:first-child {
-      margin-top: rem(-4px);
-      padding: 0 rem(14px);
-    }
 
     a {
-      color: transparent;
-      display: inline-block;
-      font-size: 0;
-      text-indent: rem(-148px);
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    height: 38px;
+    justify-content: center;
+    line-height: 1;
+    padding: 0 14px;
 
       &:before {
         color: $dark-navy-blue;
-        float: left;
-        font-size: rem(21px);
-        text-indent: 0;
         opacity: .25;
-        margin-top: rem(-5px);
       }
     }
   }
