@@ -36,15 +36,24 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 74px;
 }
 
 .post-heightline-title {
   color: $white;
+  font-weight: 300;
+  // margin-top: rem(8px);
+  // margin-left: rem(8px);
+
 }
 
 .description-wrap {
   max-width: rem(890px);
   text-align: center;
-  margin: 0 auto rem(70px);
+  margin: 0 auto rem(60px);
+  font-size: rem(20px);
+  color: $dark-navy-blue;
+  * {
+    @include fira-sans;
+  }
 }

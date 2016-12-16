@@ -17,15 +17,30 @@ h3 {
 
 .box-post-link {
   background: rgba(135, 155, 21, .05);
-  padding: rem(48px);
+  padding: 38px 50px 37px 48px;
 
   h2 {
-    margin-bottom: rem(20px);
+    margin-bottom: rem(10px);
     text-transform: uppercase;
   }
 
+  h3 {
+    line-height: 24px;
+    margin-bottom: 17px;
+  }
+
   p {
-    margin-bottom: rem(15px);
+    margin-bottom: rem(9px);
+  }
+
+  .teaser-list__date.none-lable {
+    @include lora;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+
+    .lable {
+      text-transform: uppercase;
+    }
   }
 
   .views__date {
@@ -35,7 +50,9 @@ h3 {
   }
 
   .views-link {
-    margin-bottom: rem(30px);
+    margin-bottom: rem(53px);
+    font-weight: bold;
+    text-transform: uppercase;
   }
 }
 
@@ -73,4 +90,46 @@ h2.post-detail-title {
 
 .wp-caption {
   max-width: 100%;
+}
+
+
+.page-template-default,
+.post-template-default {
+  .box-feature {
+    margin-bottom: 80px;
+  }
+
+  #page-title,
+  .post-detail-title {
+    margin-top: 36px;
+    text-transform: uppercase;
+    margin-bottom: 11px;
+  }
+
+  .teaser-list__date.none-lable {
+    @include lora;
+    color: $gray-33;
+    font-size: rem(14px);
+    font-weight: normal;
+    text-transform: uppercase;
+
+    .lable {
+      @include fira-sans;
+      color: $red-leight;
+      text-transform: uppercase;
+    }
+  }
+
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  .wp-caption-text {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
 }
