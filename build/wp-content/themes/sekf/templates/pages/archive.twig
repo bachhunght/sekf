@@ -42,7 +42,7 @@
       <h2>{{ item.box_post_link_title }}</h2>
       <div class="box-post-link--list">
         {% for post in item.box_post_link %}
-          <div class="post-date teaser-list__date none-lable"><span class="lable">Datum:</span>{{post.post_date|date("Y.m.d") }}</div>
+          <div class="post-date teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</div>
           <h3>{{ post.post_title }}</h3>
           <div class="views__content"><p>{{ post.post_content|excerpt(10) }}</p></div>
           <div class="views-link"><a href="{{item.link}}">READ THE ARTICLE IN FULL</a></div>

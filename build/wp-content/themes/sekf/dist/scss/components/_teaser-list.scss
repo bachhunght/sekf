@@ -12,7 +12,7 @@
 
   &__date {
     font-size: rem(14px);
-
+    @include lora;
     .lable {
       margin-bottom: rem(10px);
       margin-right: rem(5px);
@@ -72,14 +72,31 @@
     }
 
     .teaser-list__image {
-      margin: rem(-30px -30px 15px);
+      margin: rem(-47px -50px 23px);
     }
 
     .teaser-list__group-content {
       background-color: rgba(1, 131, 197, .05);
       margin-bottom: rem(25px);
       overflow: hidden;
-      padding: rem(30px);
+      padding: 47px 50px 41px;
+    }
+
+    .teaser-list__date .lable {
+      text-transform: uppercase;
+      color: $red-leight;
+    }
+    .teaser-list__date.none-lable {
+      color: $gray-33;
+      margin-bottom: 14px;
+    }
+    .teaser-list__title {
+      line-height: 24px;
+      margin-bottom: 18px;
+    }
+
+    .teaser-list__more {
+      margin-bottom: 0;
     }
   }
 }
