@@ -67,7 +67,31 @@
       arrows : false,
       pauseOnHover: true,
       slidesToShow: 4,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      }]
     });
 
     $('.box-testimonial__list').slick({
@@ -77,7 +101,31 @@
       arrows : true,
       pauseOnHover: true,
       slidesToShow: 3,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }]
     });
 
      $('.header__top .js-toggle').on('click', function(e) {
@@ -99,6 +147,13 @@
   $('.box-testimonial__quote').matchHeight();
   $('.box-member__item').matchHeight();
   $('.js-matchHeight').matchHeight();
+
+
+  $('.toggle-nav').click(function(e) {
+      $(this).toggleClass('active');
+      $('.toggle-nav-mainmenu').toggleClass('active');
+      e.preventDefault();
+  });
 
   $(window).load(function() {
     // Call to function

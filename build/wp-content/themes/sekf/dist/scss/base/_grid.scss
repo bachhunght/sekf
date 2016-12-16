@@ -95,7 +95,7 @@ $susy-media: (
   // max-width: 768px
   mobileOnly: (
     media: screen,
-    max-width: em($tablet - 1) * 1em,
+    max-width: em($tablet) * 1em,
   ),
 
   // max-width: 959px

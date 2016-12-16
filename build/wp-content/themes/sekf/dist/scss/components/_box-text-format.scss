@@ -2,9 +2,11 @@
   background: rgba(1, 131, 197, .05);
   margin-bottom: rem(68px);
 
+  @include susy-media(mobileOnly) {
+    margin-bottom: rem(10px);
+  }
   h2 {
     margin-bottom: rem(9px);
-
   }
 
 
@@ -23,23 +25,46 @@
   .col-sm-6 {
     padding-bottom: rem(166px);
     padding-top: rem(63px);
+
+    @include susy-media(mobileOnly) {
+      padding-bottom: rem(15px);
+      padding-top: rem(15px);
+    }
   }
 
 .col-first {
-  padding-right: rem(40px);
   border-right: rem(1px) solid $white;
   padding-left: rem(42px);
+  padding-right: rem(40px);
+
+  @include susy-media(mobileOnly) {
+    border-bottom: 2px solid $white;
+    border-right: 0;
+    padding-left: rem(15px);
+    padding-right: rem(15px);
+  }
  }
 
 .col-last {
-  padding-left: rem(37px);
   border-left: rem(1px) solid $white;
+  padding-left: rem(37px);
   padding-right: rem(40px);
+
+  @include susy-media(mobileOnly) {
+    padding-left: rem(15px);
+    padding-right: rem(15px);
+    border-left: 0;
+  }
  }
 
  .teaser-list__button {
-    position: absolute;
     bottom: rem(112px);
+    position: absolute;
+
+    @include susy-media(mobileOnly) {
+      bottom: inherit;
+      position: relative;
+    }
   }
 }
 

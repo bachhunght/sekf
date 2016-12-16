@@ -37,6 +37,11 @@ body {
   align-items: center;
   text-align: center;
   margin-bottom: 74px;
+
+  @include susy-media(mobileOnly) {
+    background-size: cover;
+    margin-bottom: 15px;
+  }
 }
 
 .post-heightline-title {
@@ -53,6 +58,15 @@ body {
   margin: 0 auto rem(60px);
   font-size: rem(20px);
   color: $dark-navy-blue;
+
+  @include susy-media(mobileOnly) {
+     margin: 0 auto rem(20px);
+     font-size: 16px;
+
+     p {
+      margin-bottom: 0;
+     }
+  }
   * {
     @include fira-sans;
   }
