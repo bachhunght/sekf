@@ -4,13 +4,27 @@
   &-wrap {
     padding: rem(67px) 0 rem(35px);
 
+    @include susy-media(mobileOnly) {
+      padding-bottom: 0;
+      padding-top: rem(20px);
+    }
+
     .section-title {
       margin-bottom: rem(43px);
+
+      @include susy-media(mobileOnly) {
+        margin-bottom: rem(10px);
+      }
     }
   }
 
   &__item {
     padding-bottom: rem(10px);
+
+    @include susy-media(mobiletinyOnly) {
+      width: 100%;
+      float: none;
+    }
   }
 
   &__image {
@@ -20,11 +34,14 @@
     border-radius: rem(200px);
     overflow: hidden;
     margin: 0 auto rem(27px);
+    @include susy-media(mobileOnly) {
+      margin-bottom: rem(10px);
+    }
   }
 
   &__name {
     font-size: rem(16px);
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     font-weight: 500;
   }
 

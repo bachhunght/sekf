@@ -19,6 +19,10 @@ h3 {
   background: rgba(135, 155, 21, .05);
   padding: 38px 50px 37px 48px;
 
+  @include susy-media(mobileOnly) {
+    padding: rem(15px);
+  }
+
   h2 {
     margin-bottom: rem(10px);
     text-transform: uppercase;
@@ -97,6 +101,9 @@ h2.post-detail-title {
 .post-template-default {
   .box-feature {
     margin-bottom: 80px;
+    @include susy-media(mobileOnly) {
+      margin-bottom: 10px;
+    }
   }
 
   #page-title,
@@ -104,6 +111,10 @@ h2.post-detail-title {
     margin-top: 36px;
     text-transform: uppercase;
     margin-bottom: 11px;
+
+    @include susy-media(mobileOnly) {
+      margin-top: 0;
+    }
   }
 
   .teaser-list__date.none-lable {

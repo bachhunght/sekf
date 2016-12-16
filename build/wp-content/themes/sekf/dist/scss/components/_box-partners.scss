@@ -3,8 +3,17 @@
   padding-top: rem(66px);
   text-align: center;
 
+  @include susy-media(mobileOnly) {
+    padding-bottom: rem(20px);
+    padding-top: rem(20px);
+  }
+
   .box-title {
     margin-bottom: rem(35px);
+
+    @include susy-media(mobileOnly) {
+      margin-bottom: 0;
+    }
   }
 
   .slick-track {

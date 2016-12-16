@@ -65,14 +65,27 @@
     margin-right: rem(-12.5px);
     position: relative;
 
+    @include susy-media(mobiletinyOnly) {
+      margin-left: 0;
+      margin-right: 0;
+    }
     .teaser-list__item {
       float: left;
       padding: 0 rem(12.5px);
       width: 50%;
+
+      @include susy-media(mobiletinyOnly) {
+         width: 100%;
+         padding: 0;
+      }
     }
 
     .teaser-list__image {
       margin: rem(-47px -50px 23px);
+
+      @include susy-media(mobileOnly) {
+        margin: rem(-15px -15px 10px);
+      }
     }
 
     .teaser-list__group-content {
@@ -80,6 +93,10 @@
       margin-bottom: rem(25px);
       overflow: hidden;
       padding: 47px 50px 41px;
+
+      @include susy-media(mobileOnly) {
+        padding: 15px;
+      }
     }
 
     .teaser-list__date .lable {

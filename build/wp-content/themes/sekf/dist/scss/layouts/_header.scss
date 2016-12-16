@@ -4,6 +4,10 @@
 
     &-menu-wrap {
       text-align: right;
+
+      @include susy-media(mobileOnly) {
+        display: none;
+      }
     }
 
     &__content {
@@ -37,6 +41,11 @@
       img {
         max-width: 90px;
         max-height: 90px;
+
+        @include susy-media(mobileOnly) {
+          width: 40px;
+          height: 40px;
+        }
       }
     }
 
@@ -44,19 +53,38 @@
       @include lora;
       color: $dark-navy-blue;
       font-size: rem(18px);
+
+      @include susy-media(mobileOnly) {
+        font-size: 12px;
+      }
     }
   }
 
-  &__bottom__content {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: rem(10px) 0 rem(11px);
+  &__bottom {
+
+    @include susy-media(mobileOnly) {
+      position: relative;
+    }
+
+    &__content {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: rem(10px) 0 rem(11px);
+
+      @include susy-media(mobileOnly) {
+        padding: rem(5px) 0;
+      }
+    }
   }
 
   nav.nav.main-menu {
     margin-right: rem(-4px);
     margin-top: rem(8px);
+
+    @include susy-media(mobileOnly) {
+      margin-right: 0;
+    }
 
     ul li {
       &:last-child {
@@ -94,3 +122,5 @@
     }
   }
 }
+
+
