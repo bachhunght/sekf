@@ -11,27 +11,30 @@
 {% endblock %}
 
 {% block content %}
-  {% if title_option != "on" %}
-    {% if post.title %}
-    <h2 id="page-title" class="page-title">
-      {{ post.title }}
-    </h2>
+  <div class="container">
+    {% if title_option != "on" %}
+      {% if post.title %}
+      <h2 id="page-title" class="page-title">
+        {{ post.title }}
+      </h2>
+      {% endif %}
+      <div class="post-date teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</div>
     {% endif %}
-    <div class="post-date teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</div>
-  {% endif %}
-  {% if post.thumbnail.src %}
-  <div class="post-picture">
-    <p><img src="{{post.thumbnail.src}}" class="feature" /></p>
+    {% if post.thumbnail.src %}
+    <div class="post-picture">
+      <p><img src="{{post.thumbnail.src}}" class="feature" /></p>
+    </div>
+    {% endif %}
   </div>
-  {% endif %}
-
   {% for post in posts %}
-    {% if not function('is_page') %}
-      <h3 class="post-title"><a href="{{ post.link }}">{{ post.title }}</a></h3>
-    {% endif %}
-    {% if post.post_content %}
-      {{  post.post_content|shortcodes }}
-    {% endif %}
+    <div class="container">
+      {% if not function('is_page') %}
+        <h3 class="post-title"><a href="{{ post.link }}">{{ post.title }}</a></h3>
+      {% endif %}
+      {% if post.post_content %}
+        {{  post.post_content|shortcodes }}
+      {% endif %}
+    </div>
     {{ flexible_content('group_component') }}
     {{ flexible_content('view_component') }}
   {% endfor %}

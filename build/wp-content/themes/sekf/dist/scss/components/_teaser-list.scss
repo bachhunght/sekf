@@ -56,8 +56,10 @@
   &__more {
     margin-bottom: rem(35px);
     text-transform: uppercase;
-    text-decoration: underline;
     font-weight: bold;
+    a {
+      text-decoration: underline;
+    }
   }
 
   &--grid {

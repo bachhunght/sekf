@@ -38,7 +38,7 @@
                 {
                     "key": "583fa3811b234",
                     "name": "box_contact_form_seven",
-                    "label": "Box Contact Form 7",
+                    "label": "Box Contact Form",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -54,6 +54,25 @@
                             "label": "Form",
                             "name": "box_form",
                             "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "container",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_58575d6b5fa6c",
+                            "label": "Form Class",
+                            "name": "form_class",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -765,5 +784,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1481649710
+    "modified": 1482120615
 }

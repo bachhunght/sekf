@@ -34,6 +34,7 @@
     margin-bottom: rem(26px);
     position: relative;
     font-style: italic;
+    color: $dark-navy-blue;
 
     @include susy-media(mobileOnly) {
       font-size: rem(16px);
