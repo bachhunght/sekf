@@ -17,7 +17,7 @@
                             "prepend": "",
                             "append": "",
                             "key": "field_58478c80673ca",
-                            "label": "Box Post Link Title",
+                            "label": "Link Title",
                             "name": "box_post_link_title",
                             "type": "text",
                             "instructions": "",
@@ -37,7 +37,7 @@
                             "return_format": "object",
                             "ui": 1,
                             "key": "field_583fefaf94752",
-                            "label": "Box Post Link",
+                            "label": "Link",
                             "name": "box_post_link",
                             "type": "post_object",
                             "instructions": "",
@@ -102,5 +102,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1481535314
+    "modified": 1482121632
 }

@@ -1,12 +1,22 @@
-<div class="box-text-format">
-  <div class="container">
-    {% for item in  text_format_field %}
-      {% if item.text_editor_one_column %}
-      <div class="row">
-        <div class="col-sm-12"> {{ item.text_editor_one_column }} </div>
+
+{% for item in  text_format_field %}
+  {% if item.text_editor_one_column %}
+    <div class="box-text-format">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12"> {{ item.text_editor_one_column }} </div>
+        </div>
       </div>
-    {% endif %}
-    {% if item.text_editor_col_first or item.text_editor_col_seccond %}
+    </div>
+  {% endif %}
+{% endfor %}
+
+
+
+{% for item in  text_format_field %}
+{% if item.text_editor_col_first or item.text_editor_col_seccond %}
+<div class="box-text-format {{item.two_columns_class}}">
+  <div class="container">
       <div class="row">
         {% if item.text_editor_col_first  %}
           {% if item.text_editor_col_seccond  %}
@@ -23,7 +33,7 @@
           {% endif %}
         {% endif %}
       </div>
-    {% endif %}
-    {% endfor %}
   </div>
 </div>
+{% endif %}
+{% endfor %}
