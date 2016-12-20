@@ -262,7 +262,7 @@ select:focus {
   z-index: 1;
   @include susy-media(mobileOnly) {
     width: 30px;
-    height: 30px;
+    height: 32px;
   }
 }
 
