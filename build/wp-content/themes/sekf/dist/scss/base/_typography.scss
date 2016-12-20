@@ -260,6 +260,10 @@ select:focus {
 .slick-prev,
 .slick-next {
   z-index: 1;
+  @include susy-media(mobileOnly) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .slick-next {
@@ -279,3 +283,42 @@ select:focus {
     left: -20px;
   }
 }
+
+ul.pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    margin: 0 5px;
+
+    &.pager-current {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      border: 1px solid $gray-dd;
+      color: $gray-33;
+    }
+
+    a {
+      background-color: $white;
+      border: 1px solid $gray-dd;
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+
+      &:hover {
+        color: $gray-33;
+      }
+    }
+  }
+}
+

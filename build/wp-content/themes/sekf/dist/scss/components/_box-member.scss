@@ -5,8 +5,8 @@
     padding: rem(67px) 0 rem(35px);
 
     @include susy-media(mobileOnly) {
-      padding-bottom: 0;
-      padding-top: rem(20px);
+      padding-bottom: 40px;
+      padding-top: rem(40px);
     }
 
     .section-title {

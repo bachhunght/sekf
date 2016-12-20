@@ -3,7 +3,7 @@
   text-align: center;
 
   @include susy-media(mobileOnly) {
-    margin-bottom: 0;
+    margin-bottom: rem(30px);
   }
 
   &__item {
