@@ -2,9 +2,9 @@
   text-align: center;
   margin-bottom: rem(62px);
 
-  @include susy-media(mobileOnly) {
-    margin-bottom: rem(50px);
-  }
+  // @include susy-media(mobileOnly) {
+  //   margin-bottom: rem(50px);
+  // }
 
   .slick-list {
     padding-top: rem(10px);
