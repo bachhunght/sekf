@@ -57,6 +57,10 @@ h3 {
     margin-bottom: rem(53px);
     font-weight: bold;
     text-transform: uppercase;
+
+    a {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -140,5 +144,19 @@ h2.post-detail-title {
   .wp-caption-text {
     font-size: 12px;
     margin-bottom: 24px;
+  }
+}
+
+.category {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  label {
+    margin-right: 10px;
+  }
+
+  a {
+    text-decoration: underline;
   }
 }

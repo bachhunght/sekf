@@ -35,6 +35,11 @@
     top: 50%;
     transform: translate(-50%, -62%);
 
+    @include susy-media(mobileOnly) {
+      padding: 0 rem(12px);
+      width: 100%;
+    }
+
     @include susy-media(tabletLandscape) {
       font-size: rem(48px);
       line-height: 1.17;

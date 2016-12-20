@@ -2,7 +2,7 @@
   margin-bottom: rem(68px);
 
   @include susy-media(mobileOnly) {
-    margin-bottom: rem(10px);
+    margin-bottom: rem(30px);
   }
   h2 {
     margin-bottom: rem(9px);
@@ -63,6 +63,12 @@
     @include susy-media(mobileOnly) {
       bottom: inherit;
       position: relative;
+    }
+
+
+    @include susy-media(mobileOnly) {
+      margin-top: rem(20px);
+      margin-bottom: rem(30px);
     }
   }
 }
