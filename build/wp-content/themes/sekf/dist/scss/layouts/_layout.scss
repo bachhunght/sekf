@@ -41,15 +41,17 @@ body {
   @include susy-media(mobileOnly) {
     background-size: cover;
     margin-bottom: 15px;
+    height: auto;
   }
 }
 
 .post-heightline-title {
   color: $white;
   font-weight: 300;
-  // margin-top: rem(8px);
-  // margin-left: rem(8px);
 
+  @include susy-media(mobileOnly) {
+    padding: rem(20px) 0;
+  }
 }
 
 .description-wrap {

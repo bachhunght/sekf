@@ -55,7 +55,8 @@
       font-size: rem(18px);
 
       @include susy-media(mobileOnly) {
-        font-size: 12px;
+        font-size: rem(12px);
+        max-width: rem(145px);
       }
     }
   }
