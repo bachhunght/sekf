@@ -1,7 +1,6 @@
 {% extends 'layout.twig' %}
 
 {% block feature %}
-  {% if title %}
     <div class="box-feature">
       <div class="container">
         <h1 class="post-heightline-title">
@@ -9,7 +8,6 @@
         </h1>
       </div>
     </div>
-  {% endif %}
   {% if term.description_post_page %}
   <div class="description-wrap">
     <div class="container">
