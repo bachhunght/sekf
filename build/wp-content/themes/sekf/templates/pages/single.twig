@@ -1,13 +1,11 @@
 {% extends 'layout.twig' %}
 
 {% block feature %}
-  {% if post.head_banner_text %}
     <div class="box-feature">
       <div class="container">
         <h1 class="post-heightline-title">{{ post.head_banner_text }}</h1>
       </div>
     </div>
-  {% endif %}
 {% endblock %}
 
 {% block content %}

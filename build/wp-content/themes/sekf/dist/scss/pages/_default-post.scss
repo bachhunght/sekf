@@ -147,16 +147,18 @@ h2.post-detail-title {
   }
 }
 
-.category {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.single {
+  .category-tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
-  label {
-    margin-right: 10px;
-  }
+    label {
+      margin-right: 10px;
+    }
 
-  a {
-    text-decoration: underline;
+    a {
+      text-decoration: underline;
+    }
   }
 }
