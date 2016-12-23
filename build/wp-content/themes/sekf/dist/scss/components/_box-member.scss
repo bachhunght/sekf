@@ -49,5 +49,12 @@
     color: $dark-navy-blue;
     font-weight: 300;
     line-height: rem(25px);
+
+    p {
+      margin-bottom: 0 !important;
+      color: $dark-navy-blue;
+      font-weight: 300;
+      line-height: rem(25px);
+    }
   }
 }
