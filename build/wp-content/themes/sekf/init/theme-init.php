@@ -278,6 +278,13 @@ function get_id_youtube($url) {
   return false;
 }
 
+function twig_in_array($str, $arr) {
+  //print_r($arr);
+  if( in_array($str, $arr) ){
+    return $str;
+  }
+}
+
 // Add Timber value
 add_filter('timber_context', 'sekf_twig_data');
 function sekf_twig_data($data){
@@ -307,6 +314,7 @@ function sekf_twig_data($data){
   $data['customtax'] = TimberHelper::function_wrapper( 'customtax' );
   $data['get_term_name'] = TimberHelper::function_wrapper( 'get_term_name' );
   $data['avatar_author'] = TimberHelper::function_wrapper( 'avatar_author' );
+  $data['twig_in_array'] = TimberHelper::function_wrapper( 'twig_in_array' );
 
   $data['menu']['main'] = new TimberMenu('main');
   $data['menu']['header_top'] = new TimberMenu('header_top');

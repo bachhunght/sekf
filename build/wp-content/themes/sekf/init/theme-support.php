@@ -18,6 +18,16 @@ function pagination_callback() {
   wp_die();
 }
 
+// Add user role member
+add_role(
+  'member',
+  __('Member', 'theme'),
+  array(
+    'read' => true,
+    'level_0' => true
+  )
+);
+
 // menu
 add_theme_support( 'menus' );
 add_action('init', 'sekf_menu');

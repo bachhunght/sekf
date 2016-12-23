@@ -38,7 +38,7 @@
                 {
                     "key": "583fa3811b234",
                     "name": "box_contact_form_seven",
-                    "label": "Box Contact Form",
+                    "label": "Box Form",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -745,7 +745,7 @@
             ],
             "min": "",
             "max": "",
-            "button_label": "Add Component OR Views Or Shortcode",
+            "button_label": "Add Component, View or Shortcode",
             "key": "field_583ce60aa4ee2",
             "label": "Group Component",
             "name": "group_component",
@@ -784,5 +784,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1482120615
+    "modified": 1482477895
 }
