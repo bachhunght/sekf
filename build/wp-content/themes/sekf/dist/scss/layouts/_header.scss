@@ -4,10 +4,6 @@
 
     &-menu-wrap {
       text-align: right;
-
-      @include susy-media(mobileOnly) {
-        display: none;
-      }
     }
 
     &__content {
@@ -107,6 +103,10 @@
       height: 38px;
       overflow: hidden;
       text-transform: uppercase;
+
+      @include susy-media(mobileOnly) {
+        display: none;
+      }
 
       a {
         @include fira-sans;
