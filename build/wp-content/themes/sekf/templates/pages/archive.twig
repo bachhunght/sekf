@@ -43,7 +43,7 @@
           <div class="post-date teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</div>
           <h3>{{ post.post_title }}</h3>
           <div class="views__content"><p>{{ post.post_content|excerpt(10) }}</p></div>
-          <div class="views-link"><a href="{{item.link}}">READ THE ARTICLE IN FULL</a></div>
+          <div class="views-link"><a href="{{item.link}}">Läs hela texten</a></div>
         {% endfor %}
       </div>
     </div>

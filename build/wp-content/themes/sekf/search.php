@@ -22,7 +22,7 @@ if( strlen($query_string) > 0 ) {
 
 $context = Timber::get_context();
 $post = Timber::get_posts($search_query);
-$context['title'] = 'Search results for: '. get_search_query();
+$context['title'] = 'Sökresultat för: '. get_search_query();
 $context['posts'] = $post;
  $context['pagination'] = Timber::get_pagination();
 
