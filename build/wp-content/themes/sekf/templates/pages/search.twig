@@ -17,12 +17,12 @@
       <h3 class="teaser-list__title"><a href="{{post.link}}">{{post.title}}</a></h3>
       <div class="teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</div>
       <div class="teaser-list__content"><p>{{post.content|excerpt(30)}}</p></div>
-      <div class="teaser-list__more"><a href="{{post.link}}">read more</a></div>
+      <div class="teaser-list__more"><a href="{{post.link}}">läs mer</a></div>
     </div>
   {% endfor %}
   {% include 'pagination.twig' %}
   {% else %}
-    <p>Sorry, no results were found!</p>
+    <p>Tyvärr, vi hittade inget resultat!</p>
     </div>
   {% endif %}
 
