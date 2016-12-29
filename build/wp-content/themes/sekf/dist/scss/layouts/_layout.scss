@@ -28,7 +28,7 @@ body {
 
 .box-feature {
   background-image: url("../images/map.jpg");
-  height: 190px;
+  min-height: 190px;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: rgb(1, 131, 197);
@@ -40,8 +40,8 @@ body {
 
   @include susy-media(mobileOnly) {
     background-size: cover;
-    margin-bottom: 15px;
-    height: auto;
+    min-height: rem(120px);
+    margin-bottom: rem(15px);
   }
 }
 
@@ -51,6 +51,7 @@ body {
 
   @include susy-media(mobileOnly) {
     padding: rem(20px) 0;
+    font-size: rem(30px);
   }
 }
 
