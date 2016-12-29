@@ -89,6 +89,7 @@
 
     .teaser-list__image {
       margin: rem(-47px -50px 23px);
+      text-align: center;
 
       @include susy-media(mobileOnly) {
         margin: rem(-15px -15px 10px);
