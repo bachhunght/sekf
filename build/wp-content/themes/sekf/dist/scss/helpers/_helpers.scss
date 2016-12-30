@@ -13,3 +13,15 @@
 .not-hidden-mobile {
   display: block !important;
 }
+
+@include susy-media(mobileOnly) {
+  .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border: 1px solid #ddd;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-overflow-scrolling: touch;
+  }
+}
