@@ -101,6 +101,21 @@ function sekf_body_class( $classes ) {
   return $classes;
 }
 
+// wrapper for table in wysiwyg editer
+add_filter( 'tiny_mce_before_init', 'fb_mce_before_init' );
+function fb_mce_before_init( $settings ) {
+  $style_formats = array(
+    array(
+      'title' => 'Table responsive wrapper',
+      'block' => 'div',
+      'classes' => 'table-responsive',
+      'wrapper' => true
+    ),
+  );
+  $settings['style_formats'] = json_encode( $style_formats );
+  return $settings;
+}
+
 add_filter('upload_mimes', 'sekf_theme_support_files_type', 1, 1);
 function sekf_theme_support_files_type($mime_types){
   $mime_types['svg'] = 'image/svg+xml';
