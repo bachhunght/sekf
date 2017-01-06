@@ -16,7 +16,7 @@
     .lable {
       margin-bottom: rem(10px);
       margin-right: rem(5px);
-      text-transform: capitalize;
+      text-transform: uppercase;
     }
 
     &.none-lable {
@@ -39,7 +39,7 @@
     .lable {
       color: $red-leight;
       margin-bottom: rem(10px);
-      text-transform: capitalize;
+      text-transform: uppercase;
     }
   }
 
