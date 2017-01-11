@@ -26,10 +26,10 @@
     background: $dark-dark;
     border-radius: rem(200px);
     display: flex;
-    height: rem(118px);
+    height: rem(140px);
     justify-content: center;
     margin: 0 auto rem(33px);
-    width: rem(118px);
+    width: rem(140px);
 
     @include susy-media(mobileOnly) {
       margin-bottom: rem(10px);
