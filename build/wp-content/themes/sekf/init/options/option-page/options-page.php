@@ -70,8 +70,8 @@ function sekf_page_option_metaboxes() {
 
   // Disable title
   $cmb->add_field( array(
-    'name'       => __( ' Disable Sidebar right', 'cmb2' ),
-    'desc'       => __( 'Check it if you want disable this page title', 'cmb2' ),
+    'name'       => __( ' Disable Right Sidebar', 'cmb2' ),
+    'desc'       => __( 'Check it if you want disable this page right sidebar', 'cmb2' ),
     'id'         => $prefix . 'sidebahiden',
     'type'       => 'checkbox',
     //'default'    => 1
