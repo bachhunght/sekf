@@ -6,3 +6,148 @@
 .welcome-paragraph {
   padding: rem(40px 0);
 }
+
+.dataTables_wrapper {
+  overflow: auto;
+  .dataTables_paginate {
+    display: none;
+  }
+  .dataTables_info {
+    display: none;
+  }
+
+  .dataTables_length {
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &:before {
+      content: "SHOW ENTRIES";
+      float: left;
+      margin-top: 19px;
+      margin-right: 10px;
+      @include fira-sans;
+      font-weight: 500;
+      color: $dark-dark;
+    }
+
+    label {
+      @include fira-sans;
+      font-weight: 500;
+      color: $dark-dark;
+      padding-top: 20px;
+      width: 65px;
+      font-size: 0;
+      overflow: hidden;
+
+      select {
+        float: right;
+        margin-top: -12px;
+        background-color: #879b15;
+        color: #fff;
+        width: 63px;
+        height: 45px;
+        padding: 10px 5px 10px 10px;
+        font-size: 16px;
+        margin-left: 10px;
+        border-radius: 8px;
+        outline: none;
+      }
+    }
+  }
+
+  .dataTables_filter {
+    float: left;
+    margin-bottom: 27px;
+
+    label {
+      @include fira-sans;
+      font-size: 16px;
+      font-weight: 500;
+      position: relative;
+      text-indent: -999em;
+
+      &:before {
+        content: "\f002";
+        text-indent: 0 !important;
+        position: absolute;
+        top: 15px;
+        left: 10px;
+
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+      }
+
+      input {
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 30px;
+        padding: 5px 0 5px 30px;
+        border: solid 1px #979797;
+        border-radius: 4px;
+        height: 45px;
+        max-width: 275px;
+        text-indent: 0;
+        float: left;
+
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: $dark-dark;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: $dark-dark;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: $dark-dark;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+          color: $dark-dark;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.tablepress tfoot th, .tablepress thead th {
+  border-right: 5px solid #fff;
+  font-size: 20px;
+  font-weight: normal !important;
+}
+
+.tablepress thead th {
+  border-bottom: 1px solid #ddd;
+}
+.tablepress {
+  tr td {
+    a {
+      text-decoration: underline;
+      color: #879b15;
+      font-weight: bold;
+    }
+
+    &:last-child {
+      text-decoration: underline;
+      color: #879b15;
+      font-weight: bold;
+    }
+  }
+}
+.table-responsive {
+  position: relative;
+}
