@@ -125,13 +125,16 @@
 }
 
 .tablepress tfoot th, .tablepress thead th {
+  @include fira-sans;
   border-right: 5px solid #fff;
   font-size: 20px;
   font-weight: normal !important;
+  background-color: rgba(1, 131, 197, 0.05) !important;
+  padding-left: 19px;
 }
 
 .tablepress thead th {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0 !important;
 }
 .tablepress {
   tr td {
@@ -151,3 +154,28 @@
 .table-responsive {
   position: relative;
 }
+
+.tablepress .row-hover tr:hover td {
+  background-color: transparent;
+}
+
+.table-responsive {
+  .tablepress .odd td {
+    background-color: #fff;
+  }
+
+  .tablepress tbody td, .tablepress tfoot th {
+    border-top: 0;
+    padding: 8px 10px;
+  }
+
+
+  .tablepress .row-hover tr:hover td {
+    background-color: #ffffff;
+  }
+}
+
+tbody.row-hover tr:first-child td {
+  padding-top: 20px;
+}
+
