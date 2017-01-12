@@ -155,8 +155,13 @@
       e.preventDefault();
   });
 
+  function myFunction() {
+    $(".dataTables_wrapper .dataTables_filter input").attr('placeholder','search for a member' );
+  }
+
   $(window).load(function() {
     // Call to function
+     myFunction();
   });
 
   $(window).resize(function() {
