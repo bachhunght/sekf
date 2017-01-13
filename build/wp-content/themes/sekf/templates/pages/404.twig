@@ -1,17 +1,17 @@
 {% extends 'layout.twig' %}
 
 {% block feature %}
-    <div class="box-feature">
+   {#  <div class="box-feature">
       <div class="container">
         <h1 class="post-heightline-title">
           Sidan kunde inte hittas
         </h1>
       </div>
-    </div>
-{% endblock %}
-{% block content %}
+    </div> #}
+
   <div class="error404__content">
-    <p>Det kan bero på att sidan tagits bort eller att du skrivit en felaktig adress i adressfältet. Prova gärna att använda sökfältet.</p>
-    {% include 'searchform.twig' %}
+    <div class="error__content__page">
+     <p>Det kan bero på att sidan tagits bort eller att du skrivit en felaktig adress i adressfältet. Prova gärna att använda sökfältet.</p>
+    </div>
   </div>
 {% endblock %}
