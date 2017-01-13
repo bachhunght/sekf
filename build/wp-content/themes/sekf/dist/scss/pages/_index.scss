@@ -8,10 +8,13 @@
 }
 
 .dataTables_wrapper {
+  position: relative;
   overflow: auto;
+
   .dataTables_paginate {
     display: none;
   }
+
   .dataTables_info {
     display: none;
   }
@@ -20,7 +23,11 @@
     float: right;
     position: absolute;
     right: 0;
-    top: 0;
+    top: -5px;
+    @include susy-media(mobiletinyOnly) {
+      position: relative;
+      float: left;
+    }
 
     &:before {
       content: "SHOW ENTRIES";
@@ -159,14 +166,14 @@
   background-color: transparent;
 }
 
-.table-responsive {
+.dataTables_wrapper {
   .tablepress .odd td {
     background-color: #fff;
   }
 
   .tablepress tbody td, .tablepress tfoot th {
     border-top: 0;
-    padding: 8px 10px;
+    padding: 8px 10px 8px 24px;
   }
 
 
