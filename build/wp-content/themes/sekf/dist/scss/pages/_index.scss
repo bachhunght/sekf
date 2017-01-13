@@ -186,3 +186,26 @@ tbody.row-hover tr:first-child td {
   padding-top: 20px;
 }
 
+
+@-moz-document url-prefix() {
+  .dataTables_wrapper .dataTables_filter label::before {
+    top: 38px;
+  }
+
+  .dataTables_wrapper .dataTables_length::before {
+    position: absolute;
+    right: 65px;
+  }
+
+  .dataTables_wrapper .dataTables_length {
+    top: 15px;
+  }
+
+  .dataTables_wrapper .dataTables_length label select option {
+    padding-left: 12px;
+  }
+
+  .dataTables_wrapper .dataTables_length label select {
+    border: 0;
+  }
+}
