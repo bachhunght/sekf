@@ -115,6 +115,7 @@
         border-radius: 4px;
         height: 45px;
         width: 275px;
+        min-width: 275px;
         text-indent: 0;
         float: left;
 
@@ -212,6 +213,10 @@ tbody.row-hover tr:first-child td {
   .dataTables_wrapper .dataTables_length::before {
     position: absolute;
     right: 65px;
+  }
+
+  .dataTables_wrapper .dataTables_length label select {
+    margin: -22px 0 0;
   }
 
   .dataTables_wrapper .dataTables_length {
