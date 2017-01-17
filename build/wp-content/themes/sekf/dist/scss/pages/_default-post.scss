@@ -175,3 +175,53 @@ h2.post-detail-title {
 
   }
 }
+
+
+.error404 {
+  main {
+    margin: 0;
+    height: 0;
+  }
+  .error404__content {
+    background: $blue;
+    text-align: center;
+    position: relative;
+    padding-top: 107px;
+    padding-bottom: 62px;
+
+    &:before {
+      content: "";
+      height: 1px;
+      width: 619px;
+      max-width: 100%;
+      position: absolute;
+      bottom: 0;
+      z-index: 9;
+      left: 50%;
+      opacity: 0.21;
+      background: #fff;
+      transform: translateX(-50%);
+      box-shadow: 1px 1px 1px 0px #0089ff;
+    }
+
+    .error__content__page {
+      width: 779px;
+      margin: 0 auto;
+    }
+
+    p {
+      line-height: 1.17;
+      @include fira-sans;
+      font-size: 48px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      color: $white;
+      margin-bottom: 0;
+    }
+  }
+  .footer {
+    margin-top: 0;
+  }
+}
+

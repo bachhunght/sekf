@@ -12,18 +12,25 @@
   overflow: auto;
 
   .dataTables_paginate {
-    display: none;
+    // display: none;
+
+    @include fira-sans;
+    font-weight: 500;
   }
 
   .dataTables_info {
-    display: none;
+    // display: none;
+
+    @include fira-sans;
+    font-weight: 500;
   }
 
   .dataTables_length {
     float: right;
     position: absolute;
     right: 0;
-    top: -5px;
+    // top: -5px;
+
     @include susy-media(mobiletinyOnly) {
       position: relative;
       float: left;
@@ -32,8 +39,8 @@
     &:before {
       content: "SHOW ENTRIES";
       float: left;
-      margin-top: 19px;
-      margin-right: 10px;
+      margin-top: 13px;
+      margin-right: 14px;
       @include fira-sans;
       font-weight: 500;
       color: $dark-dark;
@@ -43,30 +50,39 @@
       @include fira-sans;
       font-weight: 500;
       color: $dark-dark;
-      padding-top: 20px;
       width: 65px;
-      font-size: 0;
       overflow: hidden;
+      background-image: url(../images/icon-arow.png);
+      background-color: #879b15;
+      border-radius: 8px;
+      text-indent: -99em;
+      background-repeat: no-repeat;
+      background-position: 37px 17px;
 
       select {
-        float: right;
+        float: left;
         margin-top: -12px;
-        background-color: #879b15;
+        background-color: transparent;
         color: #fff;
-        width: 63px;
+        width: 90px;
         height: 45px;
         padding: 10px 5px 10px 10px;
         font-size: 16px;
-        margin-left: 10px;
+        margin: 0;
         border-radius: 8px;
         outline: none;
+        text-indent: 0;
+
+        option {
+          background-color: #879b15;
+        }
       }
     }
   }
 
   .dataTables_filter {
     float: left;
-    margin-bottom: 27px;
+    margin-bottom: 21px;
 
     label {
       @include fira-sans;
@@ -75,31 +91,31 @@
       position: relative;
       text-indent: -999em;
 
+
       &:before {
-        content: "\f002";
+        content: "";
+        background-image: url(../images/iconsearch.png);
         text-indent: 0 !important;
         position: absolute;
-        top: 15px;
-        left: 10px;
-
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        transform: translate(0, 0);
+        top: 17px;
+        left: 23px;
+        width: 17px;
+        z-index: 1;
+        background-repeat: no-repeat;
+        height: 17px;
+        background-size: cover;
       }
 
       input {
         font-size: 16px;
         font-weight: 500;
         padding-left: 30px;
-        padding: 5px 0 5px 30px;
+        padding: 5px 0 5px 44px;
         border: solid 1px #979797;
         border-radius: 4px;
         height: 45px;
-        max-width: 275px;
+        width: 275px;
+        min-width: 275px;
         text-indent: 0;
         float: left;
 
@@ -138,6 +154,8 @@
   font-weight: normal !important;
   background-color: rgba(1, 131, 197, 0.05) !important;
   padding-left: 19px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .tablepress thead th {
@@ -195,6 +213,10 @@ tbody.row-hover tr:first-child td {
   .dataTables_wrapper .dataTables_length::before {
     position: absolute;
     right: 65px;
+  }
+
+  .dataTables_wrapper .dataTables_length label select {
+    margin: -22px 0 0;
   }
 
   .dataTables_wrapper .dataTables_length {
