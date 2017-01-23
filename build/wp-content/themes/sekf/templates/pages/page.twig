@@ -6,6 +6,14 @@
         <h1 class="post-heightline-title">{{ post.head_banner_text }}</h1>
       </div>
     </div>
+
+    {% if post.description_post_page %}
+    <div class="description-wrap">
+      <div class="container">
+        {{ post.description_post_page }}
+      </div>
+    </div>
+    {% endif %}
 {% endblock %}
 
 {% block content %}
