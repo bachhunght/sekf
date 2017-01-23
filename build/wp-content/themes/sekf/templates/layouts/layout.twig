@@ -32,8 +32,8 @@
      {% set main_content_class = 'col-md-8' %}
 
       <main role="main" class="clearfix {{page_layout}} {% if  not function('is_page') %} container {% endif %} ">
-        {% if  sidebar_option is empty %} <div class="row"> {% endif %}
-        <div class="main-content {% if  sidebar_option is empty %} {{main_content_class}} {% endif %}">
+        {% if  page_layout == 'container' %} <div class="row"> {% endif %}
+        <div class="main-content {% if  page_layout == 'container' %} {{main_content_class}} {% endif %}">
           {% block content %}
             <div class="content-wrapper">
               {{context}}
@@ -41,7 +41,7 @@
           {% endblock %}
         </div>
 
-        {% if sidebar_option is empty %}
+        {% if  page_layout == 'container' %}
         <div class="sidebar-right col-md-4">
           <div class="sidebar-right__inner">
             {% block aside %}
@@ -49,7 +49,7 @@
           </div>
         </div>
         {% endif %}
-        {% if sidebar_option is empty %} </div>  {% endif %}
+        {% if  page_layout == 'container' %} </div>  {% endif %}
       </main>
 
       {% block footer %}
