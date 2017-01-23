@@ -189,6 +189,14 @@ h2.post-detail-title {
     padding-top: 107px;
     padding-bottom: 62px;
 
+    @include susy-media(mobileOnly) {
+      background: #0183c5;
+      text-align: center;
+      position: relative;
+      padding-top: rem(30px);
+      padding-bottom: rem(30px);
+    }
+
     &:before {
       content: "";
       height: 1px;
@@ -205,10 +213,18 @@ h2.post-detail-title {
     }
 
     .error__content__page {
-      width: 779px;
+      width: 100%;
       margin: 0 auto;
+      max-width: rem(779px);
+      padding: 0 10px;
     }
 
+    .post-heightline-title {
+
+      @include susy-media(mobileOnly) {
+        font-size: 20px;
+      }
+    }
     p {
       line-height: 1.17;
       @include fira-sans;
@@ -218,6 +234,11 @@ h2.post-detail-title {
       font-stretch: normal;
       color: $white;
       margin-bottom: 0;
+
+      @include susy-media(mobileOnly) {
+        font-size: 20px;
+      }
+
     }
   }
   .footer {
