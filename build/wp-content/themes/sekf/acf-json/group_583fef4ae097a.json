@@ -17,7 +17,7 @@
                             "prepend": "",
                             "append": "",
                             "key": "field_58478c80673ca",
-                            "label": "Link Title",
+                            "label": "Block Title",
                             "name": "box_post_link_title",
                             "type": "text",
                             "instructions": "",
@@ -102,5 +102,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1482121632
+    "modified": 1485228067
 }
