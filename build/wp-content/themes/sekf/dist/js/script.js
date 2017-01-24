@@ -156,7 +156,7 @@
   });
 
   function myFunction() {
-    $(".dataTables_wrapper .dataTables_filter input").attr('placeholder','search for a member' );
+    $(".dataTables_wrapper .dataTables_filter input").attr('placeholder','Sök i tabellen' );
   }
 
   $(window).load(function() {
