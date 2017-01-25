@@ -1,4 +1,8 @@
 <?php
+/** Enable W3 Total Cache */
+define('WP_CACHE', true); // Added by W3 Total Cache
+
+
 /**
  * The base configuration for WordPress
  *
@@ -23,22 +27,22 @@
 switch ($_SERVER['HTTP_HOST']) {
   case 'dev-sekf-site.pantheonsite.io':
     $config_file = 'wp-config/wp-config.pantheonsite.php';
-    //define('WP_CACHE', true); //Added by WP-Cache Manager
+     //Added by WP-Cache Manager
     break;
 
   case 'test-sekf-site.pantheonsite.io':
     $config_file = 'wp-config/wp-config.pantheonsite.php';
-    //define('WP_CACHE', true); //Added by WP-Cache Manager
+     //Added by WP-Cache Manager
     break;
 
   case 'live-sekf-site.pantheonsite.io':
     $config_file = 'wp-config/wp-config.pantheonsite.php';
-    //define('WP_CACHE', true); //Added by WP-Cache Manager
+     //Added by WP-Cache Manager
     break;
 
   default:
     $config_file = 'wp-config/wp-config.local.php';
-    //define('WP_CACHE', false); //Added by WP-Cache Manager
+     //Added by WP-Cache Manager
     break;
 }
 $config_file = __DIR__ . '/' . $config_file;
