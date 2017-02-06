@@ -1,5 +1,6 @@
 .main-menu ul {
     display: flex;
+    flex-wrap: wrap;
 
     li {
     font-size: rem(16px);
