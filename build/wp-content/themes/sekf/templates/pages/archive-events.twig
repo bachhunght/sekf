@@ -1,0 +1,20 @@
+{% block content %}
+  <div class="post post-{{ post.post_type }} teaser-list__item">
+      <div class="teaser-list__group-content">
+        <div class="test-wrapper">
+          {% if post.thumbnail.src %}
+            <div class="teaser-list__image"><img src="{{post.thumbnail.src}}" class="feature" /></div>
+          {% endif %}
+          <div class="teaser-list__group events">
+            <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{ post.group_category_events_0_datum|date('d.m.Y')}}</span>
+            {% if  post.group_category_events_0_plats %}
+              <span class="teaser-list__location"><span class="lable">Plats:</span>  {{post.group_category_events_0_plats}}</span>
+            {% endif %}
+          </div>
+          <h3 class="teaser-list__title views__title">{{post.title}}</h3>
+          <div class="teaser-list__content views__content"><p>{{post.content|excerpt(30)}}</p></div>
+          <div class="teaser-list__more"><a href="{{post.link}}">läs mer</a></div>
+        </div>
+      </div>
+  </div>
+{% endblock %}

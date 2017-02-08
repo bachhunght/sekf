@@ -23,7 +23,8 @@
       {% if function('is_tag') %}
         {% include ['tags.twig', 'archive-tease.twig'] %}
       {% elseif function('is_category') %}
-        {% include ['category.twig', 'archive-tease.twig'] %}
+        {% set term = TimberTerm(tax_id) %}
+        {% include ['archive-'~term.slug~'.twig','category.twig', 'archive-tease.twig'] %}
       {% elseif function('is_post_type_archive') %}
         {% include ["archive-"~post.post_type~".twig", 'archive-tease.twig'] %}
       {% else %}

@@ -12,7 +12,7 @@
   {% if check_login and (function('is_user_logged_in') == "") %}
     <h2>Du behöver logga in för att se det här innehållet</h2>
   {% elseif (check_login and function('is_user_logged_in')) or (check_login == "") %}
-    {% set post_cat = 'member' %}
+    {% set post_cat = 'events' %}
     {% set cat_arr = [] %}
     {% for post in posts %}
       {% for item in post.terms('category') %}

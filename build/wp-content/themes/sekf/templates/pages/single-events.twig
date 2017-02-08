@@ -1,0 +1,34 @@
+{% block content %}
+  <h2 class="post-detail-title">{{ post.title }}</h2>
+  <div class="content-post">
+    <div class="teaser-list__group">
+      <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{ post.group_category_events_0_datum|date('d.m.Y')}}</span>
+      {% if  post.group_category_events_0_plats %}
+        <span class="teaser-list__location"><span class="lable">Plats:</span>  {{post.group_category_events_0_plats}}</span>
+      {% endif %}
+    </div>
+  {% if post.thumbnail.src %}
+  <div class="post-picture">
+    <p><img src="{{post.thumbnail.src}}" class="feature" /></p>
+  </div>
+  {% endif %}
+  {% if post.description_post_page %}
+    <p>{{ post.description_post_page }}</p>
+  {% endif %}
+  <div class="post-content">
+    {{ post.content|shortcodes }}
+    {{ flexible_content('group_component') }}
+    {{ flexible_content('view_component') }}
+  </div>
+  {% if post.terms('category') %}
+  <div class="category-tags">
+    <label>Kategori:</label>
+    <ul class="cat-list">
+    {% for term in post.terms('category') %}
+      <li><a href="{{term.link}}">{{term.name}}{% if (loop.length > 1) and (loop.length != loop.last) %},{% endif %}</a></li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+  </div>
+{% endblock %}
