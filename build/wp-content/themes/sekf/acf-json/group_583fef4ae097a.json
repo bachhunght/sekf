@@ -17,7 +17,7 @@
                             "prepend": "",
                             "append": "",
                             "key": "field_58478c80673ca",
-                            "label": "Link Title",
+                            "label": "Block Title",
                             "name": "box_post_link_title",
                             "type": "text",
                             "instructions": "",
@@ -40,6 +40,111 @@
                             "label": "Link",
                             "name": "box_post_link",
                             "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "taxonomy": "category",
+                            "field_type": "multi_select",
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "return_format": "object",
+                            "add_term": 1,
+                            "load_terms": 0,
+                            "save_terms": 0,
+                            "key": "field_58880bf597877",
+                            "label": "Category Link",
+                            "name": "category_link",
+                            "type": "taxonomy",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "layouts": [
+                                {
+                                    "key": "58881031b35e8",
+                                    "name": "custom_links_item",
+                                    "label": "External Links Item",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "key": "field_58881044bb318",
+                                            "label": "Link Title",
+                                            "name": "link_title",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "new_lines": "wpautop",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "rows": 3,
+                                            "key": "field_58881236947eb",
+                                            "label": "Description",
+                                            "name": "description",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "key": "field_58881057bb319",
+                                            "label": "Link URL",
+                                            "name": "link_url",
+                                            "type": "url",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add External Link",
+                            "key": "field_58881000bb317",
+                            "label": "External Links",
+                            "name": "custom_links",
+                            "type": "flexible_content",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -102,5 +207,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1482121632
+    "modified": 1485313320
 }
