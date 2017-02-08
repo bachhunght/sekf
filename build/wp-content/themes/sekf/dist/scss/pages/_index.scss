@@ -225,3 +225,14 @@ tbody.row-hover tr:first-child td {
     border: 0;
   }
 }
+
+.teaser-list__group.events {
+  display: flex;
+
+  > span {
+    display: flex;
+  }
+  .teaser-list__date.none-lable {
+    margin-right: 1.125rem;
+  }
+}
