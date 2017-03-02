@@ -200,7 +200,7 @@ form {
     margin-bottom: rem(21px);
   }
 
-  input,
+  input.form-text,
   .inputText {
     border: rem(1px) solid $gray-e2;
     box-shadow: rem(1px 1px 1px) rgba(0, 0, 0, .1) inset;

@@ -142,6 +142,7 @@
       });
      });
 
+    $('img.alignright').wrap('<div>ok</div>');
   });
 
   $('.box-testimonial__quote').matchHeight();
