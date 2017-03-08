@@ -28,6 +28,9 @@ if(!is_admin()) {
     wp_register_script('lib-matchHeight', get_stylesheet_directory_uri() . '/dist/js/libs/jquery.matchHeight-min.js', array('jquery'), FALSE, '0.7.0', TRUE);
     wp_enqueue_script('lib-matchHeight');
 
+    wp_register_script('lib-hyphenator', get_stylesheet_directory_uri() . '/dist/js/libs/Hyphenator.js', array('jquery'),  FALSE, '2.1.5', TRUE);
+    wp_enqueue_script('lib-hyphenator');
+
     wp_register_script('lib-fancybox', get_stylesheet_directory_uri() . '/dist/js/libs/jquery.fancybox.pack.js', array('jquery'),  FALSE, '2.1.5', TRUE);
     wp_enqueue_script('lib-fancybox');
 

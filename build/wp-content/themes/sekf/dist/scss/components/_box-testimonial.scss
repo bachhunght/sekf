@@ -35,6 +35,11 @@
     position: relative;
     font-style: italic;
     color: $dark-navy-blue;
+    line-height: rem(28px);
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
 
     @include susy-media(mobileOnly) {
       font-size: rem(16px);

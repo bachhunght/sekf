@@ -53,6 +53,8 @@
 
 
   $(document).ready(function() {
+     Hyphenator.run();
+
     $('.ajax-pagination .pager-item a').on('click', pagination_ajax);
     $('.box-slide').slick({
       autoplay: false,
@@ -158,6 +160,8 @@
       $('.toggle-nav-mainmenu').toggleClass('active');
       e.preventDefault();
   });
+
+
 
   function myFunction1() {
     var widthwindow = $( window ).width();

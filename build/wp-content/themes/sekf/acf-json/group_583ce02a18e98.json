@@ -518,6 +518,22 @@
                                                 "class": "",
                                                 "id": ""
                                             }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "key": "field_58c02a990ef27",
+                                            "label": "Link",
+                                            "name": "box_partners_link",
+                                            "type": "url",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
                                         }
                                     ],
                                     "min": "",
@@ -662,6 +678,25 @@
                                                 "class": "",
                                                 "id": ""
                                             }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "key": "field_58c01ead32feb",
+                                            "label": "Two columns class",
+                                            "name": "two_columns_class",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
                                         }
                                     ],
                                     "min": "",
@@ -730,5 +765,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1488957753
+    "modified": 1488988845
 }

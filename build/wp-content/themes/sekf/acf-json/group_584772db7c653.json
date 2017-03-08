@@ -1,6 +1,6 @@
 {
     "key": "group_584772db7c653",
-    "title": "Event Information",
+    "title": "Group Category Events",
     "fields": [
         {
             "layouts": [
@@ -19,7 +19,7 @@
                             "name": "datum",
                             "type": "date_time_picker",
                             "instructions": "",
-                            "required": 0,
+                            "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -48,18 +48,18 @@
                         }
                     ],
                     "min": "",
-                    "max": "1"
+                    "max": ""
                 }
             ],
             "min": "",
             "max": "",
             "button_label": "Add Row",
             "key": "field_584772df9b046",
-            "label": "Event Information",
+            "label": "Group Category Events",
             "name": "group_category_events",
             "type": "flexible_content",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -85,5 +85,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1481274859
+    "modified": 1488963696
 }
