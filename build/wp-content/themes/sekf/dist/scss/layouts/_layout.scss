@@ -28,20 +28,25 @@ body {
 
 .box-feature {
   background-image: url("../images/map.jpg");
-  min-height: 190px;
+  height: 190px;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: rgb(1, 131, 197);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   margin-bottom: 74px;
+  display: table;
+  width: 100%;
+  padding: 10px 0;
 
   @include susy-media(mobileOnly) {
     background-size: cover;
     min-height: rem(120px);
     margin-bottom: rem(15px);
+  }
+
+  &__inner {
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 
@@ -84,3 +89,4 @@ body {
     display: none;
   }
 }
+

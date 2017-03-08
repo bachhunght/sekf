@@ -303,3 +303,31 @@ class footer_Widget extends WP_Widget {
   }
 }
 
+
+// Filter the output of logo to fix Googles Error about itemprop logo
+function wecodeart_com() {
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $html = sprintf( '<a href="%1$s" class="custom-logo-link site-logo" rel="home" itemprop="url">%2$s</a>',
+            esc_url( home_url( '/' ) ),
+            wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+                'class'    => 'custom-logo',
+            ) )
+        );
+    return $html;
+}
+add_filter( 'get_custom_logo', 'wecodeart_com' );
+
+/*
+   Debug preview with custom fields
+*/
+
+// add_filter('_wp_post_revision_fields', 'add_field_debug_preview');
+// function add_field_debug_preview($fields){
+//    $fields["debug_preview"] = "debug_preview";
+//    return $fields;
+// }
+
+// add_action( 'edit_form_after_title', 'add_input_debug_preview' );
+// function add_input_debug_preview() {
+//    echo '<input type="hidden" name="debug_preview" value="debug_preview">';
+// }

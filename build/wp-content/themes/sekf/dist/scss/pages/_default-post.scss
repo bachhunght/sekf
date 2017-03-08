@@ -26,6 +26,7 @@ h3 {
   h2 {
     margin-bottom: rem(10px);
     text-transform: uppercase;
+    line-height: normal;
   }
 
   h3 {
@@ -60,6 +61,7 @@ h3 {
 
     a {
       text-decoration: underline;
+      color: rgba(135, 155, 21, .75);
     }
   }
 }
@@ -246,3 +248,9 @@ h2.post-detail-title {
   }
 }
 
+.content-post {
+  .description-wrap {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+}

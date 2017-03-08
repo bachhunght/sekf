@@ -322,3 +322,22 @@ ul.pager {
   }
 }
 
+p.aligncenter {
+  text-align: center;
+}
+
+p.alignright {
+  text-align: right;
+  float: right;
+  padding-left: 10px;
+  margin-bottom: 15px !important;
+}
+p.alignleft {
+  text-align: left;
+  float: left;
+  padding-right: 10px;
+  margin-bottom: 15px !important;
+}
+.category-tags {
+  clear: both;
+}

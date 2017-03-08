@@ -49,7 +49,18 @@ function shortcode($name) {
   echo do_shortcode($name);
   return;
 }
-
+//custom post link
+function post_link($id) {
+  global $post;
+  $post_link = get_permalink( $id );
+  return $post_link;
+}
+// //custom post link
+// function post_link1($guid) {
+//   global $post;
+//   $post_link1 = get_permalink( $guid );
+//   return $post_link1;
+// }
 // Disable ACF plugin function
 function acfwidget($name, $widgetid) {
   if (get_field($name, 'widget_'.$widgetid)) {
@@ -315,6 +326,8 @@ function sekf_twig_data($data){
   $data['get_term_name'] = TimberHelper::function_wrapper( 'get_term_name' );
   $data['avatar_author'] = TimberHelper::function_wrapper( 'avatar_author' );
   $data['twig_in_array'] = TimberHelper::function_wrapper( 'twig_in_array' );
+  $data['post_link'] = TimberHelper::function_wrapper( 'post_link' );
+  // $data['post_link1'] = TimberHelper::function_wrapper( 'post_link1' );
 
   $data['menu']['main'] = new TimberMenu('main');
   $data['menu']['header_top'] = new TimberMenu('header_top');

@@ -6,7 +6,7 @@ function sekf_sidebar_post_metaboxes() {
 
   $cmb = new_cmb2_box( array(
     'id'            => 'post_options',
-    'title'         => __( 'Options post', 'cmb2' ),
+    'title'         => __( 'Login option', 'cmb2' ),
     'object_types'  => array('post', 'page'), // Post type or any post type use: ct_list_posttype()
     'context'       => 'normal',
     'priority'      => 'high',

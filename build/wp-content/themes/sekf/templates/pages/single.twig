@@ -2,8 +2,8 @@
 
 {% block feature %}
     <div class="box-feature">
-      <div class="container">
-        <h1 class="post-heightline-title">{{ post.head_banner_text }}</h1>
+      <div class="box-feature__inner">
+        <div class="container"><h1 class="post-heightline-title">{{ post.head_banner_text }}</h1></div>
       </div>
     </div>
 {% endblock %}
@@ -14,17 +14,22 @@
   {% elseif (check_login and function('is_user_logged_in')) or (check_login == "") %}
     {% set post_cat = 'member' %}
     {% set cat_arr = [] %}
+
     {% for post in posts %}
+
       {% for item in post.terms('category') %}
         {% set item_slug = item.slug %}
         {% set cat_arr = cat_arr|merge([item_slug]) %}
       {% endfor %}
+
       {% if twig_in_array(post_cat, cat_arr) %}
         {% include ["single-"~post.post_name~".twig", "single-"~post_cat~".twig", 'tease.twig'] %}
       {% else %}
         {% include ["single-"~post.post_name~".twig", "single-"~post.post_type~".twig", 'tease.twig'] %}
       {% endif %}
+
     {% endfor %}
+
   {% endif %}
 {% endblock %}
 

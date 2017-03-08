@@ -13,6 +13,24 @@
     padding-bottom: rem(15px);
     padding-top: rem(15px);
   }
+
+  &__gray {
+    background-color: $gray-db;
+    color: $gray-33;
+
+    .box-information h2 {
+      color: $dark-navy-blue;
+    }
+    .box-information__body a {
+      color: $gray-33;
+      text-decoration: underline;
+    }
+
+    .nav-footer {
+      border-top: rem(1px) solid rgba(51, 51, 51, .21);
+    }
+
+  }
 }
 
 .box-information {
@@ -57,7 +75,7 @@
 .nav-footer {
   border-top: rem(1px) solid rgba(255, 255, 255, .21);
   margin: 0 auto;
-  max-width: rem(619px);
+  max-width: rem(700px);
 
   &__menu {
     display: flex;

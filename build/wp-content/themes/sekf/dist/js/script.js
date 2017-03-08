@@ -51,6 +51,7 @@
 
   };
 
+
   $(document).ready(function() {
     $('.ajax-pagination .pager-item a').on('click', pagination_ajax);
     $('.box-slide').slick({
@@ -142,7 +143,9 @@
       });
      });
 
-    $('img.alignright').wrap('<div>ok</div>');
+    $('img.alignright').wrap('<p class="alignright"></p>');
+    $('img.alignleft').wrap('<p class="alignleft"></p>');
+    $('img.aligncenter').wrap('<p class="aligncenter"></p>');
   });
 
   $('.box-testimonial__quote').matchHeight();
@@ -156,16 +159,24 @@
       e.preventDefault();
   });
 
+  function myFunction1() {
+    var widthwindow = $( window ).width();
+      $('.js-toggle').on('click', function(e) {
+        $(this).parent().prevAll('.header__top-menu-wrap').toggleClass('active');
+    });
+  }
+
   function myFunction() {
     $(".dataTables_wrapper .dataTables_filter input").attr('placeholder','Sök i tabellen' );
   }
 
   $(window).load(function() {
-    // Call to function
      myFunction();
+     myFunction1();
   });
 
   $(window).resize(function() {
-    // Call to function
+    var widthwindow = $( window ).width();
+    // myFunction1();
   });
 })(jQuery);

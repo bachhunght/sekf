@@ -13,7 +13,9 @@
   </div>
   {% endif %}
   {% if post.description_post_page %}
-    <p>{{ post.description_post_page }}</p>
+    <div class="description-wrap">
+      <p>{{ post.description_post_page }}</p>
+    </div>
   {% endif %}
   <div class="post-content">
     {{ post.content|shortcodes }}
