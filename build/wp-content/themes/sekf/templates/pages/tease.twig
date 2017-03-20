@@ -1,8 +1,19 @@
 {% block content %}
+  {# {{post|print_r}} #}
   <h2 class="post-detail-title">{{ post.title }}</h2>
   <div class="content-post">
   <div class="teaser-list__group">
-  <span class="teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</span>
+
+  {% if post.group_category_events_0_datum %}
+    <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{post.group_category_events_0_datum|date('d.m.Y')}}
+      {% if post.group_category_events_0_end_datum %}
+        <span><span class="till-datum">till</span><span class="lable">Datum: </span> {{ post.group_category_events_0_end_datum|date('d.m.Y')}}</span>
+      {% endif %}
+    </span>
+  {% else %}
+    <span class="teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</span>
+  {% endif %}
+
   {% if  post.group_category_events_0_plats %}
     <span class="teaser-list__location"><span class="lable">Plats:</span>  {{post.group_category_events_0_plats}}</span>
   {% endif %}
@@ -13,7 +24,9 @@
   </div>
   {% endif %}
   {% if post.description_post_page %}
-    <p>{{ post.description_post_page }}</p>
+    <div class="description-wrap">
+      <p>{{ post.description_post_page }}</p>
+    </div>
   {% endif %}
   <div class="post-content">
     {{ post.content|shortcodes }}

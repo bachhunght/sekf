@@ -1,11 +1,20 @@
 <div class="box-post-link">
   <h2>{{box_post_link_title}}</h2>
+
   {% for item  in box_post_link %}
+    {# {{item|print_r}} #}
+    {# {% set terms = function('get_the_terms', item.ID, 'category') %}
+
+    {% for term in terms %}
+      <div>{{term.name}}</div>
+    {% endfor %} #}
     <div class="post-date teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ item.post_date|date('d.m.Y')}}</div>
+    {{function('remove_all_shortcodes')}}
     <h3>{{ item.post_title }}</h3>
-    <div class="views__content"><p>{{ item.post_content|excerpt(10) }}</p></div>
-    <div class="views-link"><a href="{{item.link}}">Läs hela texten</a></div>
+    <div class="views__content"><p>{{ item.description_post_page|excerpt(10) }}</p></div>
+    <div class="views-link"><a href="{{post_link(item.ID)}}">Läs hela texten</a></div>
   {% endfor %}
+
   {% for item in category_link %}
     {% set term = TimberTerm(item.term_id) %}
     <h3>{{ term.name }}</h3>
@@ -17,6 +26,5 @@
     <h3>{{ item.link_title }}</h3>
     <div class="views__content"><p>{{ item.description }}</p></div>
     <div class="views-link"><a href="{{item.link_url}}">Läs hela texten</a></div>
-  {# {{custom_links|print_r}} #}
   {% endfor %}
 </div>

@@ -12,7 +12,9 @@
 
   &__date {
     font-size: rem(14px);
-    @include lora;
+    @include fira-sans;
+    font-weight: normal;
+
     .lable {
       margin-bottom: rem(10px);
       margin-right: rem(5px);
@@ -35,6 +37,8 @@
     font-size: rem(14px);
     color: $gray-33;
     opacity: .75;
+    @include fira-sans;
+    font-weight: normal;
 
     .lable {
       color: $red-leight;

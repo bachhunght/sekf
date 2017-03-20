@@ -5,7 +5,7 @@
     {% for item in box_testimonial_items %}
         <div class="box-testimonial__item col-md-4">
             {% if item.box_testimonial_quote %}
-                <div class="box-testimonial__quote"> {{item.box_testimonial_quote}} </div>
+                <div class="box-testimonial__quote hyphenate"><p>{{item.box_testimonial_quote}}</p></div>
             {% endif %}
             {% if item.box_testimonial_image %}
                 <div class="box-testimonial__image"><img src=" {{item.box_testimonial_image}} "></div>

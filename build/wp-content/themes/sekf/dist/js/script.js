@@ -51,7 +51,10 @@
 
   };
 
+
   $(document).ready(function() {
+     Hyphenator.run();
+
     $('.ajax-pagination .pager-item a').on('click', pagination_ajax);
     $('.box-slide').slick({
       autoplay: false,
@@ -102,6 +105,7 @@
       pauseOnHover: true,
       slidesToShow: 3,
       slidesToScroll: 1,
+      adaptiveHeight: true,
       responsive: [
       {
         breakpoint: 1024,
@@ -140,11 +144,15 @@
       $postlistmasonry.masonry({
           itemSelector: '.teaser-list__item'
       });
+      $('.box-testimonial__quote').matchHeight();
      });
 
+    $('img.alignright').wrap('<p class="alignright"></p>');
+    $('img.alignleft').wrap('<p class="alignleft"></p>');
+    $('img.aligncenter').wrap('<p class="aligncenter"></p>');
   });
 
-  $('.box-testimonial__quote').matchHeight();
+  // $('.box-testimonial__quote').matchHeight();
   $('.box-member__item').matchHeight();
   $('.js-matchHeight').matchHeight();
 
@@ -155,16 +163,26 @@
       e.preventDefault();
   });
 
+
+
+  function myFunction1() {
+    var widthwindow = $( window ).width();
+      $('.js-toggle').on('touch click', function(e) {
+        $(this).parent('.block-search').prevAll('.header__top-menu-wrap').toggleClass('active');
+    });
+  }
+
   function myFunction() {
     $(".dataTables_wrapper .dataTables_filter input").attr('placeholder','Sök i tabellen' );
   }
 
   $(window).load(function() {
-    // Call to function
      myFunction();
+     myFunction1();
   });
 
   $(window).resize(function() {
-    // Call to function
+    var widthwindow = $( window ).width();
+    // myFunction1();
   });
 })(jQuery);
