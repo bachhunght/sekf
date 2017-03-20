@@ -101,3 +101,114 @@ function sekf_view_list($attrs) {
   return $content;
   wp_reset_postdata();
 }
+
+
+function my_posts_where( $where ) {
+  $where = str_replace("meta_key = 'group_category_events_%", "meta_key LIKE 'group_category_events_%", $where);
+  return $where;
+}
+
+add_filter('posts_where', 'my_posts_where');
+
+// View List
+add_shortcode( 'view_list_upcomming', 'sekf_view_list_upcomming' );
+function sekf_view_list_upcomming($attrs) {
+  extract(shortcode_atts (array(
+    'name'        => 'view-upcoming-events',
+    'post_type'   => 'post',
+    'per_page'    => -1,
+    'cat_id'      => 5,
+    'sort_by'     =>  'group_category_events_%_datum',
+    'order'       => 'ASC',
+  ), $attrs));
+
+  ob_start();
+    global $post;
+
+    $today = date('Y-m-d');
+
+    $args = array(
+      'post_type'       => 'post',
+      'posts_per_page'  => 3,
+      'cat'             => 5,
+      'post_status'     => 'publish',
+      'meta_key'      => 'group_category_events_0_datum',
+      'orderby'     => 'meta_value',
+      'order'       => 'ASC',
+      'meta_query' => array(
+         array(
+            'key'   => 'group_category_events_0_datum',
+            'compare' => '>=',
+            'value'   => $today,
+        )
+      )
+    );
+
+    $context = Timber::get_context();
+    query_posts($args);
+    $posts = Timber::get_posts($args);
+    $context['posts'] = $posts;
+
+    try {
+    Timber::render( array( 'view-' . $name . '.twig', 'views.twig'), $context );
+    } catch (Exception $e) {
+      echo 'Could not find a twig file for Shortcode Name: ' . $name;
+    }
+
+    $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+  wp_reset_postdata();
+}
+
+
+// View List
+add_shortcode( 'view_list_upcomming1', 'sekf_view_list_upcomming1' );
+function sekf_view_list_upcomming1($attrs) {
+  extract(shortcode_atts (array(
+    'name'        => 'evetslist',
+    'post_type'   => 'post',
+    'per_page'    => -1,
+    'cat_id'      => 5,
+    'sort_by'     =>  'group_category_events_%_datum',
+    'order'       => 'ASC',
+  ), $attrs));
+
+  ob_start();
+    global $post;
+
+    $today = date('Y-m-d');
+
+    $args = array(
+      'post_type'       => 'post',
+      'posts_per_page'  => -1,
+      'cat'             => 5,
+      'post_status'     => 'publish',
+      'meta_key'      => 'group_category_events_0_datum',
+      'orderby'     => 'meta_value',
+      'order'       => 'ASC',
+      'meta_query' => array(
+         array(
+            'key'   => 'group_category_events_0_datum',
+            'compare' => '>=',
+            'value'   => $today,
+        )
+      )
+    );
+
+    $context = Timber::get_context();
+    query_posts($args);
+    $posts = Timber::get_posts($args);
+    $context['posts'] = $posts;
+
+    try {
+    Timber::render( array( 'view-' . $name . '.twig', 'views.twig'), $context );
+    } catch (Exception $e) {
+      echo 'Could not find a twig file for Shortcode Name: ' . $name;
+    }
+
+    $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
+  wp_reset_postdata();
+}

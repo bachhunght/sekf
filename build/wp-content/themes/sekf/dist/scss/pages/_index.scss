@@ -225,3 +225,100 @@ tbody.row-hover tr:first-child td {
     border: 0;
   }
 }
+
+.dataTables_wrapper .dataTables_length label select {
+  float: left;
+  margin-top: -12px;
+  background-color: transparent;
+  color: #fff;
+  width: 90px;
+  height: 45px;
+  padding: 10px 5px 10px 10px;
+  font-size: 16px;
+  margin: 0;
+  border-radius: 8px;
+  outline: none;
+  text-indent: 0;
+}
+
+.content-post .description-wrap {
+  text-align: left;
+  margin-bottom: 40px; }
+
+.archive .teaser-list__date.none-lable {
+  margin-bottom: 5px !important; }
+
+.main-content.col-md-8 {
+  padding-right: 30px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+.comment-form input.form-text, .comment-form .inputText, form input.form-text, form .inputText {
+    width: 28.25rem;
+}
+
+.main-content ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.main-content ol li {
+  padding: 5px 0;
+}
+
+.main-content ul li {
+  padding: 5px 0;
+}
+.main-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+span.till-datum {
+  margin: 0 15px 0 10px;
+}
+
+.single .category-tags ul.cat-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.single .category-tags ul.cat-list li {
+  padding: 0;
+}
+
+.archive .teaser-list__date.none-lable {
+  margin-bottom: 5px !important;
+  margin-right: 0;
+}
+.wpcf7-checkbox span.wpcf7-list-item label {
+  display: inline-block;
+}
+
+.dataTables_wrapper .dataTables_length label {
+  width: 75px;
+  background-position: 48px 17px;
+}
+
+.tablepress .sorting:after, .tablepress .sorting_asc:after, .tablepress .sorting_desc:after {
+  right: auto !important;
+  margin-left: 7px !important;
+}
+span.till-datum {
+  margin: 0 3px 0 3px;
+}
+
+.teaser-list__date .lable {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1024px) {
+  .box-feature__inner .container {
+    width: 100%;
+  }
+}
+.views-link:last-of-type {
+  margin-bottom: 0;
+}

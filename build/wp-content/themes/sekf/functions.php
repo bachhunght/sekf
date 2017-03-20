@@ -66,16 +66,16 @@ if(!is_admin()) {
 
 // Add admin script
 function sekf_admin_scripts() {
-  wp_register_script('lib-moment', get_stylesheet_directory_uri() . '/dist/js/admin-libs/moment.js', array('jquery'), '2.13.0');
+ /* wp_register_script('lib-moment', get_stylesheet_directory_uri() . '/dist/js/admin-libs/moment.js', array('jquery'), '2.13.0');
   wp_enqueue_script('lib-moment');
 
   wp_register_script('lib-datetimepicker', get_stylesheet_directory_uri() . '/dist/js/admin-libs/bootstrap-datetimepicker.min.js', array('jquery'), '4.17.37');
-  wp_enqueue_script('lib-datetimepicker');
+  wp_enqueue_script('lib-datetimepicker');*/
 
-  wp_register_script('admin-script', get_stylesheet_directory_uri() . '/dist/js/admin-script.js', array('jquery'), '1.0.0');
-  wp_enqueue_script('admin-script');
+  wp_enqueue_script('admin-script', get_stylesheet_directory_uri() . '/dist/js/admin-script.js', array('jquery'), '1.0.0', true);
+  //wp_enqueue_script('admin-script');
 }
-add_action('admin_init', 'sekf_admin_scripts');
+add_action('admin_enqueue_scripts', 'sekf_admin_scripts');
 
 // Add admin script
 function sekf_admin_styles() {
@@ -232,4 +232,30 @@ function add_field_debug_preview($fields){
 add_action( 'edit_form_after_title', 'add_input_debug_preview' );
 function add_input_debug_preview() {
    echo '<input type="hidden" name="debug_preview" value="debug_preview">';
+}
+
+add_filter('acf/validate_value/name=end_datum', 'validate_end_date_func', 10, 4);
+function validate_end_date_func($valid, $value, $field, $input) {
+if($value == ''){
+  return true;
+}
+
+  if (!$valid) {
+    return $valid;
+  }
+  $repeater_key = 'field_584772df9b046';
+  $start_key = 'field_5847730e9b047';
+  $end_key = 'field_58c0b97711ef9';
+  // extract row from input
+  $row = preg_replace('/^\s*acf\[[^\]]+\]\[([^\]]+)\].*$/', '\1', $input);
+  $start_value = $_POST['acf'][$repeater_key][$row][$start_key];
+  $end_value = $value;
+  if ($end_value <= $start_value) {
+   $valid = 'End value must be greater than start value';
+  }
+  return $valid;
+}
+add_action( 'init', 'my_add_excerpts_to_pages' );
+function my_add_excerpts_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
 }

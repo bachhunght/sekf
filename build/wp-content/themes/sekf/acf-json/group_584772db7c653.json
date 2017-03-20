@@ -12,7 +12,7 @@
                     "sub_fields": [
                         {
                             "display_format": "d\/m\/Y g:i a",
-                            "return_format": "d\/m\/Y g:i a",
+                            "return_format": "Y-m-d H:i:s",
                             "first_day": 1,
                             "key": "field_5847730e9b047",
                             "label": "Datum",
@@ -20,6 +20,23 @@
                             "type": "date_time_picker",
                             "instructions": "",
                             "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "display_format": "d\/m\/Y g:i a",
+                            "return_format": "d\/m\/Y g:i a",
+                            "first_day": 1,
+                            "key": "field_58c0b97711ef9",
+                            "label": "End Datum",
+                            "name": "end_datum",
+                            "type": "date_time_picker",
+                            "instructions": "",
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -52,7 +69,7 @@
                 }
             ],
             "min": "",
-            "max": "",
+            "max": 1,
             "button_label": "Add Row",
             "key": "field_584772df9b046",
             "label": "Group Category Events",
@@ -60,6 +77,23 @@
             "type": "flexible_content",
             "instructions": "",
             "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1,
+            "key": "field_58ca5b7646dfb",
+            "label": "event date start",
+            "name": "event_date_start",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -85,5 +119,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1488963696
+    "modified": 1489663164
 }

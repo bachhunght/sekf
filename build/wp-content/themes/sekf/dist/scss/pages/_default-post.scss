@@ -64,6 +64,10 @@ h3 {
       color: rgba(135, 155, 21, .75);
     }
   }
+
+  .views-link:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .category {
@@ -73,12 +77,6 @@ h3 {
 
   .sidebar-right.col-md-4 {
     padding-left: 12.5px;
-  }
-}
-
-.search {
-  .teaser-list {
-    width: 60%;
   }
 }
 
@@ -109,7 +107,7 @@ h2.post-detail-title {
     margin-bottom: rem(80px);
 
     @include susy-media(mobileOnly) {
-      margin-bottom: rem(10px);
+      margin-bottom: rem(40px);
       min-height: rem(120px);
     }
   }
@@ -133,6 +131,8 @@ h2.post-detail-title {
 
     .lable {
       color: $red-leight;
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: normal;
     }
   }
 
@@ -263,4 +263,17 @@ h2.post-detail-title {
 
 .main-content.col-md-8 {
   padding-right: 30px;
+
+  @include susy-media(mobileOnly) {
+    padding-right: 10px;
+  }
 }
+
+a:hover {
+  cursor: pointer;
+}
+
+.comment-form input.form-text, .comment-form .inputText, form input.form-text, form .inputText {
+  width: 28.25rem;
+}
+

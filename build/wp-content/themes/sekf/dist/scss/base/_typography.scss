@@ -16,7 +16,10 @@ h2,
 h3,
 h4 {
   color: $dark-navy-blue;
+  line-height: normal;
+  margin-bottom: 10px;
 }
+
 
 h1 {
   @include fira-sans;
@@ -27,7 +30,7 @@ h1 {
 h2 {
   @include fira-sans;
   font-size: rem(24px);
-  line-height: 2.33;
+  line-height: normal;
   font-weight: 500;
 }
 
@@ -158,12 +161,12 @@ hr {
   }
 }
 
-#page-title {
-  font-size: rem(24px);
-  margin-bottom: rem(13px);
-  margin-top: rem(48px);
-  text-transform: capitalize;
-}
+// #page-title {
+//   font-size: rem(24px);
+//   margin-bottom: rem(13px);
+//   margin-top: rem(48px);
+//   text-transform: capitalize;
+// }
 
 .info-page {
   padding-bottom: rem(30px);
@@ -205,7 +208,6 @@ form {
     border: rem(1px) solid $gray-e2;
     box-shadow: rem(1px 1px 1px) rgba(0, 0, 0, .1) inset;
     height: rem(42px);
-    line-height: rem(42px);
     max-width: 100%;
     padding: rem(10px);
     width: rem(260px);

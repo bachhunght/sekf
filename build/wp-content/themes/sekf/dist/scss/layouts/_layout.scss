@@ -22,9 +22,12 @@ html {
 body {
   @include lora;
   text-size-adjust: none;
-  color: $dark-blue;
+  color: $dark-navy-blue;
 }
 
+span.till-datum {
+  margin: 0 3px;
+}
 
 .box-feature {
   background-image: url("../images/map.jpg");
@@ -38,16 +41,22 @@ body {
   width: 100%;
   padding: 10px 0;
 
+  @media screen and (max-width: 1024px) {
+    .box-feature__inner .container {
+      width: 100%;
+    }
+  }
   @include susy-media(mobileOnly) {
     background-size: cover;
-    min-height: rem(120px);
-    margin-bottom: rem(15px);
+    min-height: rem(90px);
+    margin-bottom: rem(40px);
   }
 
   &__inner {
     display: table-cell;
     vertical-align: middle;
   }
+
 }
 
 .post-heightline-title {
@@ -78,10 +87,6 @@ body {
   * {
     @include fira-sans;
   }
-}
-
-.page-wrapper {
-  // width: 100%;
 }
 
 .home {

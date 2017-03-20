@@ -105,6 +105,7 @@
       pauseOnHover: true,
       slidesToShow: 3,
       slidesToScroll: 1,
+      adaptiveHeight: true,
       responsive: [
       {
         breakpoint: 1024,
@@ -143,6 +144,7 @@
       $postlistmasonry.masonry({
           itemSelector: '.teaser-list__item'
       });
+      $('.box-testimonial__quote').matchHeight();
      });
 
     $('img.alignright').wrap('<p class="alignright"></p>');
@@ -150,7 +152,7 @@
     $('img.aligncenter').wrap('<p class="aligncenter"></p>');
   });
 
-  $('.box-testimonial__quote').matchHeight();
+  // $('.box-testimonial__quote').matchHeight();
   $('.box-member__item').matchHeight();
   $('.js-matchHeight').matchHeight();
 
@@ -165,8 +167,8 @@
 
   function myFunction1() {
     var widthwindow = $( window ).width();
-      $('.js-toggle').on('click', function(e) {
-        $(this).parent().prevAll('.header__top-menu-wrap').toggleClass('active');
+      $('.js-toggle').on('touch click', function(e) {
+        $(this).parent('.block-search').prevAll('.header__top-menu-wrap').toggleClass('active');
     });
   }
 
