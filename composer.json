@@ -38,5 +38,6 @@
     "wpackagist-plugin/tablepress" : "1.7",
     "wpackagist-plugin/contact-form-7" : "4.6",
      "wpackagist-plugin/tinymce-advanced" : "4.4.3"
+     "wpackagist-plugin/contact-form-7-to-database-extension" : "2.10.29"
   }
 }
