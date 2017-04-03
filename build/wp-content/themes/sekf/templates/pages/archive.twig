@@ -43,7 +43,17 @@
       <div class="box-post-link--list">
 
         {% for post in item.box_post_link %}
-          <div class="post-date teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</div>
+         <div class="teaser-list__group">
+          {% if post.group_category_events_0_datum %}
+              <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{post.group_category_events_0_datum|date('d.m.Y')}}
+                {% if post.group_category_events_0_end_datum %}
+                  <span><span class="till-datum">till </span> {{ post.group_category_events_0_end_datum|date('d.m.Y')}}</span>
+                {% endif %}
+              </span>
+            {% else %}
+              <span class="teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</span>
+            {% endif %}
+          </div>
           <h3>{{ post.post_title }}</h3>
           <div class="views__content"><p>{{ post.description_post_page|excerpt(10) }}</p></div>
           <div class="views-link"><a href="{{post_link(post.ID)}}">Läs hela texten</a></div>

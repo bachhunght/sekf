@@ -114,10 +114,10 @@ add_filter('posts_where', 'my_posts_where');
 add_shortcode( 'view_list_upcomming', 'sekf_view_list_upcomming' );
 function sekf_view_list_upcomming($attrs) {
   extract(shortcode_atts (array(
-    'name'        => 'view-upcoming-events',
-    'post_type'   => 'post',
+    'name'        => '',
+    'post_type'   => '',
     'per_page'    => -1,
-    'cat_id'      => 5,
+    'cat_id'      => '',
     'sort_by'     =>  'group_category_events_%_datum',
     'order'       => 'ASC',
   ), $attrs));
@@ -129,8 +129,8 @@ function sekf_view_list_upcomming($attrs) {
 
     $args = array(
       'post_type'       => 'post',
-      'posts_per_page'  => 3,
-      'cat'             => 5,
+      'posts_per_page'  => $per_page,
+      'cat'             => $cat_id,
       'post_status'     => 'publish',
       'meta_key'      => 'group_category_events_0_datum',
       'orderby'     => 'meta_value',
@@ -166,12 +166,12 @@ function sekf_view_list_upcomming($attrs) {
 add_shortcode( 'view_list_upcomming1', 'sekf_view_list_upcomming1' );
 function sekf_view_list_upcomming1($attrs) {
   extract(shortcode_atts (array(
-    'name'        => 'evetslist',
-    'post_type'   => 'post',
+    'name'        => '',
+    'post_type'   => '',
     'per_page'    => -1,
-    'cat_id'      => 5,
+    'cat_id'      => '',
     'sort_by'     =>  'group_category_events_%_datum',
-    'order'       => 'ASC',
+    'order'       => 'DESC',
   ), $attrs));
 
   ob_start();
@@ -182,18 +182,18 @@ function sekf_view_list_upcomming1($attrs) {
     $args = array(
       'post_type'       => 'post',
       'posts_per_page'  => -1,
-      'cat'             => 5,
+      'cat'             => $cat_id,
       'post_status'     => 'publish',
       'meta_key'      => 'group_category_events_0_datum',
       'orderby'     => 'meta_value',
-      'order'       => 'ASC',
-      'meta_query' => array(
-         array(
-            'key'   => 'group_category_events_0_datum',
-            'compare' => '>=',
-            'value'   => $today,
-        )
-      )
+      'order'       => 'DESC',
+      // 'meta_query' => array(
+      //    array(
+      //       'key'   => 'group_category_events_0_datum',
+      //       'compare' => '>=',
+      //       'value'   => $today,
+      //   )
+      // )
     );
 
     $context = Timber::get_context();

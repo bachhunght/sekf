@@ -8,7 +8,17 @@
     {% for term in terms %}
       <div>{{term.name}}</div>
     {% endfor %} #}
-    <div class="post-date teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ item.post_date|date('d.m.Y')}}</div>
+    <div class="teaser-list__group">
+    {% if item.group_category_events_0_datum %}
+        <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{item.group_category_events_0_datum|date('d.m.Y')}}
+          {% if item.group_category_events_0_end_datum %}
+            <span><span class="till-datum">till </span> {{ item.group_category_events_0_end_datum|date('d.m.Y')}}</span>
+          {% endif %}
+        </span>
+      {% else %}
+        <span class="teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ item.post_date|date('d.m.Y')}}</span>
+      {% endif %}
+    </div>
     {{function('remove_all_shortcodes')}}
     <h3>{{ item.post_title }}</h3>
     <div class="views__content"><p>{{ item.description_post_page|excerpt(10) }}</p></div>

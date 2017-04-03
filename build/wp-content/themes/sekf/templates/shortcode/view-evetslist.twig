@@ -10,7 +10,7 @@
         <div class="teaser-list__group">
           <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{post.group_category_events_0_datum|date('d.m.Y')}}
           {% if post.group_category_events_0_end_datum %}
-            <span class="teaser-list__date none-lable"><span class="till-datum">till</span><span class="lable">Datum: </span> {{ post.group_category_events_0_end_datum|date('d.m.Y')}}</span>
+            <span><span class="till-datum">till </span> {{ post.group_category_events_0_end_datum|date('d.m.Y')}}</span>
           {% endif %}
         </span>
 

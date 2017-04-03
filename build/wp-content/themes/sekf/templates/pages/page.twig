@@ -8,19 +8,10 @@
         </div>
       </div>
     </div>
-
-    {% if post.description_post_page %}
-    <div class="description-wrap">
-      <div class="container">
-        {{ post.description_post_page }}
-      </div>
-    </div>
-    {% endif %}
 {% endblock %}
 
 {% block content %}
-  <div class="container">
-
+<div class="container">
  {% if check_login and (function('is_user_logged_in') == "") %}
     <h2>Du behöver logga in för att se det här innehållet</h2>
     {% elseif (check_login and function('is_user_logged_in')) or (check_login == "") %}
@@ -32,6 +23,14 @@
             {% endif %}
             <div class="post-date teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</div>
           {% endif %}
+
+        {% if post.description_post_page %}
+        <div class="description-wrap" style="margin-bottom: 40px;">
+          <div class="" style="text-align: left;">
+          {{ post.description_post_page }}
+          </div>
+        </div>
+        {% endif %}
           {% if post.thumbnail.src %}
           <div class="post-picture">
             <p><img src="{{post.thumbnail.src}}" class="feature" /></p>
@@ -56,13 +55,6 @@
         {{ function('comment_form') }}
         {% endif %}
  {% endif %}
-
-
-
-
-
-
-
 {% endblock %}
 
 {% block aside %}

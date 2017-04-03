@@ -53,6 +53,7 @@
 
 
   $(document).ready(function() {
+    $('.single-post .post-content .form-wrapp > div, .page .col-md-8 .views .views > div').removeClass('container');
      Hyphenator.run();
 
     $('.ajax-pagination .pager-item a').on('click', pagination_ajax);
