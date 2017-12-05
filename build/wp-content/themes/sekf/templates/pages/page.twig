@@ -1,30 +1,63 @@
 {% extends 'layout.twig' %}
 
+{% block feature %}
+    <div class="box-feature">
+      <div class="box-feature__inner">
+        <div class="container">
+          <h1 class="post-heightline-title">{{ post.head_banner_text }}</h1>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-  {% if title_option != "on" %}
-    {% if post.title %}
-    <h1 id="page-title">
-      {{ post.title }}
-    </h1>
-    {% endif %}
-  {% endif %}
+<div class="container">
+ {% if check_login and (function('is_user_logged_in') == "") %}
+    <h2>Du behöver logga in för att se det här innehållet</h2>
+    {% elseif (check_login and function('is_user_logged_in')) or (check_login == "") %}
+          {% if title_option != "on" %}
+            {% if post.title %}
+            <h2 id="page-title" class="page-title">
+              {{ post.title }}
+            </h2>
+            {% endif %}
+            <div class="post-date teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</div>
+          {% endif %}
 
-  {% for post in posts %}
-    {% if not function('is_page') %}
-      <h3 class="post-title"><a href="{{ post.link }}">{{ post.title }}</a></h3>
-    {% endif %}
-    {{  post.post_content|shortcodes }}
-    {{ flexible_content('group_component') }}
-    {{ flexible_content('view_component') }}
-  {% endfor %}
+        {% if post.description_post_page %}
+        <div class="description-wrap" style="margin-bottom: 40px;">
+          <div class="" style="text-align: left;">
+          {{ post.description_post_page }}
+          </div>
+        </div>
+        {% endif %}
+          {% if post.thumbnail.src %}
+          <div class="post-picture">
+            <p><img src="{{post.thumbnail.src}}" class="feature" /></p>
+          </div>
+          {% endif %}
+        </div>
+        {% for post in posts %}
+          <div class="container">
+            {% if not function('is_page') %}
+              <h3 class="post-title"><a href="{{ post.link }}">{{ post.title }}</a></h3>
+            {% endif %}
+            {% if post.post_content %}
+              {{  post.post_content|shortcodes }}
+            {% endif %}
+          </div>
+          {{ function('flexible_content', 'group_component') }}
+          {{ function('flexible_content', 'view_component') }}
+        {% endfor %}
 
-  {% if function('comments_open') %}
-  {% include 'comments.twig' %}
-  {{ function('comment_form') }}
-  {% endif %}
-
+        {% if function('comments_open') %}
+        {% include 'comments.twig' %}
+        {{ function('comment_form') }}
+        {% endif %}
+ {% endif %}
 {% endblock %}
 
 {% block aside %}
-  {{ sidebar(sidebar_right) }}
+  {{ function('sidebar', 'sidebar-right') }}
+  {{ function('flexible_content', 'group_sidebar')}}
 {% endblock %}

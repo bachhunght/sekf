@@ -1,18 +1,41 @@
 {% block content %}
+  {# {{post|print_r}} #}
   <h2 class="post-detail-title">{{ post.title }}</h2>
-  <p class="blog-author">
-    <span class="post-date">{{ post.post_date|date}}</span> | <a class="post-author" href="{{post.author.path}}"> {{ post.author.name }} </a>
-  </p>
+  <div class="content-post">
+  <div class="teaser-list__group">
 
-  {% if post.thumbnail.src %}
-  <div class="post-picture">
-    <img src="{{post.thumbnail.src}}" class="feature" />
-  </div>
+  {% if post.group_category_events_0_datum %}
+    <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{post.group_category_events_0_datum|date('d.m.Y')}}
+      {% if post.group_category_events_0_end_datum %}
+        <span><span class="till-datum">till </span> {{ post.group_category_events_0_end_datum|date('d.m.Y')}}</span>
+      {% endif %}
+    </span>
+  {% else %}
+    <span class="teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</span>
   {% endif %}
 
+  {% if  post.group_category_events_0_plats %}
+    <span class="teaser-list__location"><span class="lable">Plats:</span>  {{post.group_category_events_0_plats}}</span>
+  {% endif %}
+</div>
+  {% if post.thumbnail.src %}
+  <div class="post-picture">
+    <p><img src="{{post.thumbnail.src}}" class="feature" /></p>
+  </div>
+  {% endif %}
+  {% if post.description_post_page %}
+    <div class="description-wrap">
+      <p>{{ post.description_post_page }}</p>
+    </div>
+  {% endif %}
+  <div class="post-content">
+    {{ post.content|shortcodes }}
+    {{ function('flexible_content', 'group_component') }}
+    {{ function('flexible_content', 'view_component') }}
+  </div>
   {% if post.terms('category') %}
-  <div class="category">
-    <label>Category:</label>
+  <div class="category-tags">
+    <label>Kategori:</label>
     <ul class="cat-list">
     {% for term in post.terms('category') %}
       <li><a href="{{term.link}}">{{term.name}}{% if (loop.length > 1) and (loop.length != loop.last) %},{% endif %}</a></li>
@@ -20,35 +43,5 @@
     </ul>
   </div>
   {% endif %}
-
-  <div class="post-content">
-    {{ post.content|shortcodes }}
-    {{ flexible_content('group_component') }}
-    {{ flexible_content('view_component') }}
   </div>
-
-  {% if post.terms('tags') %}
-  <div class="tags">
-    <label>Tags:</label>
-    <ul class="tag-list">
-    {% for term in post.terms('tags') %}
-      <li><a href="{{term.link}}">{{term.name}}</a></li>
-    {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
-
-  {% if related('category') %}
-    <h3 class="related-title block-title">Related post</h3>
-    <ul class="post-related">
-      {% for post in related('category') %}
-        <li><a href="{{post.link}}">{{post.title}}</a></li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% if function('comments_open') %}
-  {% include 'comments.twig' %}
-  {{ function('comment_form') }}
-  {% endif %}
 {% endblock %}

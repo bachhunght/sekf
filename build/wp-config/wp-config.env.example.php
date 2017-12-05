@@ -30,7 +30,6 @@ define('DB_COLLATE', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
 
 // used to override the wp_options and
 // dynamically set the site for this environment

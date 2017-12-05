@@ -1,12 +1,27 @@
 // Button
 .btn {
-  color: $primary-color;
+  @include fira-sans;
+  background-color: $green;
+  border-radius: rem(8px);
+  border: 0;
+  color: $white;
+  font-size: rem(16px);
+  font-weight: 500;
+  line-height: 1.75;
+  min-width: rem(184px);
+  padding: rem(10px 10px 7px 10px);
+  text-align: center;
+  text-transform: uppercase;
+
   &,
   &:focus,
   &:visited {
+    color: $white;
   }
 
   &:active,
   &:hover {
+    background-color: $green-glitter;
+    color: $white;
   }
 }

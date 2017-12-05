@@ -32,7 +32,6 @@
 
 // Vendors
 @import 'vendors/chosen';
-@import 'vendors/slick';
 @import 'vendors/fancybox';
 
 // Blocks
@@ -45,5 +44,18 @@
 @import 'layouts/footer';
 @import 'layouts/sidebar-layout';
 
+//Components
+@import 'components/box-social';
+@import 'components/block-search';
+@import 'components/box-slide';
+@import 'components/box-service';
+@import 'components/box-text-format';
+@import 'components/box-testimonial';
+@import 'components/box-member';
+@import 'components/box-partners';
+@import 'components/teaser-list';
+
+
 // Pages
 @import 'pages/index';
+@import 'pages/default-post';

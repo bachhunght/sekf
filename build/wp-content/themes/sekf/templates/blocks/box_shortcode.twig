@@ -9,7 +9,7 @@
   {% if box_shortcode_title %}
   <h2 class="section-title">{{box_shortcode_title}}</h2>
   {% endif %}
-  {{shortcode('[' ~ box_shortcode_name  ~ " " ~ variable|join(" ") ~ ']')}}
+  {{ function('shortcode', '[' ~ box_shortcode_name  ~ " " ~ variable|join(" ") ~ ']') }}
 
   {% for field in shortcode_custom_fields %}
     {% if field.acf_fc_layout == 'field_link' %}

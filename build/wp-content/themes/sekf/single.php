@@ -12,7 +12,8 @@
 $context = Timber::get_context();
 $post = new TimberPost();
 $context['post'] = $post;
-$context["acf"] = get_field_objects($data["post"]->ID);
+$context['check_login'] = framework_post('roleloginrequired');
+//$context["acf"] = get_field_objects($data["post"]->ID);
 
 $post_type = get_post_type();
 

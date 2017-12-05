@@ -6,3 +6,328 @@
 .welcome-paragraph {
   padding: rem(40px 0);
 }
+
+.dataTables_wrapper {
+  position: relative;
+  overflow: auto;
+
+  .dataTables_paginate {
+    // display: none;
+
+    @include fira-sans;
+    font-weight: 500;
+  }
+
+  .dataTables_info {
+    // display: none;
+
+    @include fira-sans;
+    font-weight: 500;
+  }
+
+  .dataTables_length {
+    float: right;
+    position: absolute;
+    right: 0;
+    // top: -5px;
+
+    @include susy-media(mobiletinyOnly) {
+      position: relative;
+      float: left;
+    }
+
+    &:before {
+      content: "Visa antal rader";
+      float: left;
+      margin-top: 13px;
+      margin-right: 14px;
+      @include fira-sans;
+      font-weight: 500;
+      color: $dark-dark;
+    }
+
+    label {
+      @include fira-sans;
+      font-weight: 500;
+      color: $dark-dark;
+      width: 65px;
+      overflow: hidden;
+      background-image: url(../images/icon-arow.png);
+      background-color: #879b15;
+      border-radius: 8px;
+      text-indent: -99em;
+      background-repeat: no-repeat;
+      background-position: 37px 17px;
+
+      select {
+        float: left;
+        margin-top: -12px;
+        background-color: transparent;
+        color: #fff;
+        width: 90px;
+        height: 45px;
+        padding: 10px 5px 10px 10px;
+        font-size: 16px;
+        margin: 0;
+        border-radius: 8px;
+        outline: none;
+        text-indent: 0;
+
+        option {
+          background-color: #879b15;
+        }
+      }
+    }
+  }
+
+  .dataTables_filter {
+    float: left;
+    margin-bottom: 21px;
+
+    label {
+      @include fira-sans;
+      font-size: 16px;
+      font-weight: 500;
+      position: relative;
+      text-indent: -999em;
+
+
+      &:before {
+        content: "";
+        background-image: url(../images/iconsearch.png);
+        text-indent: 0 !important;
+        position: absolute;
+        top: 17px;
+        left: 23px;
+        width: 17px;
+        z-index: 1;
+        background-repeat: no-repeat;
+        height: 17px;
+        background-size: cover;
+      }
+
+      input {
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 30px;
+        padding: 5px 0 5px 44px;
+        border: solid 1px #979797;
+        border-radius: 4px;
+        height: 45px;
+        width: 275px;
+        min-width: 275px;
+        text-indent: 0;
+        float: left;
+
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: $dark-dark;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+
+        &::-moz-placeholder { /* Firefox 19+ */
+          color: $dark-dark;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+
+        &:-ms-input-placeholder { /* IE 10+ */
+          color: $dark-dark;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+          color: $dark-dark;
+          text-transform: uppercase;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.tablepress tfoot th, .tablepress thead th {
+  @include fira-sans;
+  border-right: 5px solid #fff;
+  font-size: 20px;
+  font-weight: normal !important;
+  background-color: rgba(1, 131, 197, 0.05) !important;
+  padding-left: 19px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.tablepress thead th {
+  border-bottom: 0 !important;
+}
+.tablepress {
+  tr td {
+    a {
+      text-decoration: underline;
+      color: #879b15;
+      font-weight: bold;
+    }
+  }
+}
+.table-responsive {
+  position: relative;
+}
+
+.tablepress .row-hover tr:hover td {
+  background-color: transparent;
+}
+
+.dataTables_wrapper {
+  .tablepress .odd td {
+    background-color: #fff;
+  }
+
+  .tablepress tbody td, .tablepress tfoot th {
+    border-top: 0;
+    padding: 8px 10px 8px 24px;
+  }
+
+
+  .tablepress .row-hover tr:hover td {
+    background-color: #ffffff;
+  }
+}
+
+tbody.row-hover tr:first-child td {
+  padding-top: 20px;
+}
+
+
+@-moz-document url-prefix() {
+  .dataTables_wrapper .dataTables_filter label::before {
+    top: 38px;
+  }
+
+  .dataTables_wrapper .dataTables_length::before {
+    position: absolute;
+    right: 65px;
+  }
+
+  .dataTables_wrapper .dataTables_length label select {
+    margin: -22px 0 0;
+  }
+
+  .dataTables_wrapper .dataTables_length {
+    top: 15px;
+  }
+
+  .dataTables_wrapper .dataTables_length label select option {
+    padding-left: 12px;
+  }
+
+  .dataTables_wrapper .dataTables_length label select {
+    border: 0;
+  }
+}
+
+.dataTables_wrapper .dataTables_length label select {
+  float: left;
+  margin-top: -12px;
+  background-color: transparent;
+  color: #fff;
+  width: 90px;
+  height: 45px;
+  padding: 10px 5px 10px 10px;
+  font-size: 16px;
+  margin: 0;
+  border-radius: 8px;
+  outline: none;
+  text-indent: 0;
+}
+
+.content-post .description-wrap {
+  text-align: left;
+  margin-bottom: 40px; }
+
+.archive .teaser-list__date.none-lable {
+  margin-bottom: 5px !important; }
+
+.main-content.col-md-8 {
+  padding-right: 30px;
+}
+
+a:hover {
+  cursor: pointer;
+}
+.comment-form input.form-text, .comment-form .inputText, form input.form-text, form .inputText {
+    width: 28.25rem;
+}
+
+.main-content ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.main-content ol li {
+  padding: 5px 0;
+}
+
+.main-content ul li {
+  padding: 5px 0;
+}
+.main-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+span.till-datum {
+  margin: 0 15px 0 10px;
+}
+
+.single .category-tags ul.cat-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.single .category-tags ul.cat-list li {
+  padding: 0;
+}
+
+.archive .teaser-list__date.none-lable {
+  margin-bottom: 5px !important;
+  margin-right: 0;
+}
+.wpcf7-checkbox span.wpcf7-list-item label {
+  display: inline-block;
+}
+
+.dataTables_wrapper .dataTables_length label {
+  width: 75px;
+  background-position: 48px 17px;
+}
+
+.tablepress .sorting:after, .tablepress .sorting_asc:after, .tablepress .sorting_desc:after {
+  right: auto !important;
+  margin-left: 7px !important;
+}
+span.till-datum {
+  margin: 0 3px 0 3px;
+}
+
+.teaser-list__date .lable {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1024px) {
+  .box-feature__inner .container {
+    width: 100%;
+  }
+}
+.views-link:last-of-type {
+  margin-bottom: 0;
+}
+
+.dataTables_wrapper .dataTables_length label {
+    font-size: 0;
+}
+
+.dataTables_wrapper .dataTables_length label select {
+    width: 110px;
+    border: 0;
+}

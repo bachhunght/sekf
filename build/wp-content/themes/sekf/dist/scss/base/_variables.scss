@@ -6,8 +6,9 @@ $mobile-landscape: 480px;
 $mobile-large: 640px;
 $tablet: 768px;
 $tablet-landscape: 960px;
-$desktop: 1180px;
-$desktop-wide: 1260px;
+$desktop: 1310px;
+$container: 1170px;
+$desktop-wide: 1360px;
 $desktop-superwide: 1480px;
 $desktop-superwide1: 1320px;
 
@@ -22,7 +23,7 @@ $column-desktop: 12;
 
 //Font variables
 $base-font-size: 16px;
-$base-line-height: 1.6;
+$base-line-height: 1.5;
 
 // Add global paths
 $image-path: '../images/';

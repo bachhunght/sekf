@@ -1,2 +1,144 @@
 .header {
+  &__top {
+    // background-color: $gary-glitter;
+    background: rgba(1, 131, 197, .05);
+
+    &-menu-wrap {
+      text-align: right;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: rem(38px);
+
+
+      .form-search {
+        display: none;
+        padding: rem(0 15px);
+        border-left: 1px solid rgba(1, 131, 197, .05);
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .site-logo {
+      line-height: 0;
+      margin-right: rem(15px);
+
+      img {
+        max-width: 90px;
+        max-height: 90px;
+
+        @include susy-media(mobileOnly) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    .site-description {
+      @include lora;
+      color: $dark-navy-blue;
+      font-size: rem(18px);
+
+      a {
+        color: $dark-navy-blue;
+      }
+
+      @include susy-media(mobileOnly) {
+        font-size: rem(12px);
+        max-width: rem(145px);
+      }
+    }
+  }
+
+  &__bottom {
+
+    @include susy-media(mobileOnly) {
+      position: relative;
+    }
+
+    &__content {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: rem(10px) 0 rem(11px);
+
+      @include susy-media(mobileOnly) {
+        padding: rem(5px) 0;
+      }
+    }
+  }
+
+  nav.nav.main-menu {
+    margin-right: rem(-4px);
+    margin-top: rem(8px);
+
+    @include susy-media(mobileOnly) {
+      margin-right: 0;
+    }
+
+    ul li {
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+
+.nav-header {
+  &__menu {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    li {
+      border-left: rem(1px) solid rgba(1, 131, 197, .05);
+      height: 38px;
+      overflow: hidden;
+      text-transform: uppercase;
+
+      a {
+        @include fira-sans;
+        align-items: center;
+        color: $gray-5f6d78;
+        display: flex;
+        font-size: rem(14px);
+        font-weight: 500;
+        height: 100%;
+        margin-top: 2px;
+        padding: 0 15px;
+        text-transform: uppercase;
+
+         @include susy-media(mobileOnly) {
+          font-size: 11px;
+          padding: 0 10px;
+         }
+      }
+    }
+  }
+}
+
+@include susy-media(mobileOnly) {
+  .header__top-menu-wrap.active {
+    .nav-header__menu li {
+      display: none;
+    }
+  }
+
+  // h2.post-detail-title {
+  //   font-size: 16px;
+  //   line-height: 1.3 !important;
+  // }
 }

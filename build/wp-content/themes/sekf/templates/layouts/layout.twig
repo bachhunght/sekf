@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html {{site.language_attributes}}>
   <head>
     <meta charset="{{site.charset}}" />
     {% if function('is_home') %}
@@ -9,14 +9,25 @@
     {% else %}
       <title>{{ function('bloginfo') }} - {{ wp_title }}</title>
     {% endif %}
+    <meta name="google-site-verification" content="7Agm9j3wVwv-nV9J2hrVuLp7uptYvNyakDvqVPFy6is" />
     <meta name="description" content="{{site.description}}">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     <link rel="shortcut icon" href="{{site_favicon}}" />
     <link rel="pingback" href="{{site.pingback_url}}" />
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-93755337-1', 'auto');
+        ga('send', 'pageview');
+    </script>
     {{ wp_head }}
   </head>
+
   <body class="{{body_class}}" data-template="base.twig">
     <div class="page-wrapper">
       {% block header %}
@@ -26,25 +37,29 @@
       {% block feature %}
       {% endblock %}
 
-      <main role="main" class="clearfix {% if ( sidebar_right != 'none' ) or ( not function('is_page') ) %}has-sidebar sidebar-right{% endif %}">
-        <div class="{{ page_layout }}{% if not function('is_page') %} container{% endif %}">
-          <div class="main-content">
-            {% block content %}
-              <div class="content-wrapper">
-                {{context}}
-              </div>
+      {% set sidebar_acf = post.get_field('group_sidebar') %}
+      {% set sidebar_wp = function('sidebar_active', 'sidebar-right') %}
+     {% set main_content_class = 'col-md-8' %}
+
+      <main role="main" class="clearfix {{page_layout}} {% if  not function('is_page') %} container {% endif %} ">
+        {% if  page_layout == 'container' or page_layout == ''%} <div class="row"> {% endif %}
+        <div class="main-content {% if  page_layout == 'container' or page_layout == ''%} {{main_content_class}} {% endif %}">
+          {% block content %}
+            <div class="content-wrapper">
+              {{context}}
+            </div>
+          {% endblock %}
+        </div>
+
+        {% if  page_layout == 'container' or page_layout == ''%}
+        <div class="sidebar-right col-md-4">
+          <div class="sidebar-right__inner">
+            {% block aside %}
             {% endblock %}
           </div>
-
-          {% if ( sidebar_right != 'none' ) or ( not function('is_page') ) %}
-            <section class="sidebar-right">
-              <div class="sidebar-right__inner">
-                {% block aside %}
-                {% endblock %}
-              </div>
-            </section>
-          {% endif %}
         </div>
+        {% endif %}
+        {% if  page_layout == 'container' or page_layout == ''%} </div>  {% endif %}
       </main>
 
       {% block footer %}

@@ -95,7 +95,7 @@ $susy-media: (
   // max-width: 768px
   mobileOnly: (
     media: screen,
-    max-width: em($tablet - 1) * 1em,
+    max-width: em($tablet) * 1em,
   ),
 
   // max-width: 959px
@@ -108,6 +108,11 @@ $susy-media: (
   mobileTabletOnly: (
     media: screen,
     max-width: em($desktop - 1) * 1em,
+  ),
+  // max-width: 1360px
+  desktopOnly: (
+    media: screen,
+    max-width: em($desktop-wide - 1) * 1em,
   ),
 
   // min-width: 480px
@@ -153,7 +158,7 @@ $susy-media: (
   // min-width: 960px
   tabletLandscape: em($tablet-landscape) * 1em,
 
-  // min-width: 1180px
+  // min-width: 1310px
   desktop: em($desktop) * 1em,
 
   // min-width: 1260px
@@ -168,39 +173,19 @@ $susy-media: (
 
 
 .container {
-  @include container();
+  width: $container;
+  max-width: 100%;
+  // padding-left: 0;
+  // padding-right: 0;
+  // margin: 0 auto;
 
-  @include susy-media(tablet) {
-    @include container($susy-tablet);
+  .row {
+    // margin-left: 0;
+    // margin-right: 0;
   }
 
-  @include susy-media(desktop) {
-    @include container($susy-desktop);
-  }
-}
-
-.container-wide {
-  @include container();
-
-  @include susy-media(tablet) {
-    @include container($susy-tablet);
-  }
-
-  @include susy-media(desktop) {
-    @include container($susy-desktop);
-  }
-
-  @include susy-media(desktop-wide) {
-    @include container($susy-desktop-medium);
-  }
-
-  @include susy-media(desktop-superwide1) {
-    @include container($susy-desktop-medium);
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
 
   @include susy-media(desktop-superwide) {
-    @include container($susy-desktop-wide);
+    width: $desktop;
   }
 }

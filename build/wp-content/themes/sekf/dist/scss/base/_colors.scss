@@ -3,19 +3,39 @@
 // Use http://chir.ag/projects/name-that-color/ for naming a color.
 
 $black: #000;
+
 $white: #fff;
 
 // Grays
-$gray: gray;
+$gray: #777;
+$gray-db: #dbdbdb;
+$gray-44: #444;
 $silver: silver;
 $gray-fb: #fbfbfb;
 $gray-f4: #f4f4f4;
 $gray-c2: #c2c2c2;
+$gray-e2: #e2e2e2;
+$gray-b5bf: #b5bfc5;
+$gray-d8: #d8d8d8;
+$gray-99: #999;
+$gray-33: #333;
+$gray-dd: #ddd;
+$gray-5f6d78: #5f6d78;
+$gray-72808b: #72808b;
+
+
+$dark-navy-blue: #001021;
+$dark-dark: #001020;
+$dark-blue: #3a4c5c;
+$blue: #0183c5;
+$gary-glitter: #e6f3fa;
+$green: #879b15;
+$green-glitter: #c9d296;
+$red-leight: #bc1a0f;
 
 
 // Base colors
-$primary-color: $black;
+$primary-color: $dark-blue;
 $text-color: $primary-color;
 $border-color: $primary-color;
-$link-color: inherit;
-
+$link-color: $green;

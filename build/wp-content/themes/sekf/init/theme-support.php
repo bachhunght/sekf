@@ -18,12 +18,23 @@ function pagination_callback() {
   wp_die();
 }
 
+// Add user role member
+add_role(
+  'member',
+  __('Member', 'theme'),
+  array(
+    'read' => true,
+    'level_0' => true
+  )
+);
+
 // menu
 add_theme_support( 'menus' );
 add_action('init', 'sekf_menu');
 function sekf_menu() {
   register_nav_menus(array (
     'main' => 'Main Menu',
+    'header_top' => 'Header Top Menu',
     'footer' => 'Footer Menu'
   ));
 }
@@ -39,9 +50,26 @@ function sekf_setup() {
 // Theme support custom logo
 add_theme_support( 'post-thumbnails' );
 
-add_action( 'init', 'sekf_remove_default_field' );
+add_action( 'admin_init', 'sekf_remove_default_field' );
+//add_filter( 'user_can_richedit', 'sekf_remove_default_field' );
+/*function sekf_remove_default_field() {
+  global $post;
+  print_r($post);
+  if (($post->post_name == 'home') && ($post->post_type == 'page')) {
+    //remove_post_type_support( 'page', 'editor' );
+    //echo '<style>#post-body-content #postdivrich {display: none;}</style>';
+  }
+}*/
 function sekf_remove_default_field() {
-  remove_post_type_support( 'page', 'thumbnail' );
+  // Get the Post ID.
+  $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+  if( !isset( $post_id ) ) return;
+  // Hide the editor on the page titled 'Homepage'
+  $slug = get_post_field( 'post_name', $post_id );
+  $homepgname = get_the_title($post_id);
+  if($slug == 'home'){
+    remove_post_type_support('page', 'editor');
+  }
 }
 
 // Unset URL from comment form
@@ -65,7 +93,28 @@ function sekf_set_posts_per_page( $query ) {
 
 add_filter( 'body_class', 'sekf_body_class' );
 function sekf_body_class( $classes ) {
+  global $post;
+  if(is_page()){
+    $post_slug = $post->post_name;
+    $classes[] = 'page-'.$post_slug;
+  }
   return $classes;
+}
+
+
+// wrapper for table in wysiwyg editer
+add_filter( 'tiny_mce_before_init', 'fb_mce_before_init' );
+function fb_mce_before_init( $settings ) {
+  $style_formats = array(
+    array(
+      'title' => 'Table responsive wrapper',
+      'block' => 'div',
+      'classes' => 'table-responsive',
+      'wrapper' => true
+    ),
+  );
+  $settings['style_formats'] = json_encode( $style_formats );
+  return $settings;
 }
 
 add_filter('upload_mimes', 'sekf_theme_support_files_type', 1, 1);
@@ -87,7 +136,7 @@ if (function_exists('register_sidebar')) {
   register_sidebar(array(
     'name' => __('Sidebar'),
     'description' => __('Description for this widget-area...'),
-    'id' => 'sidebar-1',
+    'id' => 'sidebar-right',
     'before_widget' => '<div id="%1$s" class="%2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h3>',
@@ -253,3 +302,32 @@ class footer_Widget extends WP_Widget {
     <?php
   }
 }
+
+
+// Filter the output of logo to fix Googles Error about itemprop logo
+function wecodeart_com() {
+    $custom_logo_id = get_theme_mod( 'custom_logo' );
+    $html = sprintf( '<a href="%1$s" class="custom-logo-link site-logo" rel="home" itemprop="url">%2$s</a>',
+            esc_url( home_url( '/' ) ),
+            wp_get_attachment_image( $custom_logo_id, 'full', false, array(
+                'class'    => 'custom-logo',
+            ) )
+        );
+    return $html;
+}
+add_filter( 'get_custom_logo', 'wecodeart_com' );
+
+/*
+   Debug preview with custom fields
+*/
+
+// add_filter('_wp_post_revision_fields', 'add_field_debug_preview');
+// function add_field_debug_preview($fields){
+//    $fields["debug_preview"] = "debug_preview";
+//    return $fields;
+// }
+
+// add_action( 'edit_form_after_title', 'add_input_debug_preview' );
+// function add_input_debug_preview() {
+//    echo '<input type="hidden" name="debug_preview" value="debug_preview">';
+// }

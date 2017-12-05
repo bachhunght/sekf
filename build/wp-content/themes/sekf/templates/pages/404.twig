@@ -1,9 +1,20 @@
-{% extends 'base.twig' %}
+{% extends 'layout.twig' %}
 
-{% block content %}
-  <div class="info-page">
-    <h1 id="page-title"> Page Not Found</h1>
+{% block feature %}
+   {#  <div class="box-feature">
+      <div class="container">
+        <h1 class="post-heightline-title">
+          Sidan kunde inte hittas
+        </h1>
+      </div>
+    </div> #}
+
+  <div class="error404__content">
+    <div class="error__content__page">
+     <h1 class="post-heightline-title">
+        Sidan kunde inte hittas
+     </h1>
+     <p>Det kan bero på att sidan tagits bort eller att du skrivit en felaktig adress i adressfältet. Prova gärna att använda sökfältet.</p>
+    </div>
   </div>
-  <h4> Sorry, we couldn't find what you're looking for.</h4>
-  {% include 'searchform.twig' %}
 {% endblock %}

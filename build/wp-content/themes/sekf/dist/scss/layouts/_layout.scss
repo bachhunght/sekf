@@ -20,7 +20,78 @@ html {
 }
 
 body {
-  // Disable in production mode;
-  // @include show-breakpoints;
+  @include lora;
   text-size-adjust: none;
+  color: $dark-navy-blue;
 }
+
+span.till-datum {
+  margin: 0 3px;
+}
+
+.box-feature {
+  background-image: url("../images/map.jpg");
+  height: 190px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: rgb(1, 131, 197);
+  text-align: center;
+  margin-bottom: 74px;
+  display: table;
+  width: 100%;
+  padding: 10px 0;
+
+  @media screen and (max-width: 1024px) {
+    .box-feature__inner .container {
+      width: 100%;
+    }
+  }
+  @include susy-media(mobileOnly) {
+    background-size: cover;
+    min-height: rem(90px);
+    margin-bottom: rem(40px);
+  }
+
+  &__inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+}
+
+.post-heightline-title {
+  color: $white;
+  font-weight: 300;
+
+  @include susy-media(mobileOnly) {
+    padding: rem(20px) 0;
+    font-size: rem(30px);
+  }
+}
+
+.description-wrap {
+  max-width: rem(890px);
+  text-align: center;
+  margin: 0 auto rem(60px);
+  font-size: rem(20px);
+  color: $dark-navy-blue;
+
+  @include susy-media(mobileOnly) {
+     margin: 0 auto rem(20px);
+     font-size: 16px;
+
+     p {
+      margin-bottom: 0;
+     }
+  }
+  * {
+    @include fira-sans;
+  }
+}
+
+.home {
+  .box-feature {
+    display: none;
+  }
+}
+

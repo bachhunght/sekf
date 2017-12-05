@@ -19,7 +19,7 @@
   {% if box_views_title %}
   <h2 class="section-title">{{box_views_title}}</h2>
   {% endif %}
-  {{shortcode('[view_list name="' ~ box_views_template  ~ '" post_type="' ~ filter_by_post_type ~ '" per_page="' ~ post_per_page ~ '" cat_id="' ~ filter_by_taxonomy_id ~ '" custom_fields="' ~ variable|join("+")  ~ '" use_pagination="' ~ box_views_pagination ~ '" pagination_type="' ~ pagination_type ~ '" current_paged="1" ]')}}
+  {{ function('shortcode', '[view_list name="' ~ box_views_template  ~ '" post_type="' ~ filter_by_post_type ~ '" per_page="' ~ post_per_page ~ '" cat_id="' ~ filter_by_taxonomy_id ~ '" custom_fields="' ~ variable|join("+")  ~ '" use_pagination="' ~ box_views_pagination ~ '" pagination_type="' ~ pagination_type ~ '" current_paged="1" ]') }}
 
   {% for field in views_custom_fields %}
     {% if field.acf_fc_layout == 'field_link' %}

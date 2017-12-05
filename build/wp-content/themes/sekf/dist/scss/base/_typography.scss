@@ -8,45 +8,55 @@ h4,
 h5 {
   font-weight: 400;
   line-height: 1.3;
+  @include fira-sans;
 }
 
-h1 {
-  font-size: rem(45px);
+h1,
+h2,
+h3,
+h4 {
+  color: $dark-navy-blue;
+  line-height: normal;
+  margin-bottom: 10px;
+}
 
-  @include susy-media(tablet) {
-    font-size: rem(64px);
-  }
+
+h1 {
+  @include fira-sans;
+  font-size: rem(48px);
+  line-height: 1.17;
 }
 
 h2 {
-  font-size: rem(35px);
-
-  @include susy-media(tablet) {
-    font-size: rem(48px);
-  }
+  @include fira-sans;
+  font-size: rem(24px);
+  line-height: normal;
+  font-weight: 500;
 }
 
 h3 {
-  font-size: rem(30px);
-  line-height: 1.6;
+  font-size: rem(20px);
+  line-height: 1.4;
 }
 
 h4 {
-  font-size: rem(24px);
-}
-
-h5 {
   font-size: rem(18px);
 }
 
+h5 {
+  font-size: rem(16px);
+}
+
 h6 {
-  font-size: rem(15px);
+  font-size: rem(14px);
   font-weight: 400;
   line-height: 1.3;
 }
 
 p {
   margin-bottom: rem(30px);
+  line-height: rem(24px);
+  @include lora;
 }
 
 a {
@@ -56,15 +66,18 @@ a {
 
   &:focus,
   &:visited {
-    color: $primary-color;
+    color: $link-color;
+    text-decoration: none;
   }
 
   &:hover {
-    color: $primary-color;
+    color: $green-glitter;
+    text-decoration: none;
   }
 
   &:active {
-    color: $primary-color;
+    color: $green-glitter;
+    text-decoration: none;
   }
 }
 
@@ -96,48 +109,21 @@ label {
   font-weight: 400;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  margin-bottom: rem(32px);
-}
-
-h5,
-h6 {
-  margin-bottom: rem(20px);
-}
 
 hr {
-  margin: rem(30px) 0;
+  background-color: $border-color;
   border: 0;
   height: 1px;
+  margin: rem(30px) 0;
   width: 100%;
-  background-color: $border-color;
 }
 
 %section-title,
 .section-title {
-  margin-bottom: rem(30px);
+  margin-bottom: rem(50px);
   margin-top: 0;
   text-align: center;
-  text-transform: capitalize;
-
-  @include susy-media(tablet) {
-    margin-bottom: rem(41px);
-  }
-
-  @include susy-media(desktop) {
-    margin-bottom: rem(61px);
-  }
-
-  &.has-description {
-    margin-bottom: rem(15px);
-
-    @include susy-media(tablet) {
-      margin-bottom: rem(42px);
-    }
-  }
+  text-transform: uppercase;
 }
 
 %section-description,
@@ -175,16 +161,12 @@ hr {
   }
 }
 
-#page-title {
-  font-size: rem(30px);
-  margin-bottom: rem(13px);
-  margin-top: 0;
-  text-transform: capitalize;
-
-  @include susy-media(tablet) {
-    font-size: rem(64px);
-  }
-}
+// #page-title {
+//   font-size: rem(24px);
+//   margin-bottom: rem(13px);
+//   margin-top: rem(48px);
+//   text-transform: capitalize;
+// }
 
 .info-page {
   padding-bottom: rem(30px);
@@ -202,3 +184,162 @@ hr {
   }
 }
 
+
+/******************************************************************************************************
+Comments , form default
+******************************************************************************************************/
+.comment-form,
+form {
+
+  h3 {
+    color: $gray;
+    font-size: rem(22px);
+    font-weight: 400;
+    margin: rem(0 0 25px);
+    text-transform: none;
+  }
+
+  .field {
+    margin-bottom: rem(21px);
+  }
+
+  input.form-text,
+  .inputText {
+    border: rem(1px) solid $gray-e2;
+    box-shadow: rem(1px 1px 1px) rgba(0, 0, 0, .1) inset;
+    height: rem(42px);
+    max-width: 100%;
+    padding: rem(10px);
+    width: rem(260px);
+
+    &:focus {
+      outline: -webkit-focus-ring-color auto rem(5px);
+    }
+  }
+
+  textarea,
+  .areaText {
+    border: rem(1px) solid $gray-e2;
+    box-shadow: rem(1px 1px 1px) rgba(0, 0, 0, .1) inset;
+    color: $gray-44;
+    height: rem(220px);
+    padding: rem(10px);
+    width:100%;
+
+    &:focus {
+      outline: -webkit-focus-ring-color auto rem(5px);
+    }
+  }
+
+  .field-btn {
+    padding: rem(10px) 0;
+  }
+}
+
+input:focus,
+textarea:focus,
+keygen:focus,
+select:focus {
+  outline-offset: rem(-2px);
+}
+
+.user-image-default {
+  background-image: url('../images/Placeholder.svg');
+  background-size: cover;
+  border: rem(1px) solid $gray-d8;
+}
+
+.slick-prev, .slick-next {
+  min-width: inherit;
+
+  &:before {
+    color: $gray-99;
+    font-size: 30px;
+  }
+}
+
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  @include susy-media(mobileOnly) {
+    width: 30px;
+    height: 32px;
+  }
+}
+
+.slick-next {
+  right: 20px;
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+@include susy-media(desktop-superwide) {
+  .slick-next {
+    right: -20px;
+  }
+
+  .slick-prev {
+    left: -20px;
+  }
+}
+
+ul.pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    margin: 0 5px;
+
+    &.pager-current {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100%;
+      border: 1px solid $gray-dd;
+      color: $gray-33;
+    }
+
+    a {
+      background-color: $white;
+      border: 1px solid $gray-dd;
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+
+      &:hover {
+        color: $gray-33;
+      }
+    }
+  }
+}
+
+p.aligncenter {
+  text-align: center;
+}
+
+p.alignright {
+  text-align: right;
+  float: right;
+  padding-left: 10px;
+  margin-bottom: 15px !important;
+}
+p.alignleft {
+  text-align: left;
+  float: left;
+  padding-right: 10px;
+  margin-bottom: 15px !important;
+}
+.category-tags {
+  clear: both;
+}

@@ -1,5 +1,5 @@
 <?php
-add_action( 'cmb2_admin_init', 'sekf_sidebar_page_metaboxes' );
+//add_action( 'cmb2_admin_init', 'sekf_sidebar_page_metaboxes' );
 function sekf_sidebar_page_metaboxes() {
 
   $prefix = '_cmb2_';
@@ -14,7 +14,7 @@ function sekf_sidebar_page_metaboxes() {
   ) );
 
   // Sidebar Left
-  /*$cmb->add_field( array(
+  $cmb->add_field( array(
     'name'             => __( 'Select Sidebar Left', 'cmb2' ),
     'desc'             => __( 'Choose Sidebar Left for this page', 'cmb2' ),
     'id'               => $prefix . 'sidebar_left',
@@ -22,16 +22,16 @@ function sekf_sidebar_page_metaboxes() {
     'show_option_none' => false,
     'options'          => sekf_registered_sidebars(),
     'default'          => 'none',
-  ) );*/
+  ) );
 
-  /*$cmb->add_field( array(
+  $cmb->add_field( array(
     'name'             => __( 'Left Sidebar Menus', 'cmb2' ),
     'desc'             => __( 'Choose Menus for Left Sidebar on this page', 'cmb2' ),
     'id'               => $prefix . 'sidebar_menu',
     'type'             => 'select',
     'show_option_none' => true,
     'options'          => sekf_list_nav_menus(),
-  ) );*/
+  ) );
 
   // Sidebar Right
   $cmb->add_field( array(
@@ -67,13 +67,15 @@ function sekf_page_option_metaboxes() {
     'type'       => 'checkbox'
   ) );
 
+
   // Disable title
-  /*$cmb->add_field( array(
-    'name'       => __( 'Main Content no Padding', 'cmb2' ),
-    'desc'       => __( 'Check it if you want remove padding of main-content on this page', 'cmb2' ),
-    'id'         => $prefix . 'no_padding',
-    'type'       => 'checkbox'
-  ) );*/
+  // $cmb->add_field( array(
+  //   'name'       => __( ' Disable Right Sidebar', 'cmb2' ),
+  //   'desc'       => __( 'Check it if you want disable this page right sidebar', 'cmb2' ),
+  //   'id'         => $prefix . 'sidebahiden',
+  //   'type'       => 'checkbox',
+  //   //'default'    => 1
+  // ) );
 
   // Layout Option
   $cmb->add_field( array(
