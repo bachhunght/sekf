@@ -1,0 +1,7 @@
+<div class="box-social">
+  {% for item in box_social_items %}
+    <div class="box-social__item">
+      <div class="box-social__icon"><a href=" {{item.box_social_link}} " class="fa fa-{{item.box_social_name}}"></a></div>
+    </div>
+  {% endfor %}
+</div>

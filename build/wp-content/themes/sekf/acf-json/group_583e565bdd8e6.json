@@ -1,0 +1,117 @@
+{
+    "key": "group_583e565bdd8e6",
+    "title": "Group Header Component",
+    "fields": [
+        {
+            "layouts": [
+                {
+                    "key": "583e567051ef6",
+                    "name": "box_social",
+                    "label": "Box Social",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "layouts": [
+                                {
+                                    "key": "583e56bf1a469",
+                                    "name": "box_social_item",
+                                    "label": "Box social Item",
+                                    "display": "row",
+                                    "sub_fields": [
+                                        {
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "key": "field_583e56ca752cd",
+                                            "label": "Box social Name",
+                                            "name": "box_social_name",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        },
+                                        {
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "key": "field_583e5702752ce",
+                                            "label": "Box social link",
+                                            "name": "box_social_link",
+                                            "type": "url",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        }
+                                    ],
+                                    "min": "",
+                                    "max": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "button_label": "Add social Items",
+                            "key": "field_583e56a3752cc",
+                            "label": "Box social Items",
+                            "name": "box_social_items",
+                            "type": "flexible_content",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ],
+            "min": "",
+            "max": "",
+            "button_label": "Add Header Component",
+            "key": "field_583e5666752cb",
+            "label": "Group Header Component",
+            "name": "group_header_component",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "widget",
+                "operator": "==",
+                "value": "header_widget"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1480480900
+}

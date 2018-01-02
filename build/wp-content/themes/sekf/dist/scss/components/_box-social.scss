@@ -1,0 +1,31 @@
+.box-social {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    border-left: 1px solid rgba(1, 131, 197, .05);
+    height: 38px;
+    overflow: hidden;
+  }
+
+  &__icon {
+
+    a {
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    height: 38px;
+    justify-content: center;
+    line-height: 1;
+    padding: 0 14px;
+    @include susy-media(mobileOnly) {
+      font-size: 11px;
+      padding: 0 10px;
+    }
+      &:before {
+        color: $gray-72808b;
+      }
+    }
+  }
+}

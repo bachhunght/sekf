@@ -1,0 +1,108 @@
+{
+    "key": "group_584772db7c653",
+    "title": "Group Category Events",
+    "fields": [
+        {
+            "layouts": [
+                {
+                    "key": "584772ea6964d",
+                    "name": "group_field_category_events",
+                    "label": "Group field Category Events",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "display_format": "d\/m\/Y g:i a",
+                            "return_format": "Y-m-d H:i:s",
+                            "first_day": 1,
+                            "key": "field_5847730e9b047",
+                            "label": "Datum",
+                            "name": "datum",
+                            "type": "date_time_picker",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "display_format": "d\/m\/Y g:i a",
+                            "return_format": "d\/m\/Y g:i a",
+                            "first_day": 1,
+                            "key": "field_58c0b97711ef9",
+                            "label": "End Datum",
+                            "name": "end_datum",
+                            "type": "date_time_picker",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "key": "field_584774379b048",
+                            "label": "Plats",
+                            "name": "plats",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ],
+            "min": "",
+            "max": 1,
+            "button_label": "Add Row",
+            "key": "field_584772df9b046",
+            "label": "Group Category Events",
+            "name": "group_category_events",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:events"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "categories"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1490071391
+}

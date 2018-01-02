@@ -1,0 +1,131 @@
+.teaser-list {
+  &__item {
+
+  }
+  &__image {
+
+  }
+
+  &__button {
+    margin-top: rem(47px);
+  }
+
+  &__date {
+    font-size: rem(14px);
+    @include fira-sans;
+    font-weight: normal;
+
+    .lable {
+      margin-bottom: rem(10px);
+      margin-right: rem(5px);
+      text-transform: uppercase;
+    }
+
+    &.none-lable {
+      color: $red-leight;
+      margin-bottom: rem(10px);
+      margin-right: rem(50px);
+      opacity: .75;
+    }
+  }
+
+  &__group {
+    margin-bottom: rem(15px);
+  }
+
+  &__location {
+    font-size: rem(14px);
+    color: $gray-33;
+    opacity: .75;
+    @include fira-sans;
+    font-weight: normal;
+
+    .lable {
+      color: $red-leight;
+      margin-bottom: rem(10px);
+      text-transform: uppercase;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(5px);
+  }
+
+  &__content {
+    p {
+      margin-bottom: rem(9px);
+    }
+  }
+
+  &__more {
+    margin-bottom: rem(35px);
+    text-transform: uppercase;
+    font-weight: bold;
+
+    @include susy-media(mobileOnly) {
+      margin-bottom: rem(20px);
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &--grid {
+    margin-left: rem(-12.5px);
+    margin-right: rem(-12.5px);
+    position: relative;
+
+    @include susy-media(mobiletinyOnly) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .teaser-list__item {
+      float: left;
+      padding: 0 rem(12.5px);
+      width: 50%;
+
+      @include susy-media(mobiletinyOnly) {
+         width: 100%;
+         padding: 0;
+      }
+    }
+
+    .teaser-list__image {
+      margin: rem(-47px -50px 23px);
+      text-align: center;
+
+      @include susy-media(mobileOnly) {
+        margin: rem(-15px -15px 10px);
+      }
+    }
+
+    .teaser-list__group-content {
+      background-color: rgba(1, 131, 197, .05);
+      margin-bottom: rem(25px);
+      overflow: hidden;
+      padding: 47px 50px 41px;
+
+      @include susy-media(mobileOnly) {
+        padding: 15px;
+      }
+    }
+
+    .teaser-list__date .lable {
+      text-transform: uppercase;
+      color: $red-leight;
+    }
+    .teaser-list__date.none-lable {
+      color: $gray-33;
+      margin-bottom: 14px;
+    }
+    .teaser-list__title {
+      line-height: 24px;
+      margin-bottom: 18px;
+    }
+
+    .teaser-list__more {
+      margin-bottom: 0;
+    }
+  }
+}

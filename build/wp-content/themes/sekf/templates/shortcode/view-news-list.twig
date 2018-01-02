@@ -1,0 +1,26 @@
+<div class="teaser-list">
+  {% for post in posts %}
+    <div class="teaser-list__item col-md-6">
+      <div class="teaser-list__image"><img src="{{post.thumbnail.src}}" class="feature" /></div>
+      <div class="teaser-list__group">
+      {% if post.group_category_events_0_datum %}
+          <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{post.group_category_events_0_datum|date('d.m.Y')}}
+            {% if post.group_category_events_0_end_datum %}
+              <span><span class="till-datum">till </span> {{ post.group_category_events_0_end_datum|date('d.m.Y')}}</span>
+            {% endif %}
+          </span>
+        {% else %}
+          <span class="teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ post.post_date|date('d.m.Y')}}</span>
+        {% endif %}
+        </div>
+      <h3 class="teaser-list__title views__title">{{post.title}}</h3>
+      <div class="teaser-list__content views__content">
+        <p>{% if post.description_post_page %}
+           {{post.description_post_page}}
+          {% else %}
+           {{post.content|excerpt(30)}}
+        {% endif %}</p></div>
+      <div class="teaser-list__more views_link"><a href="{{post.link}}">läs mer</a></div>
+    </div>
+  {% endfor %}
+</div>

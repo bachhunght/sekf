@@ -1,0 +1,34 @@
+
+  {% for post in posts %}
+    {# {{post|print_r}} #}
+  <div class="teaser-list__item {{post.class|join(" ")}}">
+    <div class="teaser-list__group-content">
+      <div class="test-wrapper">
+          {% if post.thumbnail.src %}
+            <div class="teaser-list__image"><img src="{{post.thumbnail.src}}" class="feature" /></div>
+          {% endif %}
+        <div class="teaser-list__group">
+          <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{post.group_category_events_0_datum|date('d.m.Y')}}
+          {% if post.group_category_events_0_end_datum %}
+            <span><span class="till-datum">till </span> {{ post.group_category_events_0_end_datum|date('d.m.Y')}}</span>
+          {% endif %}
+        </span>
+
+          {% if  post.group_category_events_0_plats %}
+            <div class="teaser-list__location"><span class="lable">Plats:</span>  {{post.group_category_events_0_plats}}</div>
+          {% endif %}
+        </div>
+        <h3 class="teaser-list__title">{{post.title}}</h3>
+        <div class="teaser-list__content">
+        <p>
+          {% if post.description_post_page %}
+             {{post.description_post_page}}
+            {% else %}
+             {{post.content|excerpt(30)}}
+          {% endif %}
+        </p></div>
+        <div class="teaser-list__more"><a href="{{post.link}}">läs mer</a></div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}

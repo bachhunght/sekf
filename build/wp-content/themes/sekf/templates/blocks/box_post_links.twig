@@ -1,0 +1,48 @@
+<div class="box-post-link">
+  <h2>{{box_post_link_title}}</h2>
+
+  {% for item  in box_post_link %}
+    {# {{item|print_r}} #}
+    {# {% set terms = function('get_the_terms', item.ID, 'category') %}
+
+    {% for term in terms %}
+      <div>{{term.name}}</div>
+    {% endfor %} #}
+    <div class="teaser-list__group">
+    {% if item.group_category_events_0_datum %}
+        <span class="teaser-list__date none-lable"><span class="lable">Datum: </span> {{item.group_category_events_0_datum|date('d.m.Y')}}
+          {% if item.group_category_events_0_end_datum %}
+            <span><span class="till-datum">till </span> {{ item.group_category_events_0_end_datum|date('d.m.Y')}}</span>
+          {% endif %}
+        </span>
+      {% else %}
+        <span class="teaser-list__date none-lable"><span class="lable">Publicerat: </span>{{ item.post_date|date('d.m.Y')}}</span>
+      {% endif %}
+    </div>
+    {{function('remove_all_shortcodes')}}
+    <h3>{{ item.post_title }}</h3>
+    <div class="views__content">
+    <p>
+    {% if item.description_post_page %}
+    {{ item.description_post_page|excerpt(10) }}
+    {% else %}
+      {{item.content|excerpt(10)}}
+    {% endif %}
+    </p>
+    </div>
+    <div class="views-link"><a href="{{ function('post_link', item.ID) }}">Läs hela texten</a></div>
+  {% endfor %}
+
+  {% for item in category_link %}
+    {% set term = TimberTerm(item.term_id) %}
+    <h3>{{ term.name }}</h3>
+    <div class="views__content"><p>{{ term.description }}</p></div>
+    <div class="views-link"><a href="{{term.link}}">Läs hela texten</a></div>
+  {% endfor %}
+
+  {% for item in custom_links %}
+    <h3>{{ item.link_title }}</h3>
+    <div class="views__content"><p>{{ item.description }}</p></div>
+    <div class="views-link"><a href="{{item.link_url}}">Läs hela texten</a></div>
+  {% endfor %}
+</div>

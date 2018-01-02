@@ -1,0 +1,39 @@
+.box-partners {
+  padding-bottom: rem(97px);
+  padding-top: rem(66px);
+  text-align: center;
+
+  @include susy-media(mobileOnly) {
+    padding-bottom: rem(60px);
+    padding-top: rem(40px);
+  }
+
+  &__image {
+    @include susy-media(mobiletinyOnly) {
+      padding: 0 10px;
+    }
+  }
+
+  .box-title {
+    margin-bottom: rem(35px);
+
+    @include susy-media(mobileOnly) {
+      margin-bottom: 0;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    height: auto;
+    justify-content: center;
+
+    &.slick-slide {
+      display: flex;
+    }
+  }
+}

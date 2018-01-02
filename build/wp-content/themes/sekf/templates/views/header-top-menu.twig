@@ -1,0 +1,11 @@
+<div class="header__top-menu-wrap">
+  <ul class="nav-header__menu">
+    {% include 'menu.twig' with {'menu': menu.header_top} %}
+    {% if function('is_user_logged_in') %}
+        <li class="not-hidden-mobile"><a href="{{function('wp_logout_url')}}">{{ __('Logga ut') }}</a></li>
+      {% else %}
+        <li class="not-hidden-mobile"><a href="{{function('wp_login_url')}}">{{ __('Logga in') }}</a></li>
+    {% endif %}
+  </ul>
+</div>
+
