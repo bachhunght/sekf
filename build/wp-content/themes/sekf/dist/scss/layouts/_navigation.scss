@@ -37,6 +37,7 @@
     z-index: -9;
 
     li {
+      background: rgba(1, 131, 197, 1);
       display: block;
       font-size: 12px;
       padding: 5px 0;
@@ -44,6 +45,11 @@
 
       a {
         display: block;
+        color: $white;
+
+        &:hover {
+          opacity: .9;
+        }
       }
     }
 
