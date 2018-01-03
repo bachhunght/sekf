@@ -4,7 +4,7 @@
     <div class="box-partners__list">
       {% for item in box_partners_items %}
         <div class="box-partners__item">
-          <div class="box-partners__image"> {% if item.box_partners_link %} <a href="{{item.box_partners_link}}"> {% endif %} <img src=" {{ item.box_partners_image }} " >{% if item.box_partners_link %}</a>{% endif %}</div>
+          <div class="box-partners__image"> {% if item.box_partners_link %} <a href="{{item.box_partners_link}}" target="_blank"> {% endif %} <img src=" {{ item.box_partners_image }} " >{% if item.box_partners_link %}</a>{% endif %}</div>
         </div>
       {% endfor %}
     </div>
