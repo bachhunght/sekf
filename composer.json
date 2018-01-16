@@ -35,6 +35,8 @@
   "require": {
     "advanced-custom-fields": "5.6.7",
     "timber/timber": "~1.0",
-    "wpackagist-plugin/tablepress" : "1.9"
+    "timber/timber": "~1.0",
+    "wpackagist-plugin/tablepress" : "1.9",
+    "wpackagist-plugin/cookie-notice" : "1.2.40"
   }
 }
