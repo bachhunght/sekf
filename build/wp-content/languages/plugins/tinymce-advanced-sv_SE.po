@@ -31,7 +31,7 @@ msgstr "Ditt tema saknar stöd för editor-style.css."
 msgid "ERROR:"
 msgstr "FEL:"
 
-#: tinymce-advanced.php:856
+#: tinymce-advanced.php:867
 msgid "Settings"
 msgstr "Inställningar"
 
@@ -107,11 +107,11 @@ msgstr "http://www.laptoptips.ca/projects/tinymce-advanced/"
 msgid "TinyMCE Advanced"
 msgstr "TinyMCE Advanced"
 
-#: tinymce-advanced.php:291
+#: tinymce-advanced.php:298
 msgid "Please upgrade your WordPress installation or download an <a href=\"%s\">older version of the plugin</a>."
 msgstr "Vänligen uppgradera din WordPress-installation eller ladda hem en <a href=\"%s\">äldre version av tillägget</a>."
 
-#: tinymce-advanced.php:284
+#: tinymce-advanced.php:291
 msgid "TinyMCE Advanced requires WordPress version %1$s or newer. It appears that you are running %2$s. This can make the editor unstable."
 msgstr "Detta tillägg kräver WordPress version %1$s eller nyare. Det verkar som att du kör %2$s. Detta kan göra redigeraren instabil."
 

@@ -11,7 +11,7 @@ msgstr ""
 "Language: vi_VN\n"
 "Project-Id-Version: Plugins - Akismet Anti-Spam - Stable (latest release)\n"
 
-#: class.akismet.php:210
+#: class.akismet.php:211
 msgid "Comment discarded."
 msgstr "Bình luận bị loại bỏ."
 
@@ -67,7 +67,7 @@ msgstr "Trong trang này, bạn có thể cập nhật thiết lập Akismet và
 msgid "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key."
 msgstr "Được sử dụng bởi hàng triệu người, Akismet có thể là cách tốt nhất trên thế giới để <strong>bảo về blog của bạn từ spam</strong>. Nó giúp trang của bạn được bảo vệ cả khi bạn đang ngủ. Để bắt đầu: kích hoạt phần mở rộng Akismet và chuyển đến trang Thiết lập Akismet để cài đặt API key của bạn. "
 
-#. #-#-#-#-#  akismet-code.pot (Akismet Anti-Spam 4.0.1)  #-#-#-#-#
+#. #-#-#-#-#  akismet-code.pot (Akismet Anti-Spam 4.0.3)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: class.akismet-admin.php:95 class.akismet-admin.php:98
 msgid "Akismet Anti-Spam"
@@ -137,29 +137,29 @@ msgstr "Thống kê chi tiết"
 msgid "Statistics"
 msgstr "Thống kê"
 
-#: class.akismet-admin.php:1111
+#: class.akismet-admin.php:1125
 msgid "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. It keeps your site protected even while you sleep. To get started, just go to <a href=\"admin.php?page=akismet-key-config\">your Akismet Settings page</a> to set up your API key."
 msgstr "Được sử dụng bởi hàng triệu website, Akismet  là plugin hữu ích giúp bạn <strong>bảo vệ website khỏi spam</strong>. Nó giúp bảo vệ website khi bạn đang ngủ. Để bắt đầu, hãy <a href=\"admin.php?page=akismet-key-config\">thiết lập cấu hình</a> để nhập API key."
 
-#: class.akismet-admin.php:1108
+#: class.akismet-admin.php:1122
 msgid "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. Your site is fully configured and being protected, even while you sleep."
 msgstr "Được sử dụng bởi hàng triệu người, Akismet là có thể là cách thức tốt nhất trên thế giới để <strong>bảo về blog của bạn khỏi spam</strong>. Trang của bạn được cấu hình hoàn toàn và được bảo về, thậm chí trong khi bạn đang ngủ."
 
-#: class.akismet-admin.php:1007
+#: class.akismet-admin.php:1021
 msgid "%s comment was caught as spam."
 msgid_plural "%s comments were caught as spam."
 msgstr[0] "%s bình luận bị phát hiện là spam."
 
-#: class.akismet-admin.php:1004
+#: class.akismet-admin.php:1018
 msgid "No comments were caught as spam."
 msgstr "Không có bình luận nào bị phát hiện là spam."
 
-#: class.akismet-admin.php:1000
+#: class.akismet-admin.php:1014
 msgid "Akismet checked %s comment."
 msgid_plural "Akismet checked %s comments."
 msgstr[0] "Akismet đã kiểm tra %s bình luận."
 
-#: class.akismet-admin.php:997
+#: class.akismet-admin.php:1011
 msgid "There were no comments to check. Akismet will only check comments in the Pending queue."
 msgstr "Không còn bình luận để kiểm tra, Akismet sẽ chỉ kiểm tra bình luận trong mục Đang chờ. "
 
@@ -167,7 +167,7 @@ msgstr "Không còn bình luận để kiểm tra, Akismet sẽ chỉ kiểm tra
 msgid "Checking for Spam"
 msgstr "Đang kiểm tra Spam"
 
-#: class.akismet.php:452
+#: class.akismet.php:492
 msgid "Comment not found."
 msgstr "Không tìm thấy bình luận."
 
@@ -252,17 +252,17 @@ msgstr "Vui lòng cập nhật thông tin thanh toán."
 msgid "<strong>Almost done</strong> - configure Akismet and say goodbye to spam"
 msgstr "<strong>Sắp hoàn tất</strong> - hãy cấu hình Akismet và tạm biệt Spam"
 
-#: class.akismet-admin.php:932
+#: class.akismet-admin.php:946
 msgid "Akismet has saved you %d minute!"
 msgid_plural "Akismet has saved you %d minutes!"
 msgstr[0] "Akismet đã tiết kiệm cho bạn %d phút!"
 
-#: class.akismet-admin.php:930
+#: class.akismet-admin.php:944
 msgid "Akismet has saved you %d hour!"
 msgid_plural "Akismet has saved you %d hours!"
 msgstr[0] "Akismet đã tiết kiệm cho bạn %d giờ! "
 
-#: class.akismet-admin.php:928
+#: class.akismet-admin.php:942
 msgid "Akismet has saved you %s day!"
 msgid_plural "Akismet has saved you %s days!"
 msgstr[0] "Akismet đã tiết kiệm cho bạn %s ngày!"
@@ -549,7 +549,7 @@ msgstr "Lịch sử"
 msgid "View comment history"
 msgstr "Xem lịch sử bình luận"
 
-#: class.akismet-admin.php:818
+#: class.akismet-admin.php:832
 msgid "Please check your <a href=\"%s\">Akismet configuration</a> and contact your web host if problems persist."
 msgstr "Hãy kiểm tra <a href=\"%s\">Cấu hình Akismet</a> của bạn và liên hệ với nhà cung cấp host nếu vẫn không khắc phục được sự cố."
 
@@ -557,7 +557,7 @@ msgstr "Hãy kiểm tra <a href=\"%s\">Cấu hình Akismet</a> của bạn và l
 msgid "%s ago"
 msgstr "%s trước"
 
-#: class.akismet-admin.php:925
+#: class.akismet-admin.php:939
 msgid "Cleaning up spam takes time."
 msgstr "Dọn dẹp rác khá tốn thời gian."
 
@@ -622,11 +622,11 @@ msgstr "Akismet nhận định đây là bình luận rác trong quá trình t�
 msgid "Akismet cleared this comment during an automatic retry."
 msgstr "Akismet đã xác minh đây không phải là bình luận rác trong quá trình tự động kiểm tra lại."
 
-#: class.akismet.php:1202
+#: class.akismet.php:1248
 msgid "Please <a href=\"%1$s\">upgrade WordPress</a> to a current version, or <a href=\"%2$s\">downgrade to version 2.4 of the Akismet plugin</a>."
 msgstr "Hãy <a href=\"%1$s\">nâng cấp Wordpress</a> tới phiên bản hiện tại, hoặc <a href=\"%2$s\">hạ cấp plugin Akismet xuống 2.4</a>."
 
-#: class.akismet.php:1202
+#: class.akismet.php:1248
 msgid "Akismet %s requires WordPress %s or higher."
 msgstr "Akismet %s yêu cầu phiên bản WordPress %s hoặc cao hơn."
 

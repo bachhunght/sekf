@@ -1330,7 +1330,7 @@ msgstr "Sửa Form"
 msgid "Contact"
 msgstr "Form liên hệ"
 
-#. #-#-#-#-#  contact-form-7-code.pot (Contact Form 7 4.9.1)  #-#-#-#-#
+#. #-#-#-#-#  contact-form-7-code.pot (Contact Form 7 4.9.2)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: admin/admin.php:21 modules/flamingo.php:150
 msgid "Contact Form 7"
